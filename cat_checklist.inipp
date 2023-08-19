@@ -1,0 +1,10 @@
+[Main]
+
+[Info]
+name = "cat"
+version = "0.0.0"
+
+[Download]
+dependencies = ["https://raw.githubusercontent.com/labricecat/inipp/main/"]
+files = ["buffer.hpp","config.hpp","drawing.hpp","id.hpp","input.hpp","library.hpp","lifespan.hpp","signals.hpp","terminal.hpp","vector.hpp","window.hpp"]
+

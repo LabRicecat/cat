@@ -1,5 +1,4 @@
-#include "input.hpp" 
-#include "lifespan.hpp"
+#include "cat.hpp"
 
 int main() {
     cat::async(cat::Priority::NORMAL, [](){

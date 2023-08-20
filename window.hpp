@@ -53,6 +53,14 @@ public:
         return id;
     }
 
+    virtual const Vector2& get_resolution() {
+        return resolution;
+    }
+
+    virtual const Vector2& get_position() {
+        return position;
+    }
+
     virtual Window& clear() {
         wclear(ncurses_window);
         return *this;
@@ -86,8 +94,8 @@ public:
         return w;
     }
 
-    virtual Window& adopt(Window& win) {
-        syncs.push_back(&win);
+    virtual Window& adopt(Window* win) {
+        syncs.push_back(win);
         return *this;
     }
 
@@ -162,14 +170,6 @@ public:
 
     virtual key_event& get_key_event(const key& skey) {
         return win_keymap[skey];
-    }
-
-    virtual void start() {
-        // left for derived implementation 
-    }
-
-    virtual void end() {
-        // left for derived implementation
     }
 
     template<typename ...Tfargs>

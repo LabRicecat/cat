@@ -17,6 +17,7 @@ inline static void redraw() {
         if(i && !i->hidden() && i->redraw_request) {
             wrefresh(i->ncurses_window);
             i->redraw_request = false;
+            i->trigger_syncs();
         }
 }
 

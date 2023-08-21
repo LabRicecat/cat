@@ -14,6 +14,8 @@ namespace cat {
 
 static inline void redraw();
 
+using redraw_event = std::function<void(Window*)>;
+
 class Window {
 protected:
     WINDOW* ncurses_window = nullptr;
@@ -35,6 +37,8 @@ protected:
     id_type id;
 
     Buffer* buffer = nullptr;
+
+    std::vector<redraw_event> redraw_events;
 public:
 
     Window() = delete;
@@ -47,6 +51,8 @@ public:
     virtual ~Window() {
         if(ncurses_window)
             delwin(ncurses_window);
+        if(buffer)
+            delete buffer;
     }
    
     virtual const id_type& get_id() {
@@ -128,15 +134,21 @@ public:
 
     virtual bool focused() { return is_focused; }
 
-    virtual Window& set_buffer(Buffer* buffer) {
-        this->buffer = buffer;
+    template<typename TBuffer = Buffer>
+        requires ( std::is_base_of_v<Buffer,TBuffer> )
+    Window& set_buffer(Renderer renderer = Renderer::null, Composer composer = Composer::null) {
+        buffer = new TBuffer(this);
+        buffer->composer &= composer;
+        buffer->renderer &= renderer;
         return *this;
     }
 
-    virtual Buffer* get_buffer() {
-        return buffer;
+    template<typename TBuffer = Buffer>
+        requires ( std::is_base_of_v<Buffer,TBuffer> )
+    TBuffer* get_buffer() {
+        return dynamic_cast<TBuffer*>(buffer);
     }
-
+ 
     virtual Window& set_key(const key& skey, const key_event& event) {
         win_keymap[skey] = event;
         return *this;
@@ -189,6 +201,11 @@ public:
 
         auto display = buffer->display();
         return draw_at(offset, "%s", display.c_str());
+    }
+
+    virtual Window& on_redraw(const redraw_event& event) {
+        redraw_events.push_back(event);
+        return *this;
     }
 
     friend void redraw();

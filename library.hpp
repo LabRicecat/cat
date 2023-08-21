@@ -12,8 +12,8 @@ namespace processors {
 }
 
 namespace renderers {
-    static inline Buffer::image_type fit_resolution_hight(const Buffer::image_type& image, Buffer* buffer) {
-        Buffer::image_type rimage;
+    static inline Renderer fit_hight = [](const image_type& image, Buffer* buffer)->image_type {
+        image_type rimage;
         Vector2 res = buffer->window()->get_resolution();
         Vector2::value_type hight = 1;
         
@@ -26,17 +26,23 @@ namespace renderers {
         }
 
         return rimage;
-    }
-    
-    
-    static inline Buffer::renderer_type compose(const Buffer::renderer_type& render) {
-        return render;
-    }
+    };
 
-    template<typename Tr0, typename Tr1, typename... TrTail>
-    static inline Buffer::renderer_type compose(const Tr0& r0, const Tr1& r1, const TrTail& ...tail) {
-        return [=](const Buffer::image_type& image, Buffer* buffer)->Buffer::image_type{ return r0(compose(r1,tail...)(image, buffer),buffer); };
-    }
+    static inline Renderer fit_width = [](const image_type& image, Buffer* buffer)->image_type {
+        image_type rimage;
+        Vector2 res = buffer->window()->get_resolution();
+        Vector2::value_type width = 0;
+        
+        for(auto& i : image) {
+            ++width;
+            if(i == '\n') 
+                width = 0;
+            if(width <= res.x)
+                rimage += i;
+        }
+
+        return rimage;
+    };
 }
 
 class LockableBuffer : virtual public Buffer {

@@ -15,6 +15,9 @@ static inline std::vector<Window*> window_pool;
 inline static void redraw() {
     for(auto& i : window_pool)
         if(i && !i->hidden() && i->redraw_request) {
+            for(auto& event : i->redraw_events)
+                event(i);
+
             wrefresh(i->ncurses_window);
             i->redraw_request = false;
             i->trigger_syncs();

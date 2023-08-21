@@ -6,31 +6,92 @@
 
 namespace cat {
 
+class Buffer;
+using image_type = std::string;
+using snippet_type = std::string;
+
+template<typename Tcomp>
+static inline Tcomp compose(const Tcomp& r0) {
+    return r0;
+}
+
+template<typename Tcomp, typename... TcompP>
+static inline Tcomp compose(const Tcomp& r0, const Tcomp& r1, const TcompP& ...tail) {
+    return
+        [=](const typename Tcomp::param_type& image, Buffer* buffer)
+            ->typename Tcomp::return_type 
+        { return r0(compose<Tcomp>(r1,tail...)(image, buffer), buffer); };
+}
+
+
+template<typename Treturn_type, typename Tparam_type>
+struct Processor {
+    using return_type = Treturn_type;
+    using param_type = Tparam_type;
+    using fn_type = std::function<return_type(const param_type&, Buffer*)>;
+
+    fn_type fn;
+
+    return_type operator()(const param_type& data, Buffer* buffer) { return fn(data, buffer); }
+    return_type operator()(const param_type& data, Buffer* buffer) const { return fn(data, buffer); }
+
+
+    template<typename Fn>
+        requires ( !std::is_same_v<std::remove_cvref_t<Fn>,Processor> )
+    Processor(Fn&& fn): fn(std::forward<Fn>(fn)) { }
+    
+    Processor(const fn_type& fn): fn(fn) { }
+    Processor(fn_type&& fn): fn(fn) { }
+    Processor() { }
+    Processor& operator=(const Processor&) = default;
+    
+    Processor operator&(const Processor& processor) {
+        return compose(*this, processor);
+    }
+    Processor& operator&=(const Processor& processor) {
+        return *this = operator&(processor);
+    }
+
+    template<typename Fn>
+        requires ( !std::is_same_v<std::remove_cvref_t<Fn>,Processor> )
+    Processor& operator=(Fn&& fn) { 
+        this->fn = std::forward<Fn>(fn);
+        return *this;
+    }
+
+    Processor& operator=(const fn_type& fn) {
+        this->fn = fn;
+        return *this;
+    }
+
+    const static Processor null; 
+}; 
+
+template<typename T, typename U>
+inline const Processor<T,U> Processor<T,U>::null = [](const Processor::param_type& param, Buffer*) { return (Processor::return_type)param; };
+
+using Renderer = Processor<image_type,image_type>;
+using Composer = Processor<image_type,snippet_type>;
+
 class Window;
 
 class Buffer {
-public:
-    using image_type = std::string;
-    using snippet_type = std::string;
-    using processor_type = std::function<image_type(const snippet_type&, Buffer*)>; // processes the snippet 
-    using renderer_type = std::function<image_type(const image_type&, Buffer*)>; // makes the image fit the correct size
-
 protected:
     std::string raw;
     Window* assoc_window = nullptr;
 
-    std::vector<processor_type> processors;
-    renderer_type renderer;
+    Composer composer;
+    Renderer renderer;
 
     virtual snippet_type generate_snippet() {
         return raw; // to implement by the derived classes 
     }
     
-    virtual processor_type default_processor() {
-        return [](const snippet_type& snippet, Buffer*) { return (image_type)snippet; };
+    virtual Composer default_composer() {
+        return [](const Composer::param_type& data, Buffer*) { return (Composer::return_type)data; };
     }
 
-    virtual renderer_type default_renderer() {
+    virtual Renderer default_renderer() {
         return [](const image_type& image, Buffer*) { return image; };
     }
 
@@ -38,7 +99,7 @@ public:
 
     Buffer() = delete;
     Buffer(Window* win): assoc_window(win) {
-        processors = {default_processor()};
+        composer = default_composer();
         renderer = default_renderer();
     }
 
@@ -55,12 +116,16 @@ public:
     }
 
     virtual image_type display() {
-        image_type image = generate_snippet();
-        for(auto& i : processors)
-            image = i(image,this);
-
-        return renderer(image,this);
+        return renderer(
+            composer(
+                generate_snippet(),
+            this),
+        this);
     }
+
+    virtual ~Buffer() { }
+
+    friend class Window;
 };
 
 }

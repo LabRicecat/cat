@@ -10,9 +10,11 @@
 # undef OK
 #endif
 #include "catpkgs/inipp/inipp.hpp" 
-# ifndef OK 
+#ifndef OK 
 # define OK (1)
 #endif 
+
+#include "signals.hpp"
 
 namespace cat {
 
@@ -26,9 +28,11 @@ namespace config {
     static inline std::string config_cat_default = 
 R"([CAT_TUI]
 frame_sleep = 75
-)";
+)"; 
 
-    static inline void set_config(const fs::path& path) {
+    static inline signals::signal config_error = signals::create(signals::error_tag);
+
+    static inline void at(const fs::path& path) {
         config_file = path;
     }
 
@@ -44,8 +48,8 @@ frame_sleep = 75
         config_mirror.to_file(config_file.string()); 
     }
 
-    static inline bool has(const std::string& key) {
-        return config_mirror.has(key);    
+    static inline bool has(const std::string& key, const std::string& section = "Main") {
+        return config_mirror.has(key, section);    
     }
 
     /* adviced to use get_or instead */
@@ -77,6 +81,19 @@ frame_sleep = 75
         o.open(config_file.string());
         o << config_cat_default << config_defaults;
         o.close();
+    }
+
+    template<IniType type = IniType::Null>
+    static inline void ensure(const std::string& key, const std::string& section = "Main", const IniElement& value = IniElement()) {
+            if(!has(key,section)) {
+                signals::emit(config_error, new signals::MessageData("key " + key + " in section " + section + " does not exist!"));
+                return;
+            }
+
+            IniElement elem = get(key,section);
+            if(value.get_type() != IniType::Null && elem.get_type() != value.get_type()) {
+                signals::emit(config_error, new signals::MessageData("key " + key + " in section " + section + " is not of type " + IniType2str(value.get_type()) + " (it's of type " + IniType2str(elem.get_type()) + ")"));
+            }
     }
 }
 

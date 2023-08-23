@@ -71,7 +71,14 @@ static inline void cycle() {
     config::sync();
     refresh();
     
-    while(!signals::quit) {
+    bool running = true;
+
+    signals::listen([&](const signals::signal& sig, const signals::SignalData*) { 
+        if(sig == signals::quit_signal)
+            running = false;
+    });
+
+    while(running) {
         pass_input(getch());
         
         update();

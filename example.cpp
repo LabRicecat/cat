@@ -44,12 +44,12 @@ int main() {
 
     cat::async(cat::Priority::HIGH, [](){
         cat::set_keymap('q', []() {
-            cat::signals::quit = true;
+            cat::signals::emit(cat::signals::quit_signal);
         });
 
-        cat::on_error([](){
-            std::cerr << cat::signals::error;
-            cat::signals::quit = true;
+        cat::signals::listen_tag([](const cat::signals::tag_type& tag, const cat::signals::signal& signal, const cat::signals::SignalData* data) {
+            if(tag == cat::signals::error_tag)
+                std::cerr << "Error";
         });
     });
 

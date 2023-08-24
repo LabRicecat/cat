@@ -55,7 +55,7 @@ namespace signals {
             i(sig, data);
         for(auto& i : rtags_map[sig])
             for(auto& j : tag_listeners)
-                j(sig, data);
+                j(sig, i, data);
         if(clean && data != nullptr)
             delete data;
     }

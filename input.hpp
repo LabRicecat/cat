@@ -21,6 +21,8 @@ inline static bool in_global_keymap(const key& skey) {
     return global_keymap.find(skey) != global_keymap.end();
 }
 
+inline constexpr key shift(const key& k) { return k & 0x1f; }
+
 }
 
 #endif

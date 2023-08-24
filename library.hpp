@@ -7,8 +7,19 @@
 
 namespace cat {
 
-namespace processors {
-       
+namespace composers {
+    static inline  Composer line_numbers = [](const Composer::param_type& snippet, Buffer* buffer)->Composer::return_type {
+        image_type rimage = "1 | ";
+        size_t line = 1;
+
+        for(auto& i : snippet) {
+            rimage += i;
+            if(i == '\n')
+                rimage += std::to_string(++line) + " | ";
+        }
+
+        return rimage;
+    };
 }
 
 namespace renderers {
@@ -98,6 +109,39 @@ public:
             --position;
 
         return *this;
+    }
+};
+
+class BoxedWindow : public Window {
+    bool is_boxed = false;
+public:
+    using Window::Window;
+
+    virtual BoxedWindow& box(int chtype) override {
+        Window::box(chtype);
+        is_boxed = true;
+        return *this;
+    }
+
+    virtual bool boxed() { return is_boxed; }
+};
+
+class InputFieldWindow : public Window {
+public:
+    InputFieldWindow(const Vector2& position, const Vector2& resolution)
+    : Window::Window(position,resolution) {
+        this->set_buffer<Buffer>();
+        this->key_check = [](const key& k) { return isascii(k); };
+        this->key_handler = [&](const key& k) { 
+            this->buffer->append(std::string(1,(char)k));
+            this->draw_buffer();
+            this->redraw();
+        };
+
+        this->set_key(cat::shift('c'),[&]() {
+           this->buffer->clear();
+           this->redraw();
+        });
     }
 };
 

@@ -24,13 +24,17 @@ inline static void redraw() {
         }
 }
 
-static inline Window* new_window(Window* win) {
-    window_pool.push_back(win);
+template<typename TWindow = Window>
+    requires ( std::is_base_of_v<Window,TWindow> )
+static inline TWindow* new_window(TWindow* win) {
+    window_pool.push_back((Window*)win);
     return win;
 }
 
-static inline Window* new_window(const Vector2& position, const Vector2& resolution) {
-    Window* win = new Window(position,resolution);
+template<typename TWindow = Window>
+    requires ( std::is_base_of_v<Window,TWindow> )
+static inline TWindow* new_window(const Vector2& position, const Vector2& resolution) {
+    TWindow* win = new TWindow(position,resolution);
     return new_window(win);
 }
 
@@ -44,25 +48,30 @@ static inline void clear_pool() {
     window_pool.clear();
 }
 
-static inline Window* get_window(const id_type& id) {
+template<typename TWindow = Window>
+    requires ( std::is_base_of_v<Window,TWindow> )
+static inline TWindow* get_window(const id_type& id) {
     for(auto& i : window_pool)
         if(i && i->get_id() == id) 
-            return i;
+            return dynamic_cast<TWindow*>(i);
     return nullptr;
 }
 
-static inline Window* get_focused() {
+template<typename TWindow = Window>
+    requires ( std::is_base_of_v<Window,TWindow> )
+static inline TWindow* get_focused() {
     for(auto& i : window_pool) 
         if(i && i->focused()) 
-            return i;
+            return dynamic_cast<TWindow*>(i);
     return nullptr;
 }
-
-static inline Window* next_handler(const key& skey) {
+template<typename TWindow = Window>
+    requires ( std::is_base_of_v<Window,TWindow> )
+static inline TWindow* next_handler(const key& skey) {
     for(auto& i : window_pool)
         if(i && !i->hidden() && (i->has_key(skey) || 
            i->get_key_check() && i->get_key_check()(skey)))
-            return i;
+            return dynamic_cast<TWindow*>(i);
     return nullptr;
 }
 
@@ -82,6 +91,8 @@ static inline void remove_window(const id_type& id) {
 
 static inline void init() {
     WINDOW* main = initscr();
+    raw();
+    nonl();
     noecho();
     nodelay(main, TRUE);
     keypad(main, TRUE);

@@ -42,6 +42,14 @@ int main() {
         win2->redraw();
     });
 
+    cat::async(cat::Priority::NORMAL, [](){
+        cat::Window* input_window = cat::new_window<cat::InputFieldWindow>({30,20},{10,10});
+        input_window->draw(input_window->has_module<cat::InputFieldWindow>() ? "true" : "false");
+        input_window->set_buffer<cat::Buffer>();
+        input_window->get_buffer()->composer() &= cat::composers::line_numbers;
+        input_window->redraw();
+    });
+
     cat::async(cat::Priority::HIGH, [](){
         cat::set_keymap('q', []() {
             cat::signals::emit(cat::signals::quit_signal);

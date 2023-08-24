@@ -66,7 +66,6 @@ static inline void update() {
 }
 
 static inline void cycle() {
-    // TODO: keyboard management
     init();
     config::sync();
     refresh();

@@ -4,6 +4,7 @@
 #include <ncurses.h>
 #include <string>
 #include <vector>
+#include <set>
 
 #include "vector.hpp"
 #include "input.hpp"
@@ -39,6 +40,8 @@ protected:
     Buffer* buffer = nullptr;
 
     std::vector<redraw_event> redraw_events;
+
+    std::set<size_t> modules;
 public:
 
     Window() = delete;
@@ -46,6 +49,8 @@ public:
     : position(position), resolution(resolution) {
         ncurses_window = newwin(resolution.y,  resolution.x, position.y, position.x);
         id = new_id();
+
+        modules.insert(typeid(*this).hash_code());
     }
 
     virtual ~Window() {
@@ -137,9 +142,11 @@ public:
     template<typename TBuffer = Buffer>
         requires ( std::is_base_of_v<Buffer,TBuffer> )
     Window& set_buffer(Renderer renderer = Renderer::null, Composer composer = Composer::null) {
+        if(buffer)
+            delete buffer;
         buffer = new TBuffer(this);
-        buffer->composer &= composer;
-        buffer->renderer &= renderer;
+        buffer->composer() &= composer;
+        buffer->renderer() &= renderer;
         return *this;
     }
 
@@ -206,6 +213,12 @@ public:
     virtual Window& on_redraw(const redraw_event& event) {
         redraw_events.push_back(event);
         return *this;
+    }
+
+    template<typename TWindow>
+        requires ( std::is_base_of_v<Window,TWindow> )
+    bool has_module() {
+        return modules.contains(typeid(TWindow).hash_code());
     }
 
     friend void redraw();

@@ -91,8 +91,13 @@ frame_sleep = 75
             }
 
             IniElement elem = get(key,section);
-            if(value.get_type() != IniType::Null && elem.get_type() != value.get_type()) {
+            if(type != IniType::Null && elem.get_type() != type) {
                 signals::emit(config_error, new signals::MessageData("key " + key + " in section " + section + " is not of type " + IniType2str(value.get_type()) + " (it's of type " + IniType2str(elem.get_type()) + ")"));
+                return;
+            }
+
+            if(value.get_type() != IniType::Null && value.to_string() != elem.to_string()) {
+                signals::emit(config_error, new signals::MessageData("key " + key + " in section " + section + " is not of value " + value.to_string() + " (it's of value " + elem.to_string() + ")"));
             }
     }
 }

@@ -80,28 +80,16 @@ protected:
     std::string raw;
     Window* assoc_window = nullptr;
 
-    Composer composer;
-    Renderer renderer;
+    Composer i_composer = [](const Composer::param_type& data, Buffer*) { return (Composer::return_type)data; };
+    Renderer i_renderer = [](const Renderer::param_type& data, Buffer*) { return (Renderer::return_type)data; };
 
     virtual snippet_type generate_snippet() {
         return raw; // to implement by the derived classes 
     }
-    
-    virtual Composer default_composer() {
-        return [](const Composer::param_type& data, Buffer*) { return (Composer::return_type)data; };
-    }
-
-    virtual Renderer default_renderer() {
-        return [](const image_type& image, Buffer*) { return image; };
-    }
-
 public:
 
     Buffer() = delete;
-    Buffer(Window* win): assoc_window(win) {
-        composer = default_composer();
-        renderer = default_renderer();
-    }
+    Buffer(Window* win): assoc_window(win) { }
 
     virtual Window* window() {
         return assoc_window;
@@ -111,13 +99,25 @@ public:
         this->raw = raw;
         return *this;
     }
-    virtual const std::string& get_raw() {
+    virtual Buffer& append(const std::string& raw) {
+        this->raw += raw;
+        return *this;
+    }
+    virtual std::string& get_raw() {
         return raw;
     }
 
+    virtual Buffer& clear() {
+        raw = "";
+        return *this;
+    }
+
+    virtual Composer& composer() { return i_composer; }
+    virtual Renderer& renderer() { return i_renderer; }
+
     virtual image_type display() {
-        return renderer(
-            composer(
+        return i_renderer(
+            i_composer(
                 generate_snippet(),
             this),
         this);

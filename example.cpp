@@ -10,7 +10,6 @@ int main() {
     cat::async(cat::Priority::NORMAL, [](){
         cat::Window* win = cat::new_window({0,0},{20,20});
         win->box();
-        win->draw_at({1,1},"Hello, World");
         win->redraw();
 
         win->set_key_handler([](const cat::key& k)->bool {
@@ -44,7 +43,7 @@ int main() {
 
     cat::async(cat::Priority::NORMAL, [](){
         cat::Window* input_window = cat::new_window<cat::InputFieldWindow>({30,20},{10,10});
-        input_window->draw(input_window->has_module<cat::InputFieldWindow>() ? "true" : "false");
+        input_window->draw(input_window->viable_as<cat::InputFieldWindow>() ? "true" : "false");
         input_window->set_buffer<cat::Buffer>();
         input_window->get_buffer()->composer() &= cat::composers::line_numbers;
         input_window->redraw();

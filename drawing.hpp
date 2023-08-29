@@ -4,7 +4,9 @@
 #include <ncurses.h>
 #include <vector>
 #include <vector>
+
 #include "window.hpp" 
+#include "effects.hpp"
 
 namespace cat {
 
@@ -96,6 +98,7 @@ static inline void init() {
     noecho();
     nodelay(main, TRUE);
     keypad(main, TRUE);
+    effect::color_init();
 }
 
 static inline void exit() {

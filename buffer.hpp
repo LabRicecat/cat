@@ -4,11 +4,13 @@
 #include <string>
 #include <functional>
 
+#include "string.hpp"
+
 namespace cat {
 
 class Buffer;
-using image_type = std::string;
-using snippet_type = std::string;
+using image_type = CatString;
+using snippet_type = CatString;
 
 template<typename Tcomp>
 static inline Tcomp compose(const Tcomp& r0) {

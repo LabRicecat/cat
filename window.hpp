@@ -9,7 +9,9 @@
 #include "vector.hpp"
 #include "input.hpp"
 #include "id.hpp"
-#include "buffer.hpp" 
+#include "buffer.hpp"
+#include "drawcalls.hpp"
+#include "effects.hpp"
 
 namespace cat {
 
@@ -40,8 +42,6 @@ protected:
     Buffer* buffer = nullptr;
 
     std::vector<redraw_event> redraw_events;
-
-    std::set<size_t> modules;
 public:
 
     Window() = delete;
@@ -49,8 +49,6 @@ public:
     : position(position), resolution(resolution) {
         ncurses_window = newwin(resolution.y,  resolution.x, position.y, position.x);
         id = new_id();
-
-        modules.insert(typeid(*this).hash_code());
     }
 
     virtual ~Window() {
@@ -96,6 +94,19 @@ public:
 
     virtual Window& box(int chtype = 0) {
         ::box(ncurses_window,chtype,chtype); 
+        return *this;
+    }
+
+    virtual Window& background(const effect::color& color) {
+        wbkgd(ncurses_window, COLOR_PAIR(color));
+        return *this;
+    }
+
+    virtual Window& cursor(const Vector2& position, bool absolute = false) {
+        if(absolute)
+            ::move(position.y, position.x);
+        else
+            ::wmove(ncurses_window, position.y, position.x);
         return *this;
     }
 
@@ -192,14 +203,14 @@ public:
     }
 
     template<typename ...Tfargs>
-    Window& draw_at(const Vector2& position, const std::string& fmstr, const Tfargs&... fargs) {
-        mvwprintw(ncurses_window, position.y, position.x, fmstr.c_str(), fargs...);
+    Window& draw_at(const Vector2& position, const CatString& fmstr, const Tfargs&... fargs) {
+        cat::draw(position, ncurses_window, fmstr, fargs...);
         return *this;
     }
 
     template<typename ...Tfargs>
-    Window& draw(const std::string& fmstr, const Tfargs&... fargs) {
-        wprintw(ncurses_window, fmstr.c_str(), fargs...);
+    Window& draw(const CatString& fmstr, const Tfargs&... fargs) {
+        cat::draw(ncurses_window, fmstr, fargs...);
         return *this;
     }
 
@@ -207,7 +218,8 @@ public:
         if(!buffer) return *this;
 
         auto display = buffer->display();
-        return draw_at(offset, "%s", display.c_str());
+        draw_base(ncurses_window, buffer->display(), [&](WINDOW* w,size_t s,const char* c) { mvwprintw(w, position.y, position.x, "%s", c); }, false, 0); 
+        return *this;
     }
 
     virtual Window& on_redraw(const redraw_event& event) {
@@ -217,10 +229,10 @@ public:
 
     template<typename TWindow>
         requires ( std::is_base_of_v<Window,TWindow> )
-    bool has_module() {
-        return modules.contains(typeid(TWindow).hash_code());
+    bool viable_as() const {
+        return !!dynamic_cast<const TWindow*>(this);
     }
-
+    
     friend void redraw();
 };
 

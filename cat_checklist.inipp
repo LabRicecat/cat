@@ -2,7 +2,7 @@
 
 [Info]
 name = "cat"
-version = "0.0.4"
+version = "0.0.5"
 
 [Download]
 dependencies = ["https://raw.githubusercontent.com/labricecat/inipp/main/"]

@@ -149,8 +149,12 @@ namespace effect {
         [](CatString&, WINDOW* w) { wattron(w, COLOR_PAIR(base_colors::cyan)); };
     static inline const effect_t white = 
         [](CatString&, WINDOW* w) { wattron(w, COLOR_PAIR(base_colors::white)); };
-};
 
-};
+    static inline effect_t custom(const color& c) {
+        return [=](CatString&, WINDOW* w) { wattron(w, COLOR_PAIR(c)); };
+    }
+}
+
+}
 
 #endif

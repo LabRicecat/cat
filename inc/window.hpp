@@ -15,7 +15,7 @@
 
 namespace cat {
 
-static inline void redraw();
+void redraw();
 
 using redraw_event = std::function<void(Window*)>;
 

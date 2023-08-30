@@ -9,7 +9,7 @@
 #ifdef OK 
 # undef OK
 #endif
-#include "../catpkgs/inipp/inipp.hpp" 
+#include "catpkgs/inipp/inipp.hpp" 
 #ifndef OK 
 # define OK (1)
 #endif 

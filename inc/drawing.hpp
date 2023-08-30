@@ -13,7 +13,7 @@ static inline std::vector<Window*> window_pool;
 
 /* it's adviced not to call this function frequently, 
    and let Lifespan.hpp manage it */
-void redraw(); 
+void redraw();
 
 template<typename TWindow = Window>
     requires ( std::is_base_of_v<Window,TWindow> )
@@ -49,6 +49,9 @@ static inline TWindow* get_focused() {
             return dynamic_cast<TWindow*>(i);
     return nullptr;
 }
+
+void unfocus();
+
 template<typename TWindow = Window>
     requires ( std::is_base_of_v<Window,TWindow> )
 static inline TWindow* next_handler(const key& skey) {

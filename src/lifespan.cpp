@@ -42,7 +42,8 @@ void update() {
     async_processes.clear();
 }
 
-void cycle() {
+void cycle(const Settings& settings) {
+    apply(settings);
     init();
     config::sync();
     refresh();
@@ -60,8 +61,8 @@ void cycle() {
         update();
         redraw();
 
-        int frame_sleep = config::get_or<int>("frame_sleep", "CAT_TUI", 50);
-        std::this_thread::sleep_for(std::chrono::milliseconds(frame_sleep));
+        auto tick_sleep = current_settings.tick_sleep;
+        std::this_thread::sleep_for(std::chrono::milliseconds(tick_sleep));
     }
 
     config::apply();

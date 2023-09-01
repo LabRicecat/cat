@@ -16,8 +16,8 @@ namespace signals {
     using listener = std::function<void(const signal&, const SignalData*)>;
     using tag_listener = std::function<void(const tag_type&, const signal&, const SignalData*)>;
     
-    static inline std::map<tag_type,std::vector<signal>> tags;
-    static inline std::map<signal,std::vector<tag_type>> rtags_map;
+    inline std::map<tag_type,std::vector<signal>> tags;
+    inline std::map<signal,std::vector<tag_type>> rtags_map;
 
     struct SignalData {
         virtual size_t id() const;
@@ -25,8 +25,8 @@ namespace signals {
         virtual ~SignalData() { } // no UB lol 
     };
 
-    static inline std::vector<listener> listeners;
-    static inline std::vector<tag_listener> tag_listeners;
+    inline std::vector<listener> listeners;
+    inline std::vector<tag_listener> tag_listeners;
 
     signal tag(signal sig, tag_type tag);
 
@@ -43,12 +43,12 @@ namespace signals {
 
     template<typename TData>
         requires ( std::is_base_of_v<SignalData,TData> )
-    static inline auto id_of() {
+    inline auto id_of() {
         return TData().id();
     }
 
-    static inline const tag_type error_tag = new_tag();
-    static inline const signal quit_signal = create();
+    inline const tag_type error_tag = new_tag();
+    inline const signal quit_signal = create();
 
     struct MessageData : public SignalData {
         std::string msg;

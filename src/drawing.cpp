@@ -27,6 +27,12 @@ void clear_pool() {
     window_pool.clear();
 }
 
+void unfocus() {
+    Window* w;
+    while((w = get_focused()) != nullptr)
+        w->lose_focus();
+}
+
 void remove_window(Window* win) {
     if(!win) return;
     for(size_t i = 0; i < window_pool.size(); ++i)

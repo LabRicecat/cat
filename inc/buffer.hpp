@@ -13,12 +13,12 @@ using image_type = CatString;
 using snippet_type = CatString;
 
 template<typename Tcomp>
-static inline Tcomp compose(const Tcomp& r0) {
+inline Tcomp compose(const Tcomp& r0) {
     return r0;
 }
 
 template<typename Tcomp, typename... TcompP>
-static inline Tcomp compose(const Tcomp& r0, const Tcomp& r1, const TcompP& ...tail) {
+inline Tcomp compose(const Tcomp& r0, const Tcomp& r1, const TcompP& ...tail) {
     return
         [=](const typename Tcomp::param_type& image, Buffer* buffer)
             ->typename Tcomp::return_type 

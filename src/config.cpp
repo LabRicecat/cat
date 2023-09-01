@@ -37,7 +37,7 @@ void write_default() { // TODO: permission problems may occur
     o.close();
         
     o.open(config_file.string());
-    o << config_cat_default << config_defaults;
+    o << config_defaults;
     o.close();
 }
 

@@ -1,64 +1,38 @@
-#include "cat.hpp"
-
-class MyBuffer : public cat::LockableBuffer, public cat::ScrollBuffer {
-public:
-    MyBuffer(cat::Window* win)
-        : cat::LockableBuffer(win), cat::ScrollBuffer(win), cat::Buffer(win) { }
-};
+#include <cat/cat.hpp> // include the framework
 
 int main() {
-    cat::async(cat::Priority::NORMAL, [](){
-        cat::Window* win = cat::new_window({0,0},{20,20});
-        win->box();
-        win->redraw();
-
-        win->set_key_handler([](const cat::key& k)->bool {
-            return k >= '0' && k <= '9';
-        },[=](const cat::key& k) {
-            win->draw_at({1,2}, "%d", k - '0');
-            win->redraw();
+        // execute some code next frame once 
+    cat::async(cat::Priority::NORMAL, []() {
+            // creates a new window at 0,0 with the resolution 30x10 
+        cat::Window* my_window = cat::new_window({0,0},{30,10});
+            // draws some text to the window 
+        my_window->draw("Hello, World!");
+            
+            // mark this window to be redrawn next frame
+        my_window->redraw();
+        
+            // set a window key event 
+        my_window->set_key('o', [=]() {
+                // clears the screen
+                // It's adviced to avoid this function to avoid lag
+            my_window->clear(); 
+                // draws a c formatted string in the color red 
+            my_window->draw(cat::effect::red + "Oh a %s event!", "key"); 
+                // redraw ...
+            my_window->redraw();
         });
     });
-
-    cat::async(cat::Priority::NORMAL, [](){
-        cat::Window* win2 = cat::new_window({30,0},{10,5});
-        win2->box();
-
-        cat::Composer custom_composer = [](const cat::Composer::param_type& param, const cat::Buffer*) { 
-            return param + param;         
-        };
-
-        win2->set_buffer<MyBuffer>(
-                cat::renderers::fit_hight & cat::renderers::fit_width, 
-                custom_composer
-            );
-
-        win2->on_redraw([](cat::Window* win2){
-            win2->get_buffer<MyBuffer>()->set("Hello, World!\n");
-            win2->draw_buffer({1,1}); // offset of 1,1 because of box()
-        });
-
-        win2->redraw();
-    });
-
-    cat::async(cat::Priority::NORMAL, [](){
-        cat::Window* input_window = cat::new_window<cat::InputFieldWindow>({30,20},{10,10});
-        input_window->draw(input_window->viable_as<cat::InputFieldWindow>() ? "true" : "false");
-        input_window->set_buffer<cat::Buffer>();
-        input_window->get_buffer()->composer() &= cat::composers::line_numbers;
-        input_window->redraw();
-    });
-
-    cat::async(cat::Priority::HIGH, [](){
+        // execute some code next frame once, with higher priority
+    cat::async(cat::Priority::HIGH, []() {
+            // set a global key event
         cat::set_keymap('q', []() {
-            cat::signals::emit(cat::signals::quit_signal);
-        });
-
-        cat::signals::listen_tag([](const cat::signals::tag_type& tag, const cat::signals::signal& signal, const cat::signals::SignalData* data) {
-            if(tag == cat::signals::error_tag)
-                std::cerr << "Error";
+                // emit to the framework to shut down
+            cat::signals::emit(
+                    cat::signals::quit_signal
+                );
         });
     });
-
-    cat::cycle();
+        
+        // start the framework with some settings 
+    cat::cycle(cat::Settings{ .color = true, });
 }

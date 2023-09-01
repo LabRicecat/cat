@@ -135,7 +135,7 @@ Window& Window::draw_buffer(const Vector2& offset) {
     if(!buffer) return *this;
 
     auto display = buffer->display();
-    draw_base(this, buffer->display(), [&](WINDOW* w,size_t s,const char* c) { mvwprintw(w, position.y, position.x, "%s", c); }, false, 0); 
+    draw_base(ncurses_window, buffer->display(), [&](WINDOW* w,size_t s,const char* c) { mvwprintw(w, position.y, position.x, "%s", c); }, false, 0); 
     return *this;
 }
 

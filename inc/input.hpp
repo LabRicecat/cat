@@ -11,7 +11,7 @@ using key = int;
 using key_event = std::function<void()>;
 using keymap = std::map<key,key_event>;
 
-inline static keymap global_keymap = {};
+inline keymap global_keymap = {};
 
 void set_keymap(const key& skey, const key_event& event);
 

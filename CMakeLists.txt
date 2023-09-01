@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.9)
 
-set(VERS 0.0.6)
+set(VERS 0.0.7)
 
 project(catui
     VERSION ${VERS} 
@@ -8,9 +8,9 @@ project(catui
     LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_C_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_library(catui SHARED
+add_library(catui STATIC
     src/buffer.cpp
     src/config.cpp
     src/drawcalls.cpp
@@ -20,6 +20,7 @@ add_library(catui SHARED
     src/input.cpp
     src/library.cpp
     src/lifespan.cpp
+    src/settings.cpp
     src/signals.cpp
     src/string.cpp
     src/string_iterator.cpp

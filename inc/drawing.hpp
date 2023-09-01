@@ -9,7 +9,7 @@
 
 namespace cat {
 
-static inline std::vector<Window*> window_pool;
+inline std::vector<Window*> window_pool;
 
 /* it's adviced not to call this function frequently, 
    and let Lifespan.hpp manage it */
@@ -17,14 +17,14 @@ void redraw();
 
 template<typename TWindow = Window>
     requires ( std::is_base_of_v<Window,TWindow> )
-static inline TWindow* new_window(TWindow* win) {
+inline TWindow* new_window(TWindow* win) {
     window_pool.push_back((Window*)win);
     return win;
 }
 
 template<typename TWindow = Window>
     requires ( std::is_base_of_v<Window,TWindow> )
-static inline TWindow* new_window(const Vector2& position, const Vector2& resolution) {
+inline TWindow* new_window(const Vector2& position, const Vector2& resolution) {
     TWindow* win = new TWindow(position,resolution);
     return new_window(win);
 }
@@ -34,7 +34,7 @@ void clear_pool();
 
 template<typename TWindow = Window>
     requires ( std::is_base_of_v<Window,TWindow> )
-static inline TWindow* get_window(const id_type& id) {
+inline TWindow* get_window(const id_type& id) {
     for(auto& i : window_pool)
         if(i && i->get_id() == id) 
             return dynamic_cast<TWindow*>(i);
@@ -43,7 +43,7 @@ static inline TWindow* get_window(const id_type& id) {
 
 template<typename TWindow = Window>
     requires ( std::is_base_of_v<Window,TWindow> )
-static inline TWindow* get_focused() {
+inline TWindow* get_focused() {
     for(auto& i : window_pool) 
         if(i && i->focused()) 
             return dynamic_cast<TWindow*>(i);
@@ -54,7 +54,7 @@ void unfocus();
 
 template<typename TWindow = Window>
     requires ( std::is_base_of_v<Window,TWindow> )
-static inline TWindow* next_handler(const key& skey) {
+inline TWindow* next_handler(const key& skey) {
     for(auto& i : window_pool)
         if(i && !i->hidden() && (i->has_key(skey) || 
            i->get_key_check() && i->get_key_check()(skey)))

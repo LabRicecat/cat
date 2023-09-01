@@ -25,10 +25,6 @@ namespace config {
     inline IniFile config_mirror;
 
     inline std::string config_defaults = "";
-    static inline std::string config_cat_default = 
-R"([CAT_TUI]
-frame_sleep = 75
-)"; 
 
     inline signals::signal config_error = signals::create(signals::error_tag);
 
@@ -41,12 +37,12 @@ frame_sleep = 75
 
     /* adviced to use get_or instead */
     template<typename T = IniElement>
-    static inline T get(const std::string& key, const std::string& section = "Main") {
+    inline T get(const std::string& key, const std::string& section = "Main") {
         return (T)config_mirror.get(key,section);
     }
 
     template<typename T = IniElement>
-    static inline T get_or(const std::string& key, const std::string& section, const T& g_or) {
+    inline T get_or(const std::string& key, const std::string& section, const T& g_or) {
         if(config_mirror.has(key,section)) 
             return (T)config_mirror.get(key,section);
 
@@ -57,7 +53,7 @@ frame_sleep = 75
     void write_default();
 
     template<IniType type = IniType::Null>
-    static inline void ensure(const std::string& key, const std::string& section = "Main", const IniElement& value = IniElement()) {
+    inline void ensure(const std::string& key, const std::string& section = "Main", const IniElement& value = IniElement()) {
             if(!has(key,section)) {
                 signals::emit(config_error, new signals::MessageData("key " + key + " in section " + section + " does not exist!"));
                 return;

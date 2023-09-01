@@ -8,7 +8,7 @@
 namespace cat {
 
 namespace composers {
-    static inline  Composer line_numbers = [](const Composer::param_type& snippet, Buffer* buffer)->Composer::return_type {
+    inline Composer line_numbers = [](const Composer::param_type& snippet, Buffer* buffer)->Composer::return_type {
         image_type rimage = "1 | ";
         size_t line = 1;
 
@@ -23,7 +23,7 @@ namespace composers {
 }
 
 namespace renderers {
-    static inline Renderer fit_hight = [](const image_type& image, Buffer* buffer)->image_type {
+    inline Renderer fit_hight = [](const image_type& image, Buffer* buffer)->image_type {
         image_type rimage;
         Vector2 res = buffer->window()->get_resolution();
         Vector2::value_type hight = 1;
@@ -39,7 +39,7 @@ namespace renderers {
         return rimage;
     };
 
-    static inline Renderer fit_width = [](const image_type& image, Buffer* buffer)->image_type {
+    inline Renderer fit_width = [](const image_type& image, Buffer* buffer)->image_type {
         image_type rimage;
         Vector2 res = buffer->window()->get_resolution();
         Vector2::value_type width = 0;

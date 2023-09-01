@@ -15,7 +15,7 @@
 
 namespace cat {
 
-void redraw();
+extern void redraw();
 
 using redraw_event = std::function<void(Window*)>;
 
@@ -110,13 +110,13 @@ public:
     virtual key_event& get_key_event(const key& skey);
 
     template<typename ...Tfargs>
-    Window& draw_at(const Vector2& position, const CatString& fmstr, const Tfargs&... fargs) {
+    inline Window& draw_at(const Vector2& position, const CatString& fmstr, const Tfargs&... fargs) {
         cat::draw(position, ncurses_window, fmstr, fargs...);
         return *this;
     }
 
     template<typename ...Tfargs>
-    Window& draw(const CatString& fmstr, const Tfargs&... fargs) {
+    inline Window& draw(const CatString& fmstr, const Tfargs&... fargs) {
         cat::draw(ncurses_window, fmstr, fargs...);
         return *this;
     }
@@ -127,12 +127,11 @@ public:
 
     template<typename TWindow>
         requires ( std::is_base_of_v<Window,TWindow> )
-    bool viable_as() const {
+    inline bool viable_as() const {
         return !!dynamic_cast<const TWindow*>(this);
     }
     
     friend void redraw();
-    friend void draw_base(Window* winn, const CatString& fmstr, const draw_behaviour& draw, bool do_cformat, size_t argsize, ...); 
 };
 
 }

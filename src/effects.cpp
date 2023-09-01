@@ -27,6 +27,7 @@ color new_color_pair(color_fg fg, color_bg bg) {
 }
 
 void color_init() {
+    if(!current_settings.color) return;
     if(!(colors_supported = can_change_color())) return;
     start_color();
 

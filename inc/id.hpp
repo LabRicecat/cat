@@ -6,7 +6,7 @@
 namespace cat {
 
 using id_type = uint64_t;
-static inline id_type id_increment = 0;
+inline id_type id_increment = 0;
 
 id_type new_id(); 
 

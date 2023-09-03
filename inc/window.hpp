@@ -12,18 +12,19 @@
 #include "buffer.hpp"
 #include "drawcalls.hpp"
 #include "effects.hpp"
+#include "positional.hpp"
+#include "cursor.hpp"
 
 namespace cat {
 
 extern void redraw();
-
-using redraw_event = std::function<void(Window*)>;
-
-class Window {
+ 
+class Window : public Positional {
+public:
+    using redraw_event = std::function<void(Window*)>;
+    using focus_event = std::function<void(Window*,bool)>;
 protected:
     WINDOW* ncurses_window = nullptr;
-    Vector2 position;
-    Vector2 resolution;
 
     bool redraw_request = false;
     std::vector<Window*> syncs;
@@ -42,11 +43,12 @@ protected:
     Buffer* buffer = nullptr;
 
     std::vector<redraw_event> redraw_events;
+    std::vector<focus_event> focus_events;
 public:
 
     Window() = delete;
     Window(const Vector2& position, const Vector2& resolution)
-    : position(position), resolution(resolution) {
+    : Positional(position, resolution) {
         ncurses_window = newwin(resolution.y,  resolution.x, position.y, position.x);
         id = new_id();
     }
@@ -59,13 +61,11 @@ public:
     }
    
     virtual const id_type& get_id();
-    virtual const Vector2& get_resolution();
-    virtual const Vector2& get_position();
 
     virtual Window& clear();
     virtual Window& redraw();
-    virtual Window& move(const Vector2& position);
-    virtual Window& resize(const Vector2& resolution);
+    virtual Window& move(const Vector2& position) override;
+    virtual Window& resize(const Vector2& resolution) override;
     virtual Window& box(int chtype = 0);
     virtual Window& background(const effect::color& color);
     virtual Window& cursor(const Vector2& position, bool absolute = false);
@@ -85,7 +85,7 @@ public:
 
     template<typename TBuffer = Buffer>
         requires ( std::is_base_of_v<Buffer,TBuffer> )
-    Window& set_buffer(Renderer renderer = Renderer::null, Composer composer = Composer::null) {
+    inline Window& set_buffer(Renderer renderer = Renderer::null, Composer composer = Composer::null) {
         if(buffer)
             delete buffer;
         buffer = new TBuffer(this);
@@ -96,7 +96,7 @@ public:
 
     template<typename TBuffer = Buffer>
         requires ( std::is_base_of_v<Buffer,TBuffer> )
-    TBuffer* get_buffer() {
+    inline TBuffer* get_buffer() {
         return dynamic_cast<TBuffer*>(buffer);
     }
  
@@ -124,6 +124,7 @@ public:
     virtual Window& draw_buffer(const Vector2& offset = {0,0});
 
     virtual Window& on_redraw(const redraw_event& event);
+    virtual Window& on_focus(const focus_event& event);
 
     template<typename TWindow>
         requires ( std::is_base_of_v<Window,TWindow> )
@@ -132,6 +133,7 @@ public:
     }
     
     friend void redraw();
+    friend void move_cursor(Window*, const Vector2&);
 };
 
 }

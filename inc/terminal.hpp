@@ -3,12 +3,14 @@
 
 #include <ncurses.h>
 
+#include "vector.hpp"
+
 namespace cat {
 
 namespace terminal { // TODO: expand with more terminal specific data/configurations 
     // return the max resolution of the screen 
-    int get_x();
-    int get_y();
+    Vector2::value_type get_x();
+    Vector2::value_type get_y();
 } // namespace terminal 
 
 } // namespace cat 

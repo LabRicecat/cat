@@ -69,11 +69,11 @@ void cycle(const Settings& settings) {
     exit();
 }
 
-void queue_process(const Priority& priority, const process& process) {
+void process(const Priority& priority, const process_t& process) {
     processes[priority].push_back(process);
 }
 
-void async(const Priority& priority, const process& process) {
+void async(const Priority& priority, const process_t& process) {
     async_processes[priority].push_back(process);
 }
 

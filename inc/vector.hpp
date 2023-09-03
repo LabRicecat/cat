@@ -7,7 +7,7 @@
 namespace cat {
 
 struct Vector2 {
-    using value_type = uint32_t;
+    using value_type = int64_t;
     value_type x = 0;
     value_type y = 0;
 

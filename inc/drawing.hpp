@@ -5,7 +5,7 @@
 #include <vector>
 #include <vector>
 
-#include "window.hpp" 
+#include "window.hpp"
 
 namespace cat {
 
@@ -24,7 +24,7 @@ inline TWindow* new_window(TWindow* win) {
 
 template<typename TWindow = Window>
     requires ( std::is_base_of_v<Window,TWindow> )
-inline TWindow* new_window(const Vector2& position, const Vector2& resolution) {
+inline TWindow* new_window(const Vector2& position = {0,0}, const Vector2& resolution = {1,1}) {
     TWindow* win = new TWindow(position,resolution);
     return new_window(win);
 }
@@ -62,7 +62,7 @@ inline TWindow* next_handler(const key& skey) {
     return nullptr;
 }
 
-void remove_window(Window* win);
+void remove_window(const Window* win);
 void remove_window(const id_type& id);
 
 void init();

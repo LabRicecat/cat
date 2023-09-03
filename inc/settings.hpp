@@ -7,8 +7,10 @@
 namespace cat {
 
 struct Settings {
-    uint64_t tick_sleep = 25; // miliseconds
-    bool color = true;
+    uint64_t tick_sleep = 25; // In miliseconds
+    bool color = true;        // Enable color mode
+    bool stuck_cursor = true; // Move the cursor back to it's original position
+                              // after a redraw
 };
 
 inline Settings current_settings;

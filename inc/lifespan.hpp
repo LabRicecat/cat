@@ -20,8 +20,8 @@ enum class Priority {
     LOW
 };
 
-using process = std::function<void()>;
-using process_queue = std::vector<process>; 
+using process_t = std::function<void()>;
+using process_queue = std::vector<process_t>; 
 
 inline std::map<Priority,process_queue> processes;
 inline std::map<Priority,process_queue> async_processes;
@@ -32,8 +32,8 @@ void update();
 
 void cycle(const Settings& settings = {});
 
-void queue_process(const Priority& priority, const process& process);
-void async(const Priority& priority, const process& process);
+void process(const Priority& priority, const process_t& process);
+void async(const Priority& priority, const process_t& process);
 
 } // namespace cat
 

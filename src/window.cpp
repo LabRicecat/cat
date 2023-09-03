@@ -1,17 +1,10 @@
 #include "../inc/window.hpp"
+#include <cassert>
 
 namespace cat {
 
 const id_type& Window::get_id() {
     return id;
-}
-
-const Vector2& Window::get_resolution() {
-    return resolution;
-}
-
-const Vector2& Window::get_position() {
-    return position;
 }
 
 Window& Window::clear() {
@@ -25,14 +18,14 @@ Window& Window::redraw() {
 }
 
 Window& Window::move(const Vector2& position) {
+    Positional::move(position);
     mvwin(ncurses_window, position.y, position.x);
-    this->position = position;
     return *this;
 }
 
 Window& Window::resize(const Vector2& resolution) {
+    Positional::resize(resolution);
     wresize(ncurses_window, resolution.y, resolution.x);
-    this->resolution = resolution;
     return *this;
 }
 
@@ -48,9 +41,9 @@ Window& Window::background(const effect::color& color) {
 
 Window& Window::cursor(const Vector2& position, bool absolute) {
     if(absolute)
-        ::move(position.y, position.x);
+        cat::move_cursor_global(position);
     else
-        ::wmove(ncurses_window, position.y, position.x);
+        cat::move_cursor(this, get_position() + position);
     return *this;
 }
 
@@ -87,6 +80,10 @@ bool Window::hidden() { return is_hidden; }
 
 Window& Window::focus(bool status) {
     is_focused = status;
+
+    for(auto& i : focus_events)
+        i(this,status);
+
     return *this;
 }
 
@@ -134,8 +131,7 @@ key_event& Window::get_key_event(const key& skey) {
 Window& Window::draw_buffer(const Vector2& offset) {
     if(!buffer) return *this;
 
-    auto display = buffer->display();
-    draw_base(ncurses_window, buffer->display(), [&](WINDOW* w,size_t s,const char* c) { mvwprintw(w, position.y, position.x, "%s", c); }, false, 0); 
+    draw_base(ncurses_window, buffer->display(), [&](WINDOW* w,size_t s,const char* c) { mvwprintw(w, offset.y, offset.x, "%s", c); }, false, 0); 
     return *this;
 }
 
@@ -144,5 +140,9 @@ Window& Window::on_redraw(const redraw_event& event) {
     return *this;
 }
 
+Window& Window::on_focus(const focus_event& event) {
+    focus_events.push_back(event);
+    return *this;
+}
     
 } // namespace cat 

@@ -9,7 +9,7 @@ Cat Approved TUI - a TUI framework, meow~
 - ncurses (Display library)
 
 ## Installation
-```
+```sh
 $ git clone https://github.com/LabRicecat/cat
 $ cd cat
 $ catcare sync

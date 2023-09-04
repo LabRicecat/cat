@@ -1,0 +1,4087 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<tagfile doxygen_version="1.9.8">
+  <compound kind="file">
+    <name>buffer.hpp</name>
+    <path></path>
+    <filename>buffer_8hpp.html</filename>
+    <includes id="string_8hpp" name="string.hpp" local="yes" import="no" module="no" objc="no">string.hpp</includes>
+    <class kind="struct">cat::Processor</class>
+    <class kind="class">cat::Buffer</class>
+    <namespace>cat</namespace>
+  </compound>
+  <compound kind="file">
+    <name>cat.hpp</name>
+    <path></path>
+    <filename>cat_8hpp.html</filename>
+    <includes id="buffer_8hpp" name="buffer.hpp" local="yes" import="no" module="no" objc="no">buffer.hpp</includes>
+    <includes id="config_8hpp" name="config.hpp" local="yes" import="no" module="no" objc="no">config.hpp</includes>
+    <includes id="container_8hpp" name="container.hpp" local="yes" import="no" module="no" objc="no">container.hpp</includes>
+    <includes id="drawcalls_8hpp" name="drawcalls.hpp" local="yes" import="no" module="no" objc="no">drawcalls.hpp</includes>
+    <includes id="drawing_8hpp" name="drawing.hpp" local="yes" import="no" module="no" objc="no">drawing.hpp</includes>
+    <includes id="effects_8hpp" name="effects.hpp" local="yes" import="no" module="no" objc="no">effects.hpp</includes>
+    <includes id="id_8hpp" name="id.hpp" local="yes" import="no" module="no" objc="no">id.hpp</includes>
+    <includes id="input_8hpp" name="input.hpp" local="yes" import="no" module="no" objc="no">input.hpp</includes>
+    <includes id="lifespan_8hpp" name="lifespan.hpp" local="yes" import="no" module="no" objc="no">lifespan.hpp</includes>
+    <includes id="settings_8hpp" name="settings.hpp" local="yes" import="no" module="no" objc="no">settings.hpp</includes>
+    <includes id="signals_8hpp" name="signals.hpp" local="yes" import="no" module="no" objc="no">signals.hpp</includes>
+    <includes id="string_8hpp" name="string.hpp" local="yes" import="no" module="no" objc="no">string.hpp</includes>
+    <includes id="string__iterator_8hpp" name="string_iterator.hpp" local="yes" import="no" module="no" objc="no">string_iterator.hpp</includes>
+    <includes id="terminal_8hpp" name="terminal.hpp" local="yes" import="no" module="no" objc="no">terminal.hpp</includes>
+    <includes id="vector_8hpp" name="vector.hpp" local="yes" import="no" module="no" objc="no">vector.hpp</includes>
+    <includes id="window_8hpp" name="window.hpp" local="yes" import="no" module="no" objc="no">window.hpp</includes>
+    <includes id="buffers_8hpp" name="buffers.hpp" local="yes" import="no" module="no" objc="no">library/buffers.hpp</includes>
+    <includes id="composers_8hpp" name="composers.hpp" local="yes" import="no" module="no" objc="no">library/composers.hpp</includes>
+    <includes id="containers_8hpp" name="containers.hpp" local="yes" import="no" module="no" objc="no">library/containers.hpp</includes>
+    <includes id="renderers_8hpp" name="renderers.hpp" local="yes" import="no" module="no" objc="no">library/renderers.hpp</includes>
+    <includes id="windows_8hpp" name="windows.hpp" local="yes" import="no" module="no" objc="no">library/windows.hpp</includes>
+    <member kind="define">
+      <type>#define</type>
+      <name>CAT_VERSION</name>
+      <anchorfile>cat_8hpp.html</anchorfile>
+      <anchor>a70233bd2a9e13c1b56f32d80ce630c3b</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>config.hpp</name>
+    <path></path>
+    <filename>config_8hpp.html</filename>
+    <includes id="signals_8hpp" name="signals.hpp" local="yes" import="no" module="no" objc="no">signals.hpp</includes>
+    <namespace>cat</namespace>
+    <namespace>cat::config</namespace>
+    <member kind="define">
+      <type>#define</type>
+      <name>OK</name>
+      <anchorfile>config_8hpp.html</anchorfile>
+      <anchor>aba51915c87d64af47fb1cc59348961c9</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>container.hpp</name>
+    <path></path>
+    <filename>container_8hpp.html</filename>
+    <includes id="window_8hpp" name="window.hpp" local="yes" import="no" module="no" objc="no">window.hpp</includes>
+    <includes id="positional_8hpp" name="positional.hpp" local="yes" import="no" module="no" objc="no">positional.hpp</includes>
+    <class kind="class">cat::Container</class>
+    <namespace>cat</namespace>
+  </compound>
+  <compound kind="file">
+    <name>cursor.hpp</name>
+    <path></path>
+    <filename>cursor_8hpp.html</filename>
+    <includes id="vector_8hpp" name="vector.hpp" local="yes" import="no" module="no" objc="no">vector.hpp</includes>
+    <class kind="struct">cat::curs_position</class>
+    <namespace>cat</namespace>
+  </compound>
+  <compound kind="file">
+    <name>drawcalls.hpp</name>
+    <path></path>
+    <filename>drawcalls_8hpp.html</filename>
+    <includes id="string_8hpp" name="string.hpp" local="yes" import="no" module="no" objc="no">string.hpp</includes>
+    <includes id="vector_8hpp" name="vector.hpp" local="yes" import="no" module="no" objc="no">vector.hpp</includes>
+    <namespace>cat</namespace>
+  </compound>
+  <compound kind="file">
+    <name>drawing.hpp</name>
+    <path></path>
+    <filename>drawing_8hpp.html</filename>
+    <includes id="window_8hpp" name="window.hpp" local="yes" import="no" module="no" objc="no">window.hpp</includes>
+    <namespace>cat</namespace>
+  </compound>
+  <compound kind="file">
+    <name>effects.hpp</name>
+    <path></path>
+    <filename>effects_8hpp.html</filename>
+    <includes id="string_8hpp" name="string.hpp" local="yes" import="no" module="no" objc="no">string.hpp</includes>
+    <includes id="id_8hpp" name="id.hpp" local="yes" import="no" module="no" objc="no">id.hpp</includes>
+    <includes id="settings_8hpp" name="settings.hpp" local="yes" import="no" module="no" objc="no">settings.hpp</includes>
+    <class kind="struct">cat::effect::rgb</class>
+    <namespace>cat</namespace>
+    <namespace>cat::effect</namespace>
+    <namespace>cat::effect::base_colors</namespace>
+    <namespace>cat::effect::ncurses_colors</namespace>
+    <member kind="define">
+      <type>#define</type>
+      <name>CAT_BLOCK_NOCOL</name>
+      <anchorfile>effects_8hpp.html</anchorfile>
+      <anchor>ac3184f45e85325201877f943facbf717</anchor>
+      <arglist>(...)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>id.hpp</name>
+    <path></path>
+    <filename>id_8hpp.html</filename>
+    <namespace>cat</namespace>
+  </compound>
+  <compound kind="file">
+    <name>input.hpp</name>
+    <path></path>
+    <filename>input_8hpp.html</filename>
+    <namespace>cat</namespace>
+  </compound>
+  <compound kind="file">
+    <name>buffers.hpp</name>
+    <filename>buffers_8hpp.html</filename>
+    <includes id="buffer_8hpp" name="buffer.hpp" local="yes" import="no" module="no" objc="no">../buffer.hpp</includes>
+    <class kind="class">cat::lib::LockableBuffer</class>
+    <class kind="class">cat::lib::ScrollBuffer</class>
+    <namespace>cat</namespace>
+    <namespace>cat::lib</namespace>
+  </compound>
+  <compound kind="file">
+    <name>composers.hpp</name>
+    <filename>composers_8hpp.html</filename>
+    <includes id="buffer_8hpp" name="buffer.hpp" local="yes" import="no" module="no" objc="no">../buffer.hpp</includes>
+    <namespace>cat</namespace>
+    <namespace>cat::lib</namespace>
+  </compound>
+  <compound kind="file">
+    <name>containers.hpp</name>
+    <filename>containers_8hpp.html</filename>
+    <includes id="container_8hpp" name="container.hpp" local="yes" import="no" module="no" objc="no">../container.hpp</includes>
+    <class kind="class">cat::lib::HorizontalContainer</class>
+    <namespace>cat</namespace>
+    <namespace>cat::lib</namespace>
+  </compound>
+  <compound kind="file">
+    <name>renderers.hpp</name>
+    <filename>renderers_8hpp.html</filename>
+    <includes id="buffer_8hpp" name="buffer.hpp" local="yes" import="no" module="no" objc="no">../buffer.hpp</includes>
+    <includes id="window_8hpp" name="window.hpp" local="yes" import="no" module="no" objc="no">../window.hpp</includes>
+    <namespace>cat</namespace>
+    <namespace>cat::lib</namespace>
+  </compound>
+  <compound kind="file">
+    <name>windows.hpp</name>
+    <filename>windows_8hpp.html</filename>
+    <includes id="window_8hpp" name="window.hpp" local="yes" import="no" module="no" objc="no">../window.hpp</includes>
+    <class kind="class">cat::lib::InputField</class>
+    <class kind="class">cat::lib::BasicShell</class>
+    <namespace>cat</namespace>
+    <namespace>cat::lib</namespace>
+  </compound>
+  <compound kind="file">
+    <name>lifespan.hpp</name>
+    <path></path>
+    <filename>lifespan_8hpp.html</filename>
+    <includes id="drawing_8hpp" name="drawing.hpp" local="yes" import="no" module="no" objc="no">drawing.hpp</includes>
+    <includes id="signals_8hpp" name="signals.hpp" local="yes" import="no" module="no" objc="no">signals.hpp</includes>
+    <includes id="config_8hpp" name="config.hpp" local="yes" import="no" module="no" objc="no">config.hpp</includes>
+    <includes id="settings_8hpp" name="settings.hpp" local="yes" import="no" module="no" objc="no">settings.hpp</includes>
+    <namespace>cat</namespace>
+  </compound>
+  <compound kind="file">
+    <name>positional.hpp</name>
+    <path></path>
+    <filename>positional_8hpp.html</filename>
+    <includes id="vector_8hpp" name="vector.hpp" local="yes" import="no" module="no" objc="no">vector.hpp</includes>
+    <class kind="class">cat::Positional</class>
+    <namespace>cat</namespace>
+  </compound>
+  <compound kind="file">
+    <name>settings.hpp</name>
+    <path></path>
+    <filename>settings_8hpp.html</filename>
+    <class kind="struct">cat::Settings</class>
+    <namespace>cat</namespace>
+  </compound>
+  <compound kind="file">
+    <name>signals.hpp</name>
+    <path></path>
+    <filename>signals_8hpp.html</filename>
+    <class kind="struct">cat::signals::SignalData</class>
+    <class kind="struct">cat::signals::MessageData</class>
+    <namespace>cat</namespace>
+    <namespace>cat::signals</namespace>
+  </compound>
+  <compound kind="file">
+    <name>string.hpp</name>
+    <path></path>
+    <filename>string_8hpp.html</filename>
+    <includes id="string__iterator_8hpp" name="string_iterator.hpp" local="yes" import="no" module="no" objc="no">string_iterator.hpp</includes>
+    <class kind="class">cat::CatString</class>
+    <namespace>cat</namespace>
+  </compound>
+  <compound kind="file">
+    <name>string_iterator.hpp</name>
+    <path></path>
+    <filename>string__iterator_8hpp.html</filename>
+    <class kind="struct">cat::CatStringIterator</class>
+    <class kind="struct">cat::ConstCatStringIterator</class>
+    <namespace>cat</namespace>
+  </compound>
+  <compound kind="file">
+    <name>terminal.hpp</name>
+    <path></path>
+    <filename>terminal_8hpp.html</filename>
+    <includes id="vector_8hpp" name="vector.hpp" local="yes" import="no" module="no" objc="no">vector.hpp</includes>
+    <namespace>cat</namespace>
+    <namespace>cat::terminal</namespace>
+  </compound>
+  <compound kind="file">
+    <name>vector.hpp</name>
+    <path></path>
+    <filename>vector_8hpp.html</filename>
+    <class kind="struct">cat::Vector2</class>
+    <namespace>cat</namespace>
+  </compound>
+  <compound kind="file">
+    <name>window.hpp</name>
+    <path></path>
+    <filename>window_8hpp.html</filename>
+    <includes id="vector_8hpp" name="vector.hpp" local="yes" import="no" module="no" objc="no">vector.hpp</includes>
+    <includes id="input_8hpp" name="input.hpp" local="yes" import="no" module="no" objc="no">input.hpp</includes>
+    <includes id="id_8hpp" name="id.hpp" local="yes" import="no" module="no" objc="no">id.hpp</includes>
+    <includes id="buffer_8hpp" name="buffer.hpp" local="yes" import="no" module="no" objc="no">buffer.hpp</includes>
+    <includes id="drawcalls_8hpp" name="drawcalls.hpp" local="yes" import="no" module="no" objc="no">drawcalls.hpp</includes>
+    <includes id="effects_8hpp" name="effects.hpp" local="yes" import="no" module="no" objc="no">effects.hpp</includes>
+    <includes id="positional_8hpp" name="positional.hpp" local="yes" import="no" module="no" objc="no">positional.hpp</includes>
+    <includes id="cursor_8hpp" name="cursor.hpp" local="yes" import="no" module="no" objc="no">cursor.hpp</includes>
+    <class kind="class">cat::Window</class>
+    <namespace>cat</namespace>
+  </compound>
+  <compound kind="file">
+    <name>README.md</name>
+    <filename>_r_e_a_d_m_e_8md.html</filename>
+  </compound>
+  <compound kind="file">
+    <name>home.md</name>
+    <path></path>
+    <filename>home_8md.html</filename>
+  </compound>
+  <compound kind="class">
+    <name>cat::lib::BasicShell</name>
+    <filename>classcat_1_1lib_1_1_basic_shell.html</filename>
+    <base>cat::Window</base>
+    <member kind="typedef">
+      <type>std::function&lt; void(Window *)&gt;</type>
+      <name>redraw_event</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a9bd6a16dbf97be857ffd5b4941e5bbec</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::function&lt; void(Window *, bool)&gt;</type>
+      <name>focus_event</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a31205c1d1a7dc0dc713f172c4e58b83b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const id_type &amp;</type>
+      <name>get_id</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a3706f6090fd0f888e364d85551f55d0a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>clear</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a8579eb116a47405cfce09550fe5fe946</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>redraw</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a73bac76155bd991ea4b04cd61c29c57c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>move</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a7da4ff1aa75d8d33f16eadb4ec6d1ee2</anchor>
+      <arglist>(const Vector2 &amp;position) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>resize</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>aabc13eacf26ada65f8a8f978357258ee</anchor>
+      <arglist>(const Vector2 &amp;resolution) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>box</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a1547ed7e0b41e4b0ca9f2f0261e9dd7e</anchor>
+      <arglist>(int chtype=0)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>background</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a9f624f957b3905e4d3f14904f575bbbf</anchor>
+      <arglist>(const effect::color &amp;color)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>cursor</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a29df65e82266c0d9a8f43c15c945246d</anchor>
+      <arglist>(const Vector2 &amp;position, bool absolute=false)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window</type>
+      <name>duplicate</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a99500ad5ec0ee2e1dfbfacc59f25c4bb</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>adopt</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a1c44adf1b902d3625b59bf485c90f916</anchor>
+      <arglist>(Window *win)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>sync</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a60bb39c0e0e3ad06a7b6270aeb14939c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>trigger_syncs</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a85857ba3cdebd1e7cea8df90b38a4aa9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>hide</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a26b7076c9bab6adb663810b39f7dc077</anchor>
+      <arglist>(bool status=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>unhide</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>ac08976909ab49a8e8980fb74fe72ba1c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>hidden</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>ab4832c29fa82ac4ea194d324b90c3c7d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>focus</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>af39ae4a0e6f2a86c1cb6811f420bba7d</anchor>
+      <arglist>(bool status=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>lose_focus</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>aff173bb2719a58c0a8e9bf409d4fa556</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>focused</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a4c315766da3a8d4582ed750504292d5a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Window &amp;</type>
+      <name>set_buffer</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>afc652b549ed7c7be8d93c6f99bb276cf</anchor>
+      <arglist>(Renderer renderer=Renderer::null, Composer composer=Composer::null)</arglist>
+    </member>
+    <member kind="function">
+      <type>TBuffer *</type>
+      <name>get_buffer</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a17e443113067c603cdf29d2ed0a6ad86</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>set_key</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a666679ceffe88089fb367bd829830235</anchor>
+      <arglist>(const key &amp;skey, const key_event &amp;event)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>unset_key</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a5a0ed55240f9518cef469e4d4f2ca128</anchor>
+      <arglist>(const key &amp;skey)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>set_key_handler</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a9009d885ab963eae85f2dec4a02b653e</anchor>
+      <arglist>(const key_checker_type &amp;check, const key_handler_type &amp;handler)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const key_handler_type &amp;</type>
+      <name>get_key_handler</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a593fb80cb35de710faa11a74cd85f82f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const key_checker_type &amp;</type>
+      <name>get_key_check</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a1fe9fe8961cad0c3f52cd1c73fda7ca8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>do_key_check</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a0d00c5ef817896d70f88d4c5312ea7b1</anchor>
+      <arglist>(const key &amp;skey)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>has_key</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>ac77de6a70ed185f9b74ef6b4c3ea9bb2</anchor>
+      <arglist>(const key &amp;skey)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual key_event &amp;</type>
+      <name>get_key_event</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a38b5e9280b34abf747e490624b096ac9</anchor>
+      <arglist>(const key &amp;skey)</arglist>
+    </member>
+    <member kind="function">
+      <type>Window &amp;</type>
+      <name>draw_at</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a5f4fb82ef78e44a62c9398e88da0d3f8</anchor>
+      <arglist>(const Vector2 &amp;position, const CatString &amp;fmstr, const Tfargs &amp;... fargs)</arglist>
+    </member>
+    <member kind="function">
+      <type>Window &amp;</type>
+      <name>draw</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a17569d2be27290712efc0ce600478105</anchor>
+      <arglist>(const CatString &amp;fmstr, const Tfargs &amp;... fargs)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>draw_buffer</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>ade8447df97f72006ec040696218e20d4</anchor>
+      <arglist>(const Vector2 &amp;offset={0, 0})</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>on_redraw</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a57af7a69a4c995e3cdbac871581fbd75</anchor>
+      <arglist>(const redraw_event &amp;event)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>on_focus</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a41be4e8ea68cd412161edde6467bd440</anchor>
+      <arglist>(const focus_event &amp;event)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>viable_as</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>ac9e14d2fbe34dbe743ece3fd91d63473</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Vector2</type>
+      <name>get_position</name>
+      <anchorfile>classcat_1_1_positional.html</anchorfile>
+      <anchor>aa5ee6d81cfdc2b596175cf23ef9fe54a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Vector2</type>
+      <name>get_resolution</name>
+      <anchorfile>classcat_1_1_positional.html</anchorfile>
+      <anchor>afa7439670836aeaf8544bfa506c21ca1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="typedef" protection="protected">
+      <type>std::function&lt; bool(const key &amp;)&gt;</type>
+      <name>key_checker_type</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a2728bb49a94dc45d6d6d9940cd2c8141</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef" protection="protected">
+      <type>std::function&lt; void(const key &amp;)&gt;</type>
+      <name>key_handler_type</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a3caa7168a2df9e2c2a4f1cf4fe29e2e3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>WINDOW *</type>
+      <name>ncurses_window</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a7b251953404dcfe76a9ed75014242940</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>redraw_request</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>abb94e60ee03294b9bae3b2ab7b09b941</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::vector&lt; Window * &gt;</type>
+      <name>syncs</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a14a604ff1c2fd5d71c89cfcf7c2c917b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>is_focused</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a7862d18042d0f173babb2428c6687df8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>is_hidden</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a9557b5c01bcecfd0247d41cf792d9097</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>keymap</type>
+      <name>win_keymap</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>af65385a476fca29ea6f47db2643230e0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>key_handler_type</type>
+      <name>key_handler</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a70b4ce1a7850cb4098a2e921866d6643</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>key_checker_type</type>
+      <name>key_check</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>aff45a4ee5408f307de3f8d3df607d0b1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>id_type</type>
+      <name>id</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a673f5cf4b71e8cf98f2812eb06451858</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Buffer *</type>
+      <name>buffer</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a2a5c63d683f8eacf51241ba809b8d8e0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::vector&lt; redraw_event &gt;</type>
+      <name>redraw_events</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a14c2495e8da8ff9e2d0bbb157ea8b592</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::vector&lt; focus_event &gt;</type>
+      <name>focus_events</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a0d515fc6a723db9c2dc8d9d5045b9ede</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Vector2</type>
+      <name>position</name>
+      <anchorfile>classcat_1_1_positional.html</anchorfile>
+      <anchor>a55b93443595ca27fa02b6cae909c8ad9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Vector2</type>
+      <name>resolution</name>
+      <anchorfile>classcat_1_1_positional.html</anchorfile>
+      <anchor>ac97e987e9fa5475f147152d69c3a3ea3</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>cat::Buffer</name>
+    <filename>classcat_1_1_buffer.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Buffer</name>
+      <anchorfile>classcat_1_1_buffer.html</anchorfile>
+      <anchor>a69bfb93aa32d2e6aa7d2d22144c62dfe</anchor>
+      <arglist>()=delete</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Buffer</name>
+      <anchorfile>classcat_1_1_buffer.html</anchorfile>
+      <anchor>af29164f6fca3baa84b78f385c9c0da2f</anchor>
+      <arglist>(Window *win)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window *</type>
+      <name>window</name>
+      <anchorfile>classcat_1_1_buffer.html</anchorfile>
+      <anchor>a0931dc2d0bb21f325988d19deefff45f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Buffer &amp;</type>
+      <name>set</name>
+      <anchorfile>classcat_1_1_buffer.html</anchorfile>
+      <anchor>a773db26ce1b2b2297372ef384e006e55</anchor>
+      <arglist>(const std::string &amp;raw)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Buffer &amp;</type>
+      <name>append</name>
+      <anchorfile>classcat_1_1_buffer.html</anchorfile>
+      <anchor>a3a06b3ec862c10fb06c01ace3a9a71c6</anchor>
+      <arglist>(const std::string &amp;raw)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual std::string &amp;</type>
+      <name>get_raw</name>
+      <anchorfile>classcat_1_1_buffer.html</anchorfile>
+      <anchor>ad538c8cd142b6831a7b7315dd915d868</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Buffer &amp;</type>
+      <name>clear</name>
+      <anchorfile>classcat_1_1_buffer.html</anchorfile>
+      <anchor>acd2e29c211eaf531c88d50efa2562d8f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Composer &amp;</type>
+      <name>composer</name>
+      <anchorfile>classcat_1_1_buffer.html</anchorfile>
+      <anchor>ab177349ce4f9c54e230077c2b0f08456</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Renderer &amp;</type>
+      <name>renderer</name>
+      <anchorfile>classcat_1_1_buffer.html</anchorfile>
+      <anchor>a035b0014a5cb1b802c6df79cc2807580</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual image_type</type>
+      <name>display</name>
+      <anchorfile>classcat_1_1_buffer.html</anchorfile>
+      <anchor>ab77b60441f3cd1fa7833f504b46960c2</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~Buffer</name>
+      <anchorfile>classcat_1_1_buffer.html</anchorfile>
+      <anchor>afb16531c5f22b16636d07dddd5cfd6a6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual snippet_type</type>
+      <name>generate_snippet</name>
+      <anchorfile>classcat_1_1_buffer.html</anchorfile>
+      <anchor>a3b808568b54905aec4504767b9e78247</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::string</type>
+      <name>raw</name>
+      <anchorfile>classcat_1_1_buffer.html</anchorfile>
+      <anchor>adc8abe1601570bea832399869b5011fa</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Window *</type>
+      <name>assoc_window</name>
+      <anchorfile>classcat_1_1_buffer.html</anchorfile>
+      <anchor>aa614e50d089f8e80d133b6de7bcd8678</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Composer</type>
+      <name>i_composer</name>
+      <anchorfile>classcat_1_1_buffer.html</anchorfile>
+      <anchor>a8554b926fdfde4f41c4fec6f28bc8576</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Renderer</type>
+      <name>i_renderer</name>
+      <anchorfile>classcat_1_1_buffer.html</anchorfile>
+      <anchor>ab05693ceddb2335edeac6752062ae770</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="friend">
+      <type>friend class</type>
+      <name>Window</name>
+      <anchorfile>classcat_1_1_buffer.html</anchorfile>
+      <anchor>a553f958a25683445088050a69d3de8e9</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>cat::CatString</name>
+    <filename>classcat_1_1_cat_string.html</filename>
+    <member kind="typedef">
+      <type>event::fn_type</type>
+      <name>fn_type</name>
+      <anchorfile>classcat_1_1_cat_string.html</anchorfile>
+      <anchor>ab0aca22097b524d767eda283feb12e55</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CatString</name>
+      <anchorfile>classcat_1_1_cat_string.html</anchorfile>
+      <anchor>a0e1de30c2a7a775d7e4f500c5b547099</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CatString</name>
+      <anchorfile>classcat_1_1_cat_string.html</anchorfile>
+      <anchor>af85150671af327bd901dd7e2bc459361</anchor>
+      <arglist>(const std::string &amp;s)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CatString</name>
+      <anchorfile>classcat_1_1_cat_string.html</anchorfile>
+      <anchor>a1cf743b91d3b4e3082f34ffb6aa51a04</anchor>
+      <arglist>(const char *s)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CatString</name>
+      <anchorfile>classcat_1_1_cat_string.html</anchorfile>
+      <anchor>a7e2929475eb01cb860d4fefbd8fc8a7d</anchor>
+      <arglist>(const event::fn_type &amp;fn)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CatString</name>
+      <anchorfile>classcat_1_1_cat_string.html</anchorfile>
+      <anchor>a67ff51c45c1aaeb8335c8e42ab24c996</anchor>
+      <arglist>(const std::list&lt; event &gt; src)</arglist>
+    </member>
+    <member kind="function">
+      <type>CatString &amp;</type>
+      <name>push_back</name>
+      <anchorfile>classcat_1_1_cat_string.html</anchorfile>
+      <anchor>a8b68dcad1d565408881aaecc9f8c7e2f</anchor>
+      <arglist>(const std::string &amp;s)</arglist>
+    </member>
+    <member kind="function">
+      <type>CatString &amp;</type>
+      <name>push_back</name>
+      <anchorfile>classcat_1_1_cat_string.html</anchorfile>
+      <anchor>ad430e93b2a7f6b901f8dba5c9061c966</anchor>
+      <arglist>(const event::fn_type &amp;fn)</arglist>
+    </member>
+    <member kind="function">
+      <type>CatString &amp;</type>
+      <name>push_front</name>
+      <anchorfile>classcat_1_1_cat_string.html</anchorfile>
+      <anchor>ad4f7d51d4142ac56576425c59d5fd7d4</anchor>
+      <arglist>(const std::string &amp;s)</arglist>
+    </member>
+    <member kind="function">
+      <type>CatString &amp;</type>
+      <name>push_front</name>
+      <anchorfile>classcat_1_1_cat_string.html</anchorfile>
+      <anchor>ad99c27ff93cfe1c9e93054456d65dc88</anchor>
+      <arglist>(const event::fn_type &amp;fn)</arglist>
+    </member>
+    <member kind="function">
+      <type>event</type>
+      <name>pop</name>
+      <anchorfile>classcat_1_1_cat_string.html</anchorfile>
+      <anchor>a0997be2759323f908abf2091d486f357</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>empty</name>
+      <anchorfile>classcat_1_1_cat_string.html</anchorfile>
+      <anchor>a3455ca200446e66ebc6ea2f935bbe3e8</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>std::list&lt; event &gt; &amp;</type>
+      <name>entries</name>
+      <anchorfile>classcat_1_1_cat_string.html</anchorfile>
+      <anchor>aa719930fadb1cdd7687eeeecab3e8568</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const std::list&lt; event &gt; &amp;</type>
+      <name>entries</name>
+      <anchorfile>classcat_1_1_cat_string.html</anchorfile>
+      <anchor>a3d1e929087174f24aaae2d5510d0b900</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>size_t</type>
+      <name>size</name>
+      <anchorfile>classcat_1_1_cat_string.html</anchorfile>
+      <anchor>adf89bba77ae0afd0053358bfd65cf2ea</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>CatString &amp;</type>
+      <name>erase</name>
+      <anchorfile>classcat_1_1_cat_string.html</anchorfile>
+      <anchor>a9109afc5b1b55f3d90e6162ac568c0e6</anchor>
+      <arglist>(size_t pos, size_t n=1)</arglist>
+    </member>
+    <member kind="function">
+      <type>CatString &amp;</type>
+      <name>operator+=</name>
+      <anchorfile>classcat_1_1_cat_string.html</anchorfile>
+      <anchor>afbee8f78a4d19ae71a1caf3592666a02</anchor>
+      <arglist>(const std::string &amp;s)</arglist>
+    </member>
+    <member kind="function">
+      <type>CatString &amp;</type>
+      <name>operator+=</name>
+      <anchorfile>classcat_1_1_cat_string.html</anchorfile>
+      <anchor>ae6034b6fdcd6503ae933a75bf5e4adf6</anchor>
+      <arglist>(const event::fn_type &amp;fn)</arglist>
+    </member>
+    <member kind="function">
+      <type>CatString &amp;</type>
+      <name>operator+=</name>
+      <anchorfile>classcat_1_1_cat_string.html</anchorfile>
+      <anchor>ae99849e551d9240e4a7e1701a6c03889</anchor>
+      <arglist>(const char &amp;c)</arglist>
+    </member>
+    <member kind="function">
+      <type>CatString &amp;</type>
+      <name>operator+=</name>
+      <anchorfile>classcat_1_1_cat_string.html</anchorfile>
+      <anchor>a8289bf5e64f5c82868ac4cb6d6bada48</anchor>
+      <arglist>(const CatString &amp;s)</arglist>
+    </member>
+    <member kind="function">
+      <type>CatString &amp;</type>
+      <name>operator+=</name>
+      <anchorfile>classcat_1_1_cat_string.html</anchorfile>
+      <anchor>a2e6deab2c94b098ebe44ea511389a9d1</anchor>
+      <arglist>(const char *s)</arglist>
+    </member>
+    <member kind="function">
+      <type>CatString</type>
+      <name>operator+</name>
+      <anchorfile>classcat_1_1_cat_string.html</anchorfile>
+      <anchor>a14f44b81014480903f60875598a50112</anchor>
+      <arglist>(const std::string &amp;s) const</arglist>
+    </member>
+    <member kind="function">
+      <type>CatString</type>
+      <name>operator+</name>
+      <anchorfile>classcat_1_1_cat_string.html</anchorfile>
+      <anchor>ab225ff76436ecb234f720a9cf2b51a51</anchor>
+      <arglist>(const event::fn_type &amp;fn) const</arglist>
+    </member>
+    <member kind="function">
+      <type>CatString</type>
+      <name>operator+</name>
+      <anchorfile>classcat_1_1_cat_string.html</anchorfile>
+      <anchor>a55d81eaee7b573273844c575dc356cda</anchor>
+      <arglist>(const CatString &amp;s) const</arglist>
+    </member>
+    <member kind="function">
+      <type>CatString</type>
+      <name>operator+</name>
+      <anchorfile>classcat_1_1_cat_string.html</anchorfile>
+      <anchor>a427598ebd95a0d3f78a54f3c37002d60</anchor>
+      <arglist>(const char *s) const</arglist>
+    </member>
+    <member kind="function">
+      <type>CatString</type>
+      <name>operator+</name>
+      <anchorfile>classcat_1_1_cat_string.html</anchorfile>
+      <anchor>a2d505f643a3e7a72aa644a6442bc34d0</anchor>
+      <arglist>(const char &amp;c) const</arglist>
+    </member>
+    <member kind="function">
+      <type>char &amp;</type>
+      <name>operator[]</name>
+      <anchorfile>classcat_1_1_cat_string.html</anchorfile>
+      <anchor>a5990f80e13e757701b5a81405d0bee24</anchor>
+      <arglist>(size_t pos)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string</type>
+      <name>to_string</name>
+      <anchorfile>classcat_1_1_cat_string.html</anchorfile>
+      <anchor>acdee1c690aeb6854716ac105692381e8</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>CatStringIterator</type>
+      <name>begin</name>
+      <anchorfile>classcat_1_1_cat_string.html</anchorfile>
+      <anchor>a7171d95a343bc58a6c1832be1d955e70</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>ConstCatStringIterator</type>
+      <name>begin</name>
+      <anchorfile>classcat_1_1_cat_string.html</anchorfile>
+      <anchor>a242a843f046e12b27e733dd8ddc13a07</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>ConstCatStringIterator</type>
+      <name>end</name>
+      <anchorfile>classcat_1_1_cat_string.html</anchorfile>
+      <anchor>ae7b2a9aeed4de1ca3206562ea47af75b</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>CatStringIterator</type>
+      <name>end</name>
+      <anchorfile>classcat_1_1_cat_string.html</anchorfile>
+      <anchor>abc9cf1bd38366c16cfeb1146f9be36ec</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="friend">
+      <type>friend CatString</type>
+      <name>operator+</name>
+      <anchorfile>classcat_1_1_cat_string.html</anchorfile>
+      <anchor>ae4ce723af68502b48839408daf93eb70</anchor>
+      <arglist>(const std::string &amp;, const CatString &amp;)</arglist>
+    </member>
+    <member kind="friend">
+      <type>friend CatString</type>
+      <name>operator+</name>
+      <anchorfile>classcat_1_1_cat_string.html</anchorfile>
+      <anchor>a4a136101a08d5523e0fd7a0053d96d6b</anchor>
+      <arglist>(const fn_type &amp;, const CatString &amp;)</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>cat::CatStringIterator</name>
+    <filename>structcat_1_1_cat_string_iterator.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>CatStringIterator</name>
+      <anchorfile>structcat_1_1_cat_string_iterator.html</anchorfile>
+      <anchor>ace5b20b9bac23312d1ddba10d47ca72f</anchor>
+      <arglist>(const std::vector&lt; std::string * &gt; &amp;v)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string::iterator</type>
+      <name>next</name>
+      <anchorfile>structcat_1_1_cat_string_iterator.html</anchorfile>
+      <anchor>ab9f5aadbefe2b56eb30927e0aedab174</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>CatStringIterator &amp;</type>
+      <name>operator++</name>
+      <anchorfile>structcat_1_1_cat_string_iterator.html</anchorfile>
+      <anchor>ac55a518aab6df191f1f387e30582d066</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>char &amp;</type>
+      <name>operator*</name>
+      <anchorfile>structcat_1_1_cat_string_iterator.html</anchorfile>
+      <anchor>a9d8d3587b8e5758610e54d4e3f1e5a71</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>CatStringIterator &amp;</type>
+      <name>set_end</name>
+      <anchorfile>structcat_1_1_cat_string_iterator.html</anchorfile>
+      <anchor>a56cb7ff2bebed4a1f591afcb3abdb8c0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>structcat_1_1_cat_string_iterator.html</anchorfile>
+      <anchor>ac15617ce9f6300f8b3bc73705f904b4c</anchor>
+      <arglist>(const CatStringIterator &amp;i)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>structcat_1_1_cat_string_iterator.html</anchorfile>
+      <anchor>acb3e87b3f851dcad709c7fd87c0f08a6</anchor>
+      <arglist>(const CatStringIterator &amp;i)</arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; std::string * &gt;</type>
+      <name>lst</name>
+      <anchorfile>structcat_1_1_cat_string_iterator.html</anchorfile>
+      <anchor>a659b9321ac2383f92370994e8d0b7d71</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string::iterator</type>
+      <name>current</name>
+      <anchorfile>structcat_1_1_cat_string_iterator.html</anchorfile>
+      <anchor>a313d752889f58f7d7c2f2ff03173fec6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>size_t</type>
+      <name>adv</name>
+      <anchorfile>structcat_1_1_cat_string_iterator.html</anchorfile>
+      <anchor>af1f4834b00bcdcaea89fbdf09af25852</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>cat::ConstCatStringIterator</name>
+    <filename>structcat_1_1_const_cat_string_iterator.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>ConstCatStringIterator</name>
+      <anchorfile>structcat_1_1_const_cat_string_iterator.html</anchorfile>
+      <anchor>a8067d3bf0700d41d70c309c880fdfc5a</anchor>
+      <arglist>(const std::vector&lt; const std::string * &gt; &amp;v)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string::const_iterator</type>
+      <name>next</name>
+      <anchorfile>structcat_1_1_const_cat_string_iterator.html</anchorfile>
+      <anchor>a52cca65d0b24deafff22e58c3729363e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>ConstCatStringIterator &amp;</type>
+      <name>operator++</name>
+      <anchorfile>structcat_1_1_const_cat_string_iterator.html</anchorfile>
+      <anchor>aeec527bcb05e82de25a0ce2bce0ee13e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const char &amp;</type>
+      <name>operator*</name>
+      <anchorfile>structcat_1_1_const_cat_string_iterator.html</anchorfile>
+      <anchor>a77716a0910cc809044a77279577e44a4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>ConstCatStringIterator &amp;</type>
+      <name>set_end</name>
+      <anchorfile>structcat_1_1_const_cat_string_iterator.html</anchorfile>
+      <anchor>af44c4e5850d53fbd45793387c3e9fa59</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>structcat_1_1_const_cat_string_iterator.html</anchorfile>
+      <anchor>a8a4091808dae9c5d6487a0cc0be9294b</anchor>
+      <arglist>(const ConstCatStringIterator &amp;i)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>structcat_1_1_const_cat_string_iterator.html</anchorfile>
+      <anchor>a30826f85d69b86d2a7ede30985bf909d</anchor>
+      <arglist>(const ConstCatStringIterator &amp;i)</arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; const std::string * &gt;</type>
+      <name>lst</name>
+      <anchorfile>structcat_1_1_const_cat_string_iterator.html</anchorfile>
+      <anchor>ac4fc24346f299158b1a6af79a9b467f7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string::const_iterator</type>
+      <name>current</name>
+      <anchorfile>structcat_1_1_const_cat_string_iterator.html</anchorfile>
+      <anchor>a26001d0896b53f1a68e972a42810ba54</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>size_t</type>
+      <name>adv</name>
+      <anchorfile>structcat_1_1_const_cat_string_iterator.html</anchorfile>
+      <anchor>a10d74c8e066cc64ace0cbaf45ddcb928</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>cat::Container</name>
+    <filename>classcat_1_1_container.html</filename>
+    <base>cat::Positional</base>
+    <member kind="typedef">
+      <type>std::function&lt; void(Window *)&gt;</type>
+      <name>apply_event</name>
+      <anchorfile>classcat_1_1_container.html</anchorfile>
+      <anchor>a06caeedffccba5620befbc4a4bf481d2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Container</name>
+      <anchorfile>classcat_1_1_container.html</anchorfile>
+      <anchor>a8ebcdaa9e9aa19ad2d67473cb54f361c</anchor>
+      <arglist>(const Vector2 &amp;position, const Vector2 &amp;resolution)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window *</type>
+      <name>add</name>
+      <anchorfile>classcat_1_1_container.html</anchorfile>
+      <anchor>afa3f46f52d5ae61293ab3fd12a5b2467</anchor>
+      <arglist>(Window *window)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window *</type>
+      <name>pop</name>
+      <anchorfile>classcat_1_1_container.html</anchorfile>
+      <anchor>a4881409eef5689843a53f9508773c688</anchor>
+      <arglist>(Window *window)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual size_t</type>
+      <name>entries</name>
+      <anchorfile>classcat_1_1_container.html</anchorfile>
+      <anchor>af467e637ab1dfe7d7188b6b352743e42</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual std::vector&lt; Window * &gt;::iterator</type>
+      <name>begin</name>
+      <anchorfile>classcat_1_1_container.html</anchorfile>
+      <anchor>ab4cf4d3d345867fcc94ef4d46e5f8373</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual std::vector&lt; Window * &gt;::iterator</type>
+      <name>end</name>
+      <anchorfile>classcat_1_1_container.html</anchorfile>
+      <anchor>acca5a3255757392a0f22d26875ec42bc</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual std::vector&lt; Window * &gt;::const_iterator</type>
+      <name>begin</name>
+      <anchorfile>classcat_1_1_container.html</anchorfile>
+      <anchor>a7fe8a66e8210d059b5cdfab42202719e</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual std::vector&lt; Window * &gt;::const_iterator</type>
+      <name>end</name>
+      <anchorfile>classcat_1_1_container.html</anchorfile>
+      <anchor>aee33afe4f4b828b88289c9efd397491c</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Container &amp;</type>
+      <name>apply</name>
+      <anchorfile>classcat_1_1_container.html</anchorfile>
+      <anchor>a908a9f6ab80af329be93a1c6821c7ef7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Container &amp;</type>
+      <name>on_apply</name>
+      <anchorfile>classcat_1_1_container.html</anchorfile>
+      <anchor>ae037d81f787a924f11c7832dc6577501</anchor>
+      <arglist>(const apply_event &amp;event)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Container &amp;</type>
+      <name>move</name>
+      <anchorfile>classcat_1_1_container.html</anchorfile>
+      <anchor>a0fcdcc96eea9f1e89c381ff42618a86d</anchor>
+      <arglist>(const Vector2 &amp;position) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Container &amp;</type>
+      <name>resize</name>
+      <anchorfile>classcat_1_1_container.html</anchorfile>
+      <anchor>abb3af89551310e0f009387272fccffa7</anchor>
+      <arglist>(const Vector2 &amp;resolution) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window *</type>
+      <name>operator[]</name>
+      <anchorfile>classcat_1_1_container.html</anchorfile>
+      <anchor>a50dc694f52f3d450784c3440485d2230</anchor>
+      <arglist>(size_t index)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window *</type>
+      <name>at</name>
+      <anchorfile>classcat_1_1_container.html</anchorfile>
+      <anchor>a6ac1bb4065a8d9e0e7cf7c7d6ffb4319</anchor>
+      <arglist>(size_t index)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const Window *</type>
+      <name>at</name>
+      <anchorfile>classcat_1_1_container.html</anchorfile>
+      <anchor>a9d90923f43a7f41324e1d9f8a5c9aac4</anchor>
+      <arglist>(size_t index) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window *</type>
+      <name>front</name>
+      <anchorfile>classcat_1_1_container.html</anchorfile>
+      <anchor>a29fe28da6a14a7cd2009c583ce8c0314</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const Window *</type>
+      <name>front</name>
+      <anchorfile>classcat_1_1_container.html</anchorfile>
+      <anchor>a44384d5570415387bea02b66af05a4c6</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window *</type>
+      <name>back</name>
+      <anchorfile>classcat_1_1_container.html</anchorfile>
+      <anchor>a2916e90a0392b42bc84a68e976d009c2</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const Window *</type>
+      <name>back</name>
+      <anchorfile>classcat_1_1_container.html</anchorfile>
+      <anchor>a69f6025cd08125c0b66fc8f5dbeb0a2a</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~Container</name>
+      <anchorfile>classcat_1_1_container.html</anchorfile>
+      <anchor>a9376cbfaf1a6dd145a356dfcf307cf41</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Vector2</type>
+      <name>get_position</name>
+      <anchorfile>classcat_1_1_positional.html</anchorfile>
+      <anchor>aa5ee6d81cfdc2b596175cf23ef9fe54a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Vector2</type>
+      <name>get_resolution</name>
+      <anchorfile>classcat_1_1_positional.html</anchorfile>
+      <anchor>afa7439670836aeaf8544bfa506c21ca1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::vector&lt; Window * &gt;</type>
+      <name>windows</name>
+      <anchorfile>classcat_1_1_container.html</anchorfile>
+      <anchor>a081d0791533374fd1cdae0a2b0712c78</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::vector&lt; apply_event &gt;</type>
+      <name>events</name>
+      <anchorfile>classcat_1_1_container.html</anchorfile>
+      <anchor>a254e07bbe7386380c197301f2fd7ec9d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Vector2</type>
+      <name>position</name>
+      <anchorfile>classcat_1_1_positional.html</anchorfile>
+      <anchor>a55b93443595ca27fa02b6cae909c8ad9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Vector2</type>
+      <name>resolution</name>
+      <anchorfile>classcat_1_1_positional.html</anchorfile>
+      <anchor>ac97e987e9fa5475f147152d69c3a3ea3</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>cat::curs_position</name>
+    <filename>structcat_1_1curs__position.html</filename>
+    <member kind="variable">
+      <type>WINDOW *</type>
+      <name>win</name>
+      <anchorfile>structcat_1_1curs__position.html</anchorfile>
+      <anchor>acd959c6629abeda2d8a37e09765ccf92</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>Vector2</type>
+      <name>position</name>
+      <anchorfile>structcat_1_1curs__position.html</anchorfile>
+      <anchor>aa6c203343a91c33f3d4c7afeab409ca3</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>cat::lib::HorizontalContainer</name>
+    <filename>classcat_1_1lib_1_1_horizontal_container.html</filename>
+    <base>cat::Container</base>
+    <member kind="typedef">
+      <type>std::function&lt; void(Window *)&gt;</type>
+      <name>apply_event</name>
+      <anchorfile>classcat_1_1_container.html</anchorfile>
+      <anchor>a06caeedffccba5620befbc4a4bf481d2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Container &amp;</type>
+      <name>apply</name>
+      <anchorfile>classcat_1_1lib_1_1_horizontal_container.html</anchorfile>
+      <anchor>a3f3dd1980ebadd8d4f73f8d335a96030</anchor>
+      <arglist>() override</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Container</name>
+      <anchorfile>classcat_1_1lib_1_1_horizontal_container.html</anchorfile>
+      <anchor>a8ebcdaa9e9aa19ad2d67473cb54f361c</anchor>
+      <arglist>(const Vector2 &amp;position, const Vector2 &amp;resolution)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window *</type>
+      <name>add</name>
+      <anchorfile>classcat_1_1_container.html</anchorfile>
+      <anchor>afa3f46f52d5ae61293ab3fd12a5b2467</anchor>
+      <arglist>(Window *window)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window *</type>
+      <name>pop</name>
+      <anchorfile>classcat_1_1_container.html</anchorfile>
+      <anchor>a4881409eef5689843a53f9508773c688</anchor>
+      <arglist>(Window *window)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual size_t</type>
+      <name>entries</name>
+      <anchorfile>classcat_1_1_container.html</anchorfile>
+      <anchor>af467e637ab1dfe7d7188b6b352743e42</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual std::vector&lt; Window * &gt;::iterator</type>
+      <name>begin</name>
+      <anchorfile>classcat_1_1_container.html</anchorfile>
+      <anchor>ab4cf4d3d345867fcc94ef4d46e5f8373</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual std::vector&lt; Window * &gt;::const_iterator</type>
+      <name>begin</name>
+      <anchorfile>classcat_1_1_container.html</anchorfile>
+      <anchor>a7fe8a66e8210d059b5cdfab42202719e</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual std::vector&lt; Window * &gt;::iterator</type>
+      <name>end</name>
+      <anchorfile>classcat_1_1_container.html</anchorfile>
+      <anchor>acca5a3255757392a0f22d26875ec42bc</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual std::vector&lt; Window * &gt;::const_iterator</type>
+      <name>end</name>
+      <anchorfile>classcat_1_1_container.html</anchorfile>
+      <anchor>aee33afe4f4b828b88289c9efd397491c</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Container &amp;</type>
+      <name>on_apply</name>
+      <anchorfile>classcat_1_1_container.html</anchorfile>
+      <anchor>ae037d81f787a924f11c7832dc6577501</anchor>
+      <arglist>(const apply_event &amp;event)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Container &amp;</type>
+      <name>move</name>
+      <anchorfile>classcat_1_1_container.html</anchorfile>
+      <anchor>a0fcdcc96eea9f1e89c381ff42618a86d</anchor>
+      <arglist>(const Vector2 &amp;position) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Container &amp;</type>
+      <name>resize</name>
+      <anchorfile>classcat_1_1_container.html</anchorfile>
+      <anchor>abb3af89551310e0f009387272fccffa7</anchor>
+      <arglist>(const Vector2 &amp;resolution) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window *</type>
+      <name>operator[]</name>
+      <anchorfile>classcat_1_1_container.html</anchorfile>
+      <anchor>a50dc694f52f3d450784c3440485d2230</anchor>
+      <arglist>(size_t index)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window *</type>
+      <name>at</name>
+      <anchorfile>classcat_1_1_container.html</anchorfile>
+      <anchor>a6ac1bb4065a8d9e0e7cf7c7d6ffb4319</anchor>
+      <arglist>(size_t index)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const Window *</type>
+      <name>at</name>
+      <anchorfile>classcat_1_1_container.html</anchorfile>
+      <anchor>a9d90923f43a7f41324e1d9f8a5c9aac4</anchor>
+      <arglist>(size_t index) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window *</type>
+      <name>front</name>
+      <anchorfile>classcat_1_1_container.html</anchorfile>
+      <anchor>a29fe28da6a14a7cd2009c583ce8c0314</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const Window *</type>
+      <name>front</name>
+      <anchorfile>classcat_1_1_container.html</anchorfile>
+      <anchor>a44384d5570415387bea02b66af05a4c6</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window *</type>
+      <name>back</name>
+      <anchorfile>classcat_1_1_container.html</anchorfile>
+      <anchor>a2916e90a0392b42bc84a68e976d009c2</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const Window *</type>
+      <name>back</name>
+      <anchorfile>classcat_1_1_container.html</anchorfile>
+      <anchor>a69f6025cd08125c0b66fc8f5dbeb0a2a</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Vector2</type>
+      <name>get_position</name>
+      <anchorfile>classcat_1_1_positional.html</anchorfile>
+      <anchor>aa5ee6d81cfdc2b596175cf23ef9fe54a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Vector2</type>
+      <name>get_resolution</name>
+      <anchorfile>classcat_1_1_positional.html</anchorfile>
+      <anchor>afa7439670836aeaf8544bfa506c21ca1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::vector&lt; Window * &gt;</type>
+      <name>windows</name>
+      <anchorfile>classcat_1_1_container.html</anchorfile>
+      <anchor>a081d0791533374fd1cdae0a2b0712c78</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::vector&lt; apply_event &gt;</type>
+      <name>events</name>
+      <anchorfile>classcat_1_1_container.html</anchorfile>
+      <anchor>a254e07bbe7386380c197301f2fd7ec9d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Vector2</type>
+      <name>position</name>
+      <anchorfile>classcat_1_1_positional.html</anchorfile>
+      <anchor>a55b93443595ca27fa02b6cae909c8ad9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Vector2</type>
+      <name>resolution</name>
+      <anchorfile>classcat_1_1_positional.html</anchorfile>
+      <anchor>ac97e987e9fa5475f147152d69c3a3ea3</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>cat::lib::InputField</name>
+    <filename>classcat_1_1lib_1_1_input_field.html</filename>
+    <base>cat::Window</base>
+    <member kind="typedef">
+      <type>std::function&lt; void(Window *)&gt;</type>
+      <name>redraw_event</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a9bd6a16dbf97be857ffd5b4941e5bbec</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::function&lt; void(Window *, bool)&gt;</type>
+      <name>focus_event</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a31205c1d1a7dc0dc713f172c4e58b83b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>InputField</name>
+      <anchorfile>classcat_1_1lib_1_1_input_field.html</anchorfile>
+      <anchor>a0a2c9085d57e65199566857d78b39edc</anchor>
+      <arglist>(const Vector2 &amp;position, const Vector2 &amp;resolution)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const id_type &amp;</type>
+      <name>get_id</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a3706f6090fd0f888e364d85551f55d0a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>clear</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a8579eb116a47405cfce09550fe5fe946</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>redraw</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a73bac76155bd991ea4b04cd61c29c57c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>move</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a7da4ff1aa75d8d33f16eadb4ec6d1ee2</anchor>
+      <arglist>(const Vector2 &amp;position) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>resize</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>aabc13eacf26ada65f8a8f978357258ee</anchor>
+      <arglist>(const Vector2 &amp;resolution) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>box</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a1547ed7e0b41e4b0ca9f2f0261e9dd7e</anchor>
+      <arglist>(int chtype=0)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>background</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a9f624f957b3905e4d3f14904f575bbbf</anchor>
+      <arglist>(const effect::color &amp;color)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>cursor</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a29df65e82266c0d9a8f43c15c945246d</anchor>
+      <arglist>(const Vector2 &amp;position, bool absolute=false)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window</type>
+      <name>duplicate</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a99500ad5ec0ee2e1dfbfacc59f25c4bb</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>adopt</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a1c44adf1b902d3625b59bf485c90f916</anchor>
+      <arglist>(Window *win)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>sync</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a60bb39c0e0e3ad06a7b6270aeb14939c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>trigger_syncs</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a85857ba3cdebd1e7cea8df90b38a4aa9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>hide</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a26b7076c9bab6adb663810b39f7dc077</anchor>
+      <arglist>(bool status=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>unhide</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>ac08976909ab49a8e8980fb74fe72ba1c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>hidden</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>ab4832c29fa82ac4ea194d324b90c3c7d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>focus</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>af39ae4a0e6f2a86c1cb6811f420bba7d</anchor>
+      <arglist>(bool status=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>lose_focus</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>aff173bb2719a58c0a8e9bf409d4fa556</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>focused</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a4c315766da3a8d4582ed750504292d5a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Window &amp;</type>
+      <name>set_buffer</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>afc652b549ed7c7be8d93c6f99bb276cf</anchor>
+      <arglist>(Renderer renderer=Renderer::null, Composer composer=Composer::null)</arglist>
+    </member>
+    <member kind="function">
+      <type>TBuffer *</type>
+      <name>get_buffer</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a17e443113067c603cdf29d2ed0a6ad86</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>set_key</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a666679ceffe88089fb367bd829830235</anchor>
+      <arglist>(const key &amp;skey, const key_event &amp;event)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>unset_key</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a5a0ed55240f9518cef469e4d4f2ca128</anchor>
+      <arglist>(const key &amp;skey)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>set_key_handler</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a9009d885ab963eae85f2dec4a02b653e</anchor>
+      <arglist>(const key_checker_type &amp;check, const key_handler_type &amp;handler)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const key_handler_type &amp;</type>
+      <name>get_key_handler</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a593fb80cb35de710faa11a74cd85f82f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const key_checker_type &amp;</type>
+      <name>get_key_check</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a1fe9fe8961cad0c3f52cd1c73fda7ca8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>do_key_check</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a0d00c5ef817896d70f88d4c5312ea7b1</anchor>
+      <arglist>(const key &amp;skey)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>has_key</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>ac77de6a70ed185f9b74ef6b4c3ea9bb2</anchor>
+      <arglist>(const key &amp;skey)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual key_event &amp;</type>
+      <name>get_key_event</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a38b5e9280b34abf747e490624b096ac9</anchor>
+      <arglist>(const key &amp;skey)</arglist>
+    </member>
+    <member kind="function">
+      <type>Window &amp;</type>
+      <name>draw_at</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a5f4fb82ef78e44a62c9398e88da0d3f8</anchor>
+      <arglist>(const Vector2 &amp;position, const CatString &amp;fmstr, const Tfargs &amp;... fargs)</arglist>
+    </member>
+    <member kind="function">
+      <type>Window &amp;</type>
+      <name>draw</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a17569d2be27290712efc0ce600478105</anchor>
+      <arglist>(const CatString &amp;fmstr, const Tfargs &amp;... fargs)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>draw_buffer</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>ade8447df97f72006ec040696218e20d4</anchor>
+      <arglist>(const Vector2 &amp;offset={0, 0})</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>on_redraw</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a57af7a69a4c995e3cdbac871581fbd75</anchor>
+      <arglist>(const redraw_event &amp;event)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>on_focus</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a41be4e8ea68cd412161edde6467bd440</anchor>
+      <arglist>(const focus_event &amp;event)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>viable_as</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>ac9e14d2fbe34dbe743ece3fd91d63473</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Vector2</type>
+      <name>get_position</name>
+      <anchorfile>classcat_1_1_positional.html</anchorfile>
+      <anchor>aa5ee6d81cfdc2b596175cf23ef9fe54a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Vector2</type>
+      <name>get_resolution</name>
+      <anchorfile>classcat_1_1_positional.html</anchorfile>
+      <anchor>afa7439670836aeaf8544bfa506c21ca1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="typedef" protection="protected">
+      <type>std::function&lt; bool(const key &amp;)&gt;</type>
+      <name>key_checker_type</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a2728bb49a94dc45d6d6d9940cd2c8141</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef" protection="protected">
+      <type>std::function&lt; void(const key &amp;)&gt;</type>
+      <name>key_handler_type</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a3caa7168a2df9e2c2a4f1cf4fe29e2e3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>WINDOW *</type>
+      <name>ncurses_window</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a7b251953404dcfe76a9ed75014242940</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>redraw_request</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>abb94e60ee03294b9bae3b2ab7b09b941</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::vector&lt; Window * &gt;</type>
+      <name>syncs</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a14a604ff1c2fd5d71c89cfcf7c2c917b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>is_focused</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a7862d18042d0f173babb2428c6687df8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>is_hidden</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a9557b5c01bcecfd0247d41cf792d9097</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>keymap</type>
+      <name>win_keymap</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>af65385a476fca29ea6f47db2643230e0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>key_handler_type</type>
+      <name>key_handler</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a70b4ce1a7850cb4098a2e921866d6643</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>key_checker_type</type>
+      <name>key_check</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>aff45a4ee5408f307de3f8d3df607d0b1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>id_type</type>
+      <name>id</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a673f5cf4b71e8cf98f2812eb06451858</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Buffer *</type>
+      <name>buffer</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a2a5c63d683f8eacf51241ba809b8d8e0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::vector&lt; redraw_event &gt;</type>
+      <name>redraw_events</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a14c2495e8da8ff9e2d0bbb157ea8b592</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::vector&lt; focus_event &gt;</type>
+      <name>focus_events</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a0d515fc6a723db9c2dc8d9d5045b9ede</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Vector2</type>
+      <name>position</name>
+      <anchorfile>classcat_1_1_positional.html</anchorfile>
+      <anchor>a55b93443595ca27fa02b6cae909c8ad9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Vector2</type>
+      <name>resolution</name>
+      <anchorfile>classcat_1_1_positional.html</anchorfile>
+      <anchor>ac97e987e9fa5475f147152d69c3a3ea3</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>cat::lib::LockableBuffer</name>
+    <filename>classcat_1_1lib_1_1_lockable_buffer.html</filename>
+    <base virtualness="virtual">cat::Buffer</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual LockableBuffer &amp;</type>
+      <name>lock</name>
+      <anchorfile>classcat_1_1lib_1_1_lockable_buffer.html</anchorfile>
+      <anchor>ab077ad2b0d8df4d4787e6e14d7ccd313</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual LockableBuffer &amp;</type>
+      <name>unlock</name>
+      <anchorfile>classcat_1_1lib_1_1_lockable_buffer.html</anchorfile>
+      <anchor>a9749383da8ffb9e1e11914f29410ee66</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>locked</name>
+      <anchorfile>classcat_1_1lib_1_1_lockable_buffer.html</anchorfile>
+      <anchor>aeb4143f645829d37ab43cfac91fc12e3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual image_type</type>
+      <name>display</name>
+      <anchorfile>classcat_1_1lib_1_1_lockable_buffer.html</anchorfile>
+      <anchor>a8f5383d827c1c4dc042f1e33687f48ae</anchor>
+      <arglist>() override</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Buffer</name>
+      <anchorfile>classcat_1_1lib_1_1_lockable_buffer.html</anchorfile>
+      <anchor>a69bfb93aa32d2e6aa7d2d22144c62dfe</anchor>
+      <arglist>()=delete</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Buffer</name>
+      <anchorfile>classcat_1_1lib_1_1_lockable_buffer.html</anchorfile>
+      <anchor>af29164f6fca3baa84b78f385c9c0da2f</anchor>
+      <arglist>(Window *win)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window *</type>
+      <name>window</name>
+      <anchorfile>classcat_1_1_buffer.html</anchorfile>
+      <anchor>a0931dc2d0bb21f325988d19deefff45f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Buffer &amp;</type>
+      <name>set</name>
+      <anchorfile>classcat_1_1_buffer.html</anchorfile>
+      <anchor>a773db26ce1b2b2297372ef384e006e55</anchor>
+      <arglist>(const std::string &amp;raw)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Buffer &amp;</type>
+      <name>append</name>
+      <anchorfile>classcat_1_1_buffer.html</anchorfile>
+      <anchor>a3a06b3ec862c10fb06c01ace3a9a71c6</anchor>
+      <arglist>(const std::string &amp;raw)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual std::string &amp;</type>
+      <name>get_raw</name>
+      <anchorfile>classcat_1_1_buffer.html</anchorfile>
+      <anchor>ad538c8cd142b6831a7b7315dd915d868</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Buffer &amp;</type>
+      <name>clear</name>
+      <anchorfile>classcat_1_1_buffer.html</anchorfile>
+      <anchor>acd2e29c211eaf531c88d50efa2562d8f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Composer &amp;</type>
+      <name>composer</name>
+      <anchorfile>classcat_1_1_buffer.html</anchorfile>
+      <anchor>ab177349ce4f9c54e230077c2b0f08456</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Renderer &amp;</type>
+      <name>renderer</name>
+      <anchorfile>classcat_1_1_buffer.html</anchorfile>
+      <anchor>a035b0014a5cb1b802c6df79cc2807580</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual snippet_type</type>
+      <name>generate_snippet</name>
+      <anchorfile>classcat_1_1_buffer.html</anchorfile>
+      <anchor>a3b808568b54905aec4504767b9e78247</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>is_locked</name>
+      <anchorfile>classcat_1_1lib_1_1_lockable_buffer.html</anchorfile>
+      <anchor>ac94d251ce304b959553f316a3671435b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>image_type</type>
+      <name>last_display</name>
+      <anchorfile>classcat_1_1lib_1_1_lockable_buffer.html</anchorfile>
+      <anchor>a2c96c90e7bad219a48005ed3f88b8a8d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::string</type>
+      <name>raw</name>
+      <anchorfile>classcat_1_1_buffer.html</anchorfile>
+      <anchor>adc8abe1601570bea832399869b5011fa</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Window *</type>
+      <name>assoc_window</name>
+      <anchorfile>classcat_1_1_buffer.html</anchorfile>
+      <anchor>aa614e50d089f8e80d133b6de7bcd8678</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Composer</type>
+      <name>i_composer</name>
+      <anchorfile>classcat_1_1_buffer.html</anchorfile>
+      <anchor>a8554b926fdfde4f41c4fec6f28bc8576</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Renderer</type>
+      <name>i_renderer</name>
+      <anchorfile>classcat_1_1_buffer.html</anchorfile>
+      <anchor>ab05693ceddb2335edeac6752062ae770</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>cat::signals::MessageData</name>
+    <filename>structcat_1_1signals_1_1_message_data.html</filename>
+    <base>cat::signals::SignalData</base>
+    <member kind="function">
+      <type></type>
+      <name>MessageData</name>
+      <anchorfile>structcat_1_1signals_1_1_message_data.html</anchorfile>
+      <anchor>a8374079299de3d9c4ec47b87ee1c63dd</anchor>
+      <arglist>(const std::string &amp;msg)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual size_t</type>
+      <name>id</name>
+      <anchorfile>structcat_1_1signals_1_1_signal_data.html</anchorfile>
+      <anchor>a2bb6b6e036e6c2b178425a406a48bae4</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>msg</name>
+      <anchorfile>structcat_1_1signals_1_1_message_data.html</anchorfile>
+      <anchor>af58e298bfafc1ae21379a00a5c8804aa</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>cat::Positional</name>
+    <filename>classcat_1_1_positional.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Positional</name>
+      <anchorfile>classcat_1_1_positional.html</anchorfile>
+      <anchor>a59e78e4098611cc5281ea79fd1732735</anchor>
+      <arglist>()=delete</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Positional</name>
+      <anchorfile>classcat_1_1_positional.html</anchorfile>
+      <anchor>ae592824053a78fa5ce6a02e5719b76da</anchor>
+      <arglist>(const Vector2 &amp;position, const Vector2 &amp;resolution)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Vector2</type>
+      <name>get_position</name>
+      <anchorfile>classcat_1_1_positional.html</anchorfile>
+      <anchor>aa5ee6d81cfdc2b596175cf23ef9fe54a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Vector2</type>
+      <name>get_resolution</name>
+      <anchorfile>classcat_1_1_positional.html</anchorfile>
+      <anchor>afa7439670836aeaf8544bfa506c21ca1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Positional &amp;</type>
+      <name>move</name>
+      <anchorfile>classcat_1_1_positional.html</anchorfile>
+      <anchor>a296d799392038bc6a82648913d90aa9c</anchor>
+      <arglist>(const Vector2 &amp;position)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Positional &amp;</type>
+      <name>resize</name>
+      <anchorfile>classcat_1_1_positional.html</anchorfile>
+      <anchor>a9db5af6c7db9a259b1bebedba4759332</anchor>
+      <arglist>(const Vector2 &amp;positional)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Vector2</type>
+      <name>position</name>
+      <anchorfile>classcat_1_1_positional.html</anchorfile>
+      <anchor>a55b93443595ca27fa02b6cae909c8ad9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Vector2</type>
+      <name>resolution</name>
+      <anchorfile>classcat_1_1_positional.html</anchorfile>
+      <anchor>ac97e987e9fa5475f147152d69c3a3ea3</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>cat::Processor</name>
+    <filename>structcat_1_1_processor.html</filename>
+    <templarg>typename Treturn_type</templarg>
+    <templarg>typename Tparam_type</templarg>
+    <member kind="typedef">
+      <type>Treturn_type</type>
+      <name>return_type</name>
+      <anchorfile>structcat_1_1_processor.html</anchorfile>
+      <anchor>af783ea21ea81625687fc56f2e17146db</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Tparam_type</type>
+      <name>param_type</name>
+      <anchorfile>structcat_1_1_processor.html</anchorfile>
+      <anchor>a03aad9a908717fe6219073b5b67972f1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::function&lt; return_type(const param_type &amp;, Buffer *)&gt;</type>
+      <name>fn_type</name>
+      <anchorfile>structcat_1_1_processor.html</anchorfile>
+      <anchor>a48df3adcc79f82e2ce71100751f5e6e7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>return_type</type>
+      <name>operator()</name>
+      <anchorfile>structcat_1_1_processor.html</anchorfile>
+      <anchor>ae3dbf965ceb0c802985f7b8afcc0920f</anchor>
+      <arglist>(const param_type &amp;data, Buffer *buffer)</arglist>
+    </member>
+    <member kind="function">
+      <type>return_type</type>
+      <name>operator()</name>
+      <anchorfile>structcat_1_1_processor.html</anchorfile>
+      <anchor>a9075712efe76afce5efe8d5bfbd208da</anchor>
+      <arglist>(const param_type &amp;data, Buffer *buffer) const</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Processor</name>
+      <anchorfile>structcat_1_1_processor.html</anchorfile>
+      <anchor>a9ef427dae6e463756c3260571ac06b96</anchor>
+      <arglist>(Fn &amp;&amp;fn)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Processor</name>
+      <anchorfile>structcat_1_1_processor.html</anchorfile>
+      <anchor>afe30155e61a5d74df194e899c5621550</anchor>
+      <arglist>(const fn_type &amp;fn)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Processor</name>
+      <anchorfile>structcat_1_1_processor.html</anchorfile>
+      <anchor>a3f5ce92a157e2a81b54b1d5bf36a28da</anchor>
+      <arglist>(fn_type &amp;&amp;fn)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Processor</name>
+      <anchorfile>structcat_1_1_processor.html</anchorfile>
+      <anchor>a3598911034c3a8e7b879c21a70d1bd80</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Processor &amp;</type>
+      <name>operator=</name>
+      <anchorfile>structcat_1_1_processor.html</anchorfile>
+      <anchor>ae6320aa52d3dba0688b1c3fd6309ca4c</anchor>
+      <arglist>(const Processor &amp;)=default</arglist>
+    </member>
+    <member kind="function">
+      <type>Processor</type>
+      <name>operator&amp;</name>
+      <anchorfile>structcat_1_1_processor.html</anchorfile>
+      <anchor>af18651bceb0b02600f214a7f4c97f7de</anchor>
+      <arglist>(const Processor &amp;processor)</arglist>
+    </member>
+    <member kind="function">
+      <type>Processor &amp;</type>
+      <name>operator&amp;=</name>
+      <anchorfile>structcat_1_1_processor.html</anchorfile>
+      <anchor>a04d18490f8d030281d971fa76f0ad2db</anchor>
+      <arglist>(const Processor &amp;processor)</arglist>
+    </member>
+    <member kind="function">
+      <type>Processor &amp;</type>
+      <name>operator=</name>
+      <anchorfile>structcat_1_1_processor.html</anchorfile>
+      <anchor>a587cdf6e5743d85d93c7abb5547cf0cf</anchor>
+      <arglist>(Fn &amp;&amp;fn)</arglist>
+    </member>
+    <member kind="function">
+      <type>Processor &amp;</type>
+      <name>operator=</name>
+      <anchorfile>structcat_1_1_processor.html</anchorfile>
+      <anchor>a715acefee7b03bc1185f0c3c57e7ad76</anchor>
+      <arglist>(const fn_type &amp;fn)</arglist>
+    </member>
+    <member kind="variable">
+      <type>fn_type</type>
+      <name>fn</name>
+      <anchorfile>structcat_1_1_processor.html</anchorfile>
+      <anchor>a4e090468bcf59c26af7bd2ebbfeb719e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static const Processor</type>
+      <name>null</name>
+      <anchorfile>structcat_1_1_processor.html</anchorfile>
+      <anchor>af2de2ae44a6907e504308e487d989dc2</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>cat::effect::rgb</name>
+    <filename>structcat_1_1effect_1_1rgb.html</filename>
+    <member kind="variable">
+      <type>int</type>
+      <name>r</name>
+      <anchorfile>structcat_1_1effect_1_1rgb.html</anchorfile>
+      <anchor>a32bf00d3c9d1b89bdad143a29dd82905</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>g</name>
+      <anchorfile>structcat_1_1effect_1_1rgb.html</anchorfile>
+      <anchor>a94ec8543a13e5c4c050881999eca0039</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>b</name>
+      <anchorfile>structcat_1_1effect_1_1rgb.html</anchorfile>
+      <anchor>a894e66a9e64f730fa25c7b81ce93023a</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>cat::lib::ScrollBuffer</name>
+    <filename>classcat_1_1lib_1_1_scroll_buffer.html</filename>
+    <base virtualness="virtual">cat::Buffer</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual ScrollBuffer &amp;</type>
+      <name>advance</name>
+      <anchorfile>classcat_1_1lib_1_1_scroll_buffer.html</anchorfile>
+      <anchor>af358f3bf09e6964d63bd92cebc817502</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual ScrollBuffer &amp;</type>
+      <name>back</name>
+      <anchorfile>classcat_1_1lib_1_1_scroll_buffer.html</anchorfile>
+      <anchor>a111ba4721b187b3c3d5d1865ac13529a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Buffer</name>
+      <anchorfile>classcat_1_1lib_1_1_scroll_buffer.html</anchorfile>
+      <anchor>a69bfb93aa32d2e6aa7d2d22144c62dfe</anchor>
+      <arglist>()=delete</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Buffer</name>
+      <anchorfile>classcat_1_1lib_1_1_scroll_buffer.html</anchorfile>
+      <anchor>af29164f6fca3baa84b78f385c9c0da2f</anchor>
+      <arglist>(Window *win)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window *</type>
+      <name>window</name>
+      <anchorfile>classcat_1_1_buffer.html</anchorfile>
+      <anchor>a0931dc2d0bb21f325988d19deefff45f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Buffer &amp;</type>
+      <name>set</name>
+      <anchorfile>classcat_1_1_buffer.html</anchorfile>
+      <anchor>a773db26ce1b2b2297372ef384e006e55</anchor>
+      <arglist>(const std::string &amp;raw)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Buffer &amp;</type>
+      <name>append</name>
+      <anchorfile>classcat_1_1_buffer.html</anchorfile>
+      <anchor>a3a06b3ec862c10fb06c01ace3a9a71c6</anchor>
+      <arglist>(const std::string &amp;raw)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual std::string &amp;</type>
+      <name>get_raw</name>
+      <anchorfile>classcat_1_1_buffer.html</anchorfile>
+      <anchor>ad538c8cd142b6831a7b7315dd915d868</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Buffer &amp;</type>
+      <name>clear</name>
+      <anchorfile>classcat_1_1_buffer.html</anchorfile>
+      <anchor>acd2e29c211eaf531c88d50efa2562d8f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Composer &amp;</type>
+      <name>composer</name>
+      <anchorfile>classcat_1_1_buffer.html</anchorfile>
+      <anchor>ab177349ce4f9c54e230077c2b0f08456</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Renderer &amp;</type>
+      <name>renderer</name>
+      <anchorfile>classcat_1_1_buffer.html</anchorfile>
+      <anchor>a035b0014a5cb1b802c6df79cc2807580</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual image_type</type>
+      <name>display</name>
+      <anchorfile>classcat_1_1_buffer.html</anchorfile>
+      <anchor>ab77b60441f3cd1fa7833f504b46960c2</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::string</type>
+      <name>raw</name>
+      <anchorfile>classcat_1_1_buffer.html</anchorfile>
+      <anchor>adc8abe1601570bea832399869b5011fa</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Window *</type>
+      <name>assoc_window</name>
+      <anchorfile>classcat_1_1_buffer.html</anchorfile>
+      <anchor>aa614e50d089f8e80d133b6de7bcd8678</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Composer</type>
+      <name>i_composer</name>
+      <anchorfile>classcat_1_1_buffer.html</anchorfile>
+      <anchor>a8554b926fdfde4f41c4fec6f28bc8576</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Renderer</type>
+      <name>i_renderer</name>
+      <anchorfile>classcat_1_1_buffer.html</anchorfile>
+      <anchor>ab05693ceddb2335edeac6752062ae770</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="private" virtualness="virtual">
+      <type>virtual snippet_type</type>
+      <name>generate_snippet</name>
+      <anchorfile>classcat_1_1lib_1_1_scroll_buffer.html</anchorfile>
+      <anchor>a64fd16baa77c17e02f114fe748c35540</anchor>
+      <arglist>() override</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>cat::Settings</name>
+    <filename>structcat_1_1_settings.html</filename>
+    <member kind="variable">
+      <type>uint64_t</type>
+      <name>tick_sleep</name>
+      <anchorfile>structcat_1_1_settings.html</anchorfile>
+      <anchor>af7b6bec0bb6f78d599710c3ba5a22a54</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>color</name>
+      <anchorfile>structcat_1_1_settings.html</anchorfile>
+      <anchor>aa61351e2f392a4894bb034a165779be6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>stuck_cursor</name>
+      <anchorfile>structcat_1_1_settings.html</anchorfile>
+      <anchor>ac88b40f9263ca58184bd63b1389f920c</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>cat::signals::SignalData</name>
+    <filename>structcat_1_1signals_1_1_signal_data.html</filename>
+    <member kind="function" virtualness="virtual">
+      <type>virtual size_t</type>
+      <name>id</name>
+      <anchorfile>structcat_1_1signals_1_1_signal_data.html</anchorfile>
+      <anchor>a2bb6b6e036e6c2b178425a406a48bae4</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~SignalData</name>
+      <anchorfile>structcat_1_1signals_1_1_signal_data.html</anchorfile>
+      <anchor>ac08b9a5b534993238c2c388f0adde5e5</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>cat::Vector2</name>
+    <filename>structcat_1_1_vector2.html</filename>
+    <member kind="typedef">
+      <type>int64_t</type>
+      <name>value_type</name>
+      <anchorfile>structcat_1_1_vector2.html</anchorfile>
+      <anchor>a37ce0f6e69a1578bcb3334b4a751c21d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Vector2</name>
+      <anchorfile>structcat_1_1_vector2.html</anchorfile>
+      <anchor>ad197b3de9c2df01fa44859d9baa6b695</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Vector2</name>
+      <anchorfile>structcat_1_1_vector2.html</anchorfile>
+      <anchor>abb8ba9a82db582310b444ec204c5a87e</anchor>
+      <arglist>(value_type x, value_type y)</arglist>
+    </member>
+    <member kind="function">
+      <type>Vector2</type>
+      <name>operator+</name>
+      <anchorfile>structcat_1_1_vector2.html</anchorfile>
+      <anchor>ae2d66e996836fde056d1dfb06b01f688</anchor>
+      <arglist>(const Vector2 &amp;v)</arglist>
+    </member>
+    <member kind="function">
+      <type>Vector2</type>
+      <name>operator-</name>
+      <anchorfile>structcat_1_1_vector2.html</anchorfile>
+      <anchor>a0f1ec8135f749b0d8956f08555140bba</anchor>
+      <arglist>(const Vector2 &amp;v)</arglist>
+    </member>
+    <member kind="function">
+      <type>Vector2</type>
+      <name>operator*</name>
+      <anchorfile>structcat_1_1_vector2.html</anchorfile>
+      <anchor>aed44c4639b1771306638bc61efad1cdd</anchor>
+      <arglist>(const Vector2 &amp;v)</arglist>
+    </member>
+    <member kind="function">
+      <type>Vector2</type>
+      <name>operator/</name>
+      <anchorfile>structcat_1_1_vector2.html</anchorfile>
+      <anchor>a5dc0855ec27e89d9c5f735cce7d126e3</anchor>
+      <arglist>(const Vector2 &amp;v)</arglist>
+    </member>
+    <member kind="function">
+      <type>Vector2 &amp;</type>
+      <name>operator+=</name>
+      <anchorfile>structcat_1_1_vector2.html</anchorfile>
+      <anchor>a0184831dca7a724a5bf50f4c090fff78</anchor>
+      <arglist>(const Vector2 &amp;v)</arglist>
+    </member>
+    <member kind="function">
+      <type>Vector2 &amp;</type>
+      <name>operator-=</name>
+      <anchorfile>structcat_1_1_vector2.html</anchorfile>
+      <anchor>ac2f32bc3b46c7f693074ead9248766b9</anchor>
+      <arglist>(const Vector2 &amp;v)</arglist>
+    </member>
+    <member kind="function">
+      <type>Vector2 &amp;</type>
+      <name>operator*=</name>
+      <anchorfile>structcat_1_1_vector2.html</anchorfile>
+      <anchor>a52f52165a3e7375919ec9d2ecbfb96cc</anchor>
+      <arglist>(const Vector2 &amp;v)</arglist>
+    </member>
+    <member kind="function">
+      <type>Vector2 &amp;</type>
+      <name>operator/=</name>
+      <anchorfile>structcat_1_1_vector2.html</anchorfile>
+      <anchor>a04d033337b9c0f3afa87dddbb060117c</anchor>
+      <arglist>(const Vector2 &amp;v)</arglist>
+    </member>
+    <member kind="function">
+      <type>value_type</type>
+      <name>distance</name>
+      <anchorfile>structcat_1_1_vector2.html</anchorfile>
+      <anchor>a58c260666374ec5d57c49f3549e1a2ca</anchor>
+      <arglist>(const Vector2 &amp;v)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>between</name>
+      <anchorfile>structcat_1_1_vector2.html</anchorfile>
+      <anchor>acb0719f98dc74dc74a4eb499a98fa4ab</anchor>
+      <arglist>(const Vector2 &amp;a, const Vector2 &amp;b)</arglist>
+    </member>
+    <member kind="variable">
+      <type>value_type</type>
+      <name>x</name>
+      <anchorfile>structcat_1_1_vector2.html</anchorfile>
+      <anchor>ae379220802c0569eb02adcf8f74e9b5a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>value_type</type>
+      <name>y</name>
+      <anchorfile>structcat_1_1_vector2.html</anchorfile>
+      <anchor>a73f82756509a96b296bfba589826d9ad</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>cat::Window</name>
+    <filename>classcat_1_1_window.html</filename>
+    <base>cat::Positional</base>
+    <member kind="typedef">
+      <type>std::function&lt; void(Window *)&gt;</type>
+      <name>redraw_event</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a9bd6a16dbf97be857ffd5b4941e5bbec</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::function&lt; void(Window *, bool)&gt;</type>
+      <name>focus_event</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a31205c1d1a7dc0dc713f172c4e58b83b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Window</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a4606ceb4b7bc0b3b3fd4bd75a07a5da9</anchor>
+      <arglist>()=delete</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Window</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>ae130f6fc72959c030e78300766d07a7f</anchor>
+      <arglist>(const Vector2 &amp;position, const Vector2 &amp;resolution)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~Window</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a62e7160eabaa2d377f3dd1c3b26778e7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const id_type &amp;</type>
+      <name>get_id</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a3706f6090fd0f888e364d85551f55d0a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>clear</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a8579eb116a47405cfce09550fe5fe946</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>redraw</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a73bac76155bd991ea4b04cd61c29c57c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>move</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a7da4ff1aa75d8d33f16eadb4ec6d1ee2</anchor>
+      <arglist>(const Vector2 &amp;position) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>resize</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>aabc13eacf26ada65f8a8f978357258ee</anchor>
+      <arglist>(const Vector2 &amp;resolution) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>box</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a1547ed7e0b41e4b0ca9f2f0261e9dd7e</anchor>
+      <arglist>(int chtype=0)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>background</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a9f624f957b3905e4d3f14904f575bbbf</anchor>
+      <arglist>(const effect::color &amp;color)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>cursor</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a29df65e82266c0d9a8f43c15c945246d</anchor>
+      <arglist>(const Vector2 &amp;position, bool absolute=false)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window</type>
+      <name>duplicate</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a99500ad5ec0ee2e1dfbfacc59f25c4bb</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>adopt</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a1c44adf1b902d3625b59bf485c90f916</anchor>
+      <arglist>(Window *win)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>sync</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a60bb39c0e0e3ad06a7b6270aeb14939c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>trigger_syncs</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a85857ba3cdebd1e7cea8df90b38a4aa9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>hide</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a26b7076c9bab6adb663810b39f7dc077</anchor>
+      <arglist>(bool status=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>unhide</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>ac08976909ab49a8e8980fb74fe72ba1c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>hidden</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>ab4832c29fa82ac4ea194d324b90c3c7d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>focus</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>af39ae4a0e6f2a86c1cb6811f420bba7d</anchor>
+      <arglist>(bool status=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>lose_focus</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>aff173bb2719a58c0a8e9bf409d4fa556</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>focused</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a4c315766da3a8d4582ed750504292d5a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Window &amp;</type>
+      <name>set_buffer</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>afc652b549ed7c7be8d93c6f99bb276cf</anchor>
+      <arglist>(Renderer renderer=Renderer::null, Composer composer=Composer::null)</arglist>
+    </member>
+    <member kind="function">
+      <type>TBuffer *</type>
+      <name>get_buffer</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a17e443113067c603cdf29d2ed0a6ad86</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>set_key</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a666679ceffe88089fb367bd829830235</anchor>
+      <arglist>(const key &amp;skey, const key_event &amp;event)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>unset_key</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a5a0ed55240f9518cef469e4d4f2ca128</anchor>
+      <arglist>(const key &amp;skey)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>set_key_handler</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a9009d885ab963eae85f2dec4a02b653e</anchor>
+      <arglist>(const key_checker_type &amp;check, const key_handler_type &amp;handler)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const key_handler_type &amp;</type>
+      <name>get_key_handler</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a593fb80cb35de710faa11a74cd85f82f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const key_checker_type &amp;</type>
+      <name>get_key_check</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a1fe9fe8961cad0c3f52cd1c73fda7ca8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>do_key_check</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a0d00c5ef817896d70f88d4c5312ea7b1</anchor>
+      <arglist>(const key &amp;skey)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>has_key</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>ac77de6a70ed185f9b74ef6b4c3ea9bb2</anchor>
+      <arglist>(const key &amp;skey)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual key_event &amp;</type>
+      <name>get_key_event</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a38b5e9280b34abf747e490624b096ac9</anchor>
+      <arglist>(const key &amp;skey)</arglist>
+    </member>
+    <member kind="function">
+      <type>Window &amp;</type>
+      <name>draw_at</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a5f4fb82ef78e44a62c9398e88da0d3f8</anchor>
+      <arglist>(const Vector2 &amp;position, const CatString &amp;fmstr, const Tfargs &amp;... fargs)</arglist>
+    </member>
+    <member kind="function">
+      <type>Window &amp;</type>
+      <name>draw</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a17569d2be27290712efc0ce600478105</anchor>
+      <arglist>(const CatString &amp;fmstr, const Tfargs &amp;... fargs)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>draw_buffer</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>ade8447df97f72006ec040696218e20d4</anchor>
+      <arglist>(const Vector2 &amp;offset={0, 0})</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>on_redraw</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a57af7a69a4c995e3cdbac871581fbd75</anchor>
+      <arglist>(const redraw_event &amp;event)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Window &amp;</type>
+      <name>on_focus</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a41be4e8ea68cd412161edde6467bd440</anchor>
+      <arglist>(const focus_event &amp;event)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>viable_as</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>ac9e14d2fbe34dbe743ece3fd91d63473</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Vector2</type>
+      <name>get_position</name>
+      <anchorfile>classcat_1_1_positional.html</anchorfile>
+      <anchor>aa5ee6d81cfdc2b596175cf23ef9fe54a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Vector2</type>
+      <name>get_resolution</name>
+      <anchorfile>classcat_1_1_positional.html</anchorfile>
+      <anchor>afa7439670836aeaf8544bfa506c21ca1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="typedef" protection="protected">
+      <type>std::function&lt; bool(const key &amp;)&gt;</type>
+      <name>key_checker_type</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a2728bb49a94dc45d6d6d9940cd2c8141</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef" protection="protected">
+      <type>std::function&lt; void(const key &amp;)&gt;</type>
+      <name>key_handler_type</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a3caa7168a2df9e2c2a4f1cf4fe29e2e3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>WINDOW *</type>
+      <name>ncurses_window</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a7b251953404dcfe76a9ed75014242940</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>redraw_request</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>abb94e60ee03294b9bae3b2ab7b09b941</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::vector&lt; Window * &gt;</type>
+      <name>syncs</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a14a604ff1c2fd5d71c89cfcf7c2c917b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>is_focused</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a7862d18042d0f173babb2428c6687df8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>is_hidden</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a9557b5c01bcecfd0247d41cf792d9097</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>keymap</type>
+      <name>win_keymap</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>af65385a476fca29ea6f47db2643230e0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>key_handler_type</type>
+      <name>key_handler</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a70b4ce1a7850cb4098a2e921866d6643</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>key_checker_type</type>
+      <name>key_check</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>aff45a4ee5408f307de3f8d3df607d0b1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>id_type</type>
+      <name>id</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a673f5cf4b71e8cf98f2812eb06451858</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Buffer *</type>
+      <name>buffer</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a2a5c63d683f8eacf51241ba809b8d8e0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::vector&lt; redraw_event &gt;</type>
+      <name>redraw_events</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a14c2495e8da8ff9e2d0bbb157ea8b592</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>std::vector&lt; focus_event &gt;</type>
+      <name>focus_events</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a0d515fc6a723db9c2dc8d9d5045b9ede</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Vector2</type>
+      <name>position</name>
+      <anchorfile>classcat_1_1_positional.html</anchorfile>
+      <anchor>a55b93443595ca27fa02b6cae909c8ad9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Vector2</type>
+      <name>resolution</name>
+      <anchorfile>classcat_1_1_positional.html</anchorfile>
+      <anchor>ac97e987e9fa5475f147152d69c3a3ea3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="friend">
+      <type>friend void</type>
+      <name>redraw</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>ab396718daaebb64c60262944a5e28755</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="friend">
+      <type>friend void</type>
+      <name>move_cursor</name>
+      <anchorfile>classcat_1_1_window.html</anchorfile>
+      <anchor>a239cce8ef6eaa14e6667ace535794332</anchor>
+      <arglist>(Window *, const Vector2 &amp;)</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>cat</name>
+    <filename>namespacecat.html</filename>
+    <namespace>cat::config</namespace>
+    <namespace>cat::effect</namespace>
+    <namespace>cat::lib</namespace>
+    <namespace>cat::signals</namespace>
+    <namespace>cat::terminal</namespace>
+    <class kind="class">cat::Buffer</class>
+    <class kind="class">cat::CatString</class>
+    <class kind="struct">cat::CatStringIterator</class>
+    <class kind="struct">cat::ConstCatStringIterator</class>
+    <class kind="class">cat::Container</class>
+    <class kind="struct">cat::curs_position</class>
+    <class kind="class">cat::Positional</class>
+    <class kind="struct">cat::Processor</class>
+    <class kind="struct">cat::Settings</class>
+    <class kind="struct">cat::Vector2</class>
+    <class kind="class">cat::Window</class>
+    <member kind="typedef">
+      <type>CatString</type>
+      <name>image_type</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>a6dfb86ebbb1fb574ca0bbe6dd0bf407e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CatString</type>
+      <name>snippet_type</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>a9956eac013712610ae19d4def66ff571</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Processor&lt; image_type, image_type &gt;</type>
+      <name>Renderer</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>abd77a5f8f9a559e1be8ad238cd4a842d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Processor&lt; image_type, snippet_type &gt;</type>
+      <name>Composer</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>a42a11d320a68cf9b9622b72c7566bb31</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::function&lt; void(WINDOW *, size_t, const char *)&gt;</type>
+      <name>draw_behaviour</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>acd9c794fdeae9e7256d31d94241168df</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>uint64_t</type>
+      <name>id_type</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>a3d03a98ba16ebc8920ce3b3cd672d54b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>int</type>
+      <name>key</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>a9bedec76f31ed6d6b6aa354f79c214ba</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::function&lt; void()&gt;</type>
+      <name>key_event</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>a46504b334e77c132e83bd405fdcafd1b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::map&lt; key, key_event &gt;</type>
+      <name>keymap</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>a8c836b79359fef361386614e80394c2b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::function&lt; void()&gt;</type>
+      <name>process_t</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>a8170e9498d159e06b9977227057acd82</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::vector&lt; process_t &gt;</type>
+      <name>process_queue</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>a42a7147ec6c329917adb445ed3398966</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>Priority</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>afb9038176a5490c4455248c147148dcc</anchor>
+      <arglist></arglist>
+      <enumvalue file="namespacecat.html" anchor="afb9038176a5490c4455248c147148dccab89de3b4b81c4facfac906edf29aec8c">HIGH</enumvalue>
+      <enumvalue file="namespacecat.html" anchor="afb9038176a5490c4455248c147148dcca1e23852820b9154316c7c06e2b7ba051">NORMAL</enumvalue>
+      <enumvalue file="namespacecat.html" anchor="afb9038176a5490c4455248c147148dcca41bc94cbd8eebea13ce0491b2ac11b88">LOW</enumvalue>
+    </member>
+    <member kind="function">
+      <type>Tcomp</type>
+      <name>compose</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>ab0249b77fed38bbac01c547269b21901</anchor>
+      <arglist>(const Tcomp &amp;r0)</arglist>
+    </member>
+    <member kind="function">
+      <type>Tcomp</type>
+      <name>compose</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>ac1a2f5089154fa8399f1cb03e6fd24ed</anchor>
+      <arglist>(const Tcomp &amp;r0, const Tcomp &amp;r1, const TcompP &amp;...tail)</arglist>
+    </member>
+    <member kind="function">
+      <type>TContainer *</type>
+      <name>new_container</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>a49721ad0d44e2c1cb21c8085c8fae551</anchor>
+      <arglist>(const Vector2 &amp;position, const Vector2 &amp;resolution)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>remove_container</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>a14b51f45925f88dc3785dc985e6ff4f1</anchor>
+      <arglist>(const Container *container)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>clear_container_pool</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>a894c062f0bde9d306c13cbf27c4a5845</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>curs_position</type>
+      <name>get_cursor</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>a33a759c1860ea34ddd67a308f6e82ffc</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>move_cursor_global</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>a262ec84a2c3fcef45a39aa1e536be396</anchor>
+      <arglist>(const Vector2 &amp;position)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>move_cursor</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>a6422012d61ab7deb7b9885b163087cb3</anchor>
+      <arglist>(Window *win, const Vector2 &amp;position)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>move_cursor</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>aebbc2188ab53808dae9f3bd3a5ed3ba9</anchor>
+      <arglist>(const curs_position &amp;position)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>move_cursor_relative</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>a107dad89474dae184530f17e71ce6415</anchor>
+      <arglist>(const Vector2 &amp;movement)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>draw_base</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>a98cda3da96d2dc8689372d7ebc29f056</anchor>
+      <arglist>(WINDOW *win, const CatString &amp;fmstr, const draw_behaviour &amp;draw, bool do_cformat, size_t argsize,...)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>draw</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>a46e33a50496d687cf8a7c60ef0635f86</anchor>
+      <arglist>(WINDOW *win, const CatString &amp;fmstr, Targs... args)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>draw</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>a8143e93299fbe4a8aa9738e80a120fe5</anchor>
+      <arglist>(const Vector2 &amp;position, WINDOW *win, const CatString &amp;fmstr, Targs... args)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>redraw</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>ab60ef35d03f090e295a41ebff3bedb44</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>TWindow *</type>
+      <name>new_window</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>abe6a03f24b9472a3b177ecc16c16c470</anchor>
+      <arglist>(TWindow *win)</arglist>
+    </member>
+    <member kind="function">
+      <type>TWindow *</type>
+      <name>new_window</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>ac9cf32a5580bf0e9c6fe57fc64c15657</anchor>
+      <arglist>(const Vector2 &amp;position={0, 0}, const Vector2 &amp;resolution={1, 1})</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>clear_pool</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>ae648ed2c293c21f70820f209def0530f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>TWindow *</type>
+      <name>get_window</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>a8192f41ca82955a66f5a6fc31f6f5fd9</anchor>
+      <arglist>(const id_type &amp;id)</arglist>
+    </member>
+    <member kind="function">
+      <type>TWindow *</type>
+      <name>get_focused</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>acbd0aba5edd594a6e23ecf9313680f22</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>unfocus</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>a15b2cd8cc97fcab5128a366912beb0b9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>TWindow *</type>
+      <name>next_handler</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>a762faabb736ea5d18629acb11121d9fe</anchor>
+      <arglist>(const key &amp;skey)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>remove_window</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>a96e7e1e08f23f08d73b77d7a19e3759e</anchor>
+      <arglist>(const Window *win)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>remove_window</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>a0c11d62142a2a260af4babc7e8c86ea0</anchor>
+      <arglist>(const id_type &amp;id)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>init</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>a0cc47facb555decf5fe1e9899b1a0681</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>exit</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>ac596e9e57efb3df1e5613128bdf89bbe</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>id_type</type>
+      <name>new_id</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>a56d118e21f0bce7896b5b73fbeae8d04</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_keymap</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>a8b0cde4208de02c577bf7241bad15a7d</anchor>
+      <arglist>(const key &amp;skey, const key_event &amp;event)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>set_keymap</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>ae7d4d5994dfee2d46e0a83d4892a3a89</anchor>
+      <arglist>(std::map&lt; const key, const key_event &gt; events)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>in_global_keymap</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>a9d180006d67ca69fed521616a950dffd</anchor>
+      <arglist>(const key &amp;skey)</arglist>
+    </member>
+    <member kind="function">
+      <type>key</type>
+      <name>shift</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>a181414ff49bc30540b6cf27eb7ff9d8b</anchor>
+      <arglist>(const key &amp;k)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>pass_input</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>a749df1e02ba97cae9bbdacdadfc6d13c</anchor>
+      <arglist>(int input)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>update</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>a396b94f93119ea9617c657752ef5cf34</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>cycle</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>aee56737ffaccbbd0745d5b03253a2de6</anchor>
+      <arglist>(const Settings &amp;settings={})</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>process</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>ab2b69fb4c9c8d2c905c20b516afd6db3</anchor>
+      <arglist>(const Priority &amp;priority, const process_t &amp;process)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>async</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>a47f80520f0f014557b101b77d3a42bc6</anchor>
+      <arglist>(const Priority &amp;priority, const process_t &amp;process)</arglist>
+    </member>
+    <member kind="function">
+      <type>Settings</type>
+      <name>apply</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>a4e02bd25a37bc7dce906a71ed7cc9949</anchor>
+      <arglist>(const Settings &amp;applied)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>error</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>a589e67902b09cfc3a0765e9c1ffaa5af</anchor>
+      <arglist>(const std::string &amp;msg)</arglist>
+    </member>
+    <member kind="function">
+      <type>CatString</type>
+      <name>operator+</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>a4a43a0a6e60810f882d3c9bfcdfab4e8</anchor>
+      <arglist>(const std::string &amp;s, const CatString &amp;cs)</arglist>
+    </member>
+    <member kind="function">
+      <type>CatString</type>
+      <name>operator+</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>aca94ee9dec65c571721b0a4092646f8f</anchor>
+      <arglist>(const CatString::fn_type &amp;fn, const CatString &amp;cs)</arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; Container * &gt;</type>
+      <name>container_pool</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>a7dfd11bd031c710318e06b486bd4b195</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>curs_position</type>
+      <name>cursor</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>a2c289f7fd31fae2f71ff240da03b0828</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; Window * &gt;</type>
+      <name>window_pool</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>a708e422e0a8cac7dd0cf6a1390f74932</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>id_type</type>
+      <name>id_increment</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>af08030cee7c400405a3e140b8214cbe0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>keymap</type>
+      <name>global_keymap</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>a03a6a6dc9039b26613fac592a01388b7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::map&lt; Priority, process_queue &gt;</type>
+      <name>processes</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>a249114148809307d61f67e7a844681e4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::map&lt; Priority, process_queue &gt;</type>
+      <name>async_processes</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>afe8eaebd514fefb940f20bd418df195b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>Settings</type>
+      <name>current_settings</name>
+      <anchorfile>namespacecat.html</anchorfile>
+      <anchor>a64d2eeccc58e47e9cf18a4b29a75dced</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>cat::config</name>
+    <filename>namespacecat_1_1config.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>at</name>
+      <anchorfile>namespacecat_1_1config.html</anchorfile>
+      <anchor>a2407621dfd1cfda0dbecdb9290551e44</anchor>
+      <arglist>(const fs::path &amp;path)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>sync</name>
+      <anchorfile>namespacecat_1_1config.html</anchorfile>
+      <anchor>a133fa366a698062586a0502787fe1863</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>apply</name>
+      <anchorfile>namespacecat_1_1config.html</anchorfile>
+      <anchor>ac40959c512f702a6cd56f3118f46e00e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>has</name>
+      <anchorfile>namespacecat_1_1config.html</anchorfile>
+      <anchor>a36d3ed812520d508af61b3f8f8b1aa97</anchor>
+      <arglist>(const std::string &amp;key, const std::string &amp;section=&quot;Main&quot;)</arglist>
+    </member>
+    <member kind="function">
+      <type>T</type>
+      <name>get</name>
+      <anchorfile>namespacecat_1_1config.html</anchorfile>
+      <anchor>a0829fdb8309475c3fe9d8aefefbceb18</anchor>
+      <arglist>(const std::string &amp;key, const std::string &amp;section=&quot;Main&quot;)</arglist>
+    </member>
+    <member kind="function">
+      <type>T</type>
+      <name>get_or</name>
+      <anchorfile>namespacecat_1_1config.html</anchorfile>
+      <anchor>a4190267b99def96c4ad54517f4730d4b</anchor>
+      <arglist>(const std::string &amp;key, const std::string &amp;section, const T &amp;g_or)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::string &amp;</type>
+      <name>add_default</name>
+      <anchorfile>namespacecat_1_1config.html</anchorfile>
+      <anchor>aecde0ac940a5a0a24bb5436ca85554ab</anchor>
+      <arglist>(const std::string &amp;adefault)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>write_default</name>
+      <anchorfile>namespacecat_1_1config.html</anchorfile>
+      <anchor>a283896ac4958f990f6273fd6f1fd9224</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>ensure</name>
+      <anchorfile>namespacecat_1_1config.html</anchorfile>
+      <anchor>ab77a895c0ae41e81bb6705f0c7917cd9</anchor>
+      <arglist>(const std::string &amp;key, const std::string &amp;section=&quot;Main&quot;, const IniElement &amp;value=IniElement())</arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>opened</name>
+      <anchorfile>namespacecat_1_1config.html</anchorfile>
+      <anchor>a5752f06260d4a2f24618e144d978cd02</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>fs::path</type>
+      <name>config_file</name>
+      <anchorfile>namespacecat_1_1config.html</anchorfile>
+      <anchor>a80e18d841576299fb5975435efdfd317</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>IniFile</type>
+      <name>config_mirror</name>
+      <anchorfile>namespacecat_1_1config.html</anchorfile>
+      <anchor>a0680d21caa935045f6aa7c6772b1bee6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::string</type>
+      <name>config_defaults</name>
+      <anchorfile>namespacecat_1_1config.html</anchorfile>
+      <anchor>a7f2140f4be37f46d45c07326f1b22b7a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>signals::signal</type>
+      <name>config_error</name>
+      <anchorfile>namespacecat_1_1config.html</anchorfile>
+      <anchor>a0bb70764da6352c9dbfb92070cc6bd59</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>cat::effect</name>
+    <filename>namespacecat_1_1effect.html</filename>
+    <namespace>cat::effect::base_colors</namespace>
+    <namespace>cat::effect::ncurses_colors</namespace>
+    <class kind="struct">cat::effect::rgb</class>
+    <member kind="typedef">
+      <type>CatString::fn_type</type>
+      <name>effect_t</name>
+      <anchorfile>namespacecat_1_1effect.html</anchorfile>
+      <anchor>a0fa059787b913755cd554f65590e9470</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>id_type</type>
+      <name>color</name>
+      <anchorfile>namespacecat_1_1effect.html</anchorfile>
+      <anchor>a365cb21a52474cc0b996c6c6de275194</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>short</type>
+      <name>color_fg</name>
+      <anchorfile>namespacecat_1_1effect.html</anchorfile>
+      <anchor>a68083972cb0f8c9fb0a7fc0d328c6fc2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>color_fg</type>
+      <name>color_bg</name>
+      <anchorfile>namespacecat_1_1effect.html</anchorfile>
+      <anchor>af38fe537ec7caa73ee4860befefc6ec7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>color</type>
+      <name>new_color</name>
+      <anchorfile>namespacecat_1_1effect.html</anchorfile>
+      <anchor>a4b3a8d417fcee649a3101a27853d4a02</anchor>
+      <arglist>(const rgb &amp;fg, const rgb &amp;bg=rgb{-1,-1,-1})</arglist>
+    </member>
+    <member kind="function">
+      <type>color</type>
+      <name>new_color</name>
+      <anchorfile>namespacecat_1_1effect.html</anchorfile>
+      <anchor>a2eab2f14de4e896419be7739b1bd2b7f</anchor>
+      <arglist>(int r, int g, int b)</arglist>
+    </member>
+    <member kind="function">
+      <type>color</type>
+      <name>new_color_pair</name>
+      <anchorfile>namespacecat_1_1effect.html</anchorfile>
+      <anchor>a13e33cb3090a32d19fdf21a43203235b</anchor>
+      <arglist>(color_fg fg, color_bg bg)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>color_init</name>
+      <anchorfile>namespacecat_1_1effect.html</anchorfile>
+      <anchor>a54acf33303a3354b48534366592a7f98</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>effect_t</type>
+      <name>custom</name>
+      <anchorfile>namespacecat_1_1effect.html</anchorfile>
+      <anchor>a4a08eb90b99038c1bb986730c3255fe9</anchor>
+      <arglist>(const color &amp;c)</arglist>
+    </member>
+    <member kind="variable">
+      <type>const effect_t</type>
+      <name>normal</name>
+      <anchorfile>namespacecat_1_1effect.html</anchorfile>
+      <anchor>a52b8ff040fdd039ec080a311b2aed46c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>const effect_t</type>
+      <name>standout</name>
+      <anchorfile>namespacecat_1_1effect.html</anchorfile>
+      <anchor>a545c32dae38497b2728bd8d28b66e7d7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>const effect_t</type>
+      <name>underline</name>
+      <anchorfile>namespacecat_1_1effect.html</anchorfile>
+      <anchor>a48e6147c9d3225fdb1b1c8d442cce831</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>const effect_t</type>
+      <name>reverse</name>
+      <anchorfile>namespacecat_1_1effect.html</anchorfile>
+      <anchor>abe867a825b4eaece57c6488067c8dec7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>const effect_t</type>
+      <name>blink</name>
+      <anchorfile>namespacecat_1_1effect.html</anchorfile>
+      <anchor>aa63fb9d42ba73818e13559f48514ddb7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>const effect_t</type>
+      <name>dim</name>
+      <anchorfile>namespacecat_1_1effect.html</anchorfile>
+      <anchor>ae065c88aa04b6e1567706f7e0eee99b1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>const effect_t</type>
+      <name>bold</name>
+      <anchorfile>namespacecat_1_1effect.html</anchorfile>
+      <anchor>aba404d05bda23bd29402cbf34b4096cd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>const effect_t</type>
+      <name>protect</name>
+      <anchorfile>namespacecat_1_1effect.html</anchorfile>
+      <anchor>ac3cbcd1553f154099f59478432873e0a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>const effect_t</type>
+      <name>invisible</name>
+      <anchorfile>namespacecat_1_1effect.html</anchorfile>
+      <anchor>a988fdb5ebf155a89d0d065e69e23f654</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>const effect_t</type>
+      <name>altchar</name>
+      <anchorfile>namespacecat_1_1effect.html</anchorfile>
+      <anchor>a31b767909be1423e5a5102dcf64acd71</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>const effect_t</type>
+      <name>italic</name>
+      <anchorfile>namespacecat_1_1effect.html</anchorfile>
+      <anchor>ad05461f1c79a793408d9186fc366bed9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>colors_supported</name>
+      <anchorfile>namespacecat_1_1effect.html</anchorfile>
+      <anchor>a2339d0e62cf8d5cf2e916cf0ec906e74</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>id_type</type>
+      <name>i_color_id</name>
+      <anchorfile>namespacecat_1_1effect.html</anchorfile>
+      <anchor>a0809d5a64ff420b449cbf72266254730</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>id_type</type>
+      <name>i_pair_id</name>
+      <anchorfile>namespacecat_1_1effect.html</anchorfile>
+      <anchor>aa537a5e37f8c3e5553688458b6853958</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>const effect_t</type>
+      <name>black</name>
+      <anchorfile>namespacecat_1_1effect.html</anchorfile>
+      <anchor>ad36f723f9181752e5fb26ac4244a9659</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>const effect_t</type>
+      <name>red</name>
+      <anchorfile>namespacecat_1_1effect.html</anchorfile>
+      <anchor>a6a506005d7615191c93a771753d2e06f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>const effect_t</type>
+      <name>green</name>
+      <anchorfile>namespacecat_1_1effect.html</anchorfile>
+      <anchor>a22fa737624fd45520b4d48932bba111a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>const effect_t</type>
+      <name>yellow</name>
+      <anchorfile>namespacecat_1_1effect.html</anchorfile>
+      <anchor>aa69e7451a179621800015f09e92950f7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>const effect_t</type>
+      <name>blue</name>
+      <anchorfile>namespacecat_1_1effect.html</anchorfile>
+      <anchor>a3033ab08c6a864d419e81b4e872cb9b4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>const effect_t</type>
+      <name>magenta</name>
+      <anchorfile>namespacecat_1_1effect.html</anchorfile>
+      <anchor>a04fba70fb1dc053c4a5e63d07a887919</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>const effect_t</type>
+      <name>cyan</name>
+      <anchorfile>namespacecat_1_1effect.html</anchorfile>
+      <anchor>aa53a2c36624b11ca81f430a53a6e2f82</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>const effect_t</type>
+      <name>white</name>
+      <anchorfile>namespacecat_1_1effect.html</anchorfile>
+      <anchor>a6686f393a6d89db55895133947481874</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>cat::effect::base_colors</name>
+    <filename>namespacecat_1_1effect_1_1base__colors.html</filename>
+    <member kind="variable">
+      <type>color</type>
+      <name>black</name>
+      <anchorfile>namespacecat_1_1effect_1_1base__colors.html</anchorfile>
+      <anchor>a8142a96ba6cf553a18ed832d62a83d87</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>color</type>
+      <name>red</name>
+      <anchorfile>namespacecat_1_1effect_1_1base__colors.html</anchorfile>
+      <anchor>a22ab2338aa52f551ab042104842dea87</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>color</type>
+      <name>green</name>
+      <anchorfile>namespacecat_1_1effect_1_1base__colors.html</anchorfile>
+      <anchor>ae1b91843a9efdd90500399404c7c63aa</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>color</type>
+      <name>yellow</name>
+      <anchorfile>namespacecat_1_1effect_1_1base__colors.html</anchorfile>
+      <anchor>a1f73923c8c6b0bf4761721aa012a35e2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>color</type>
+      <name>blue</name>
+      <anchorfile>namespacecat_1_1effect_1_1base__colors.html</anchorfile>
+      <anchor>a087891dd444d06d491acaa3a77b26cf6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>color</type>
+      <name>magenta</name>
+      <anchorfile>namespacecat_1_1effect_1_1base__colors.html</anchorfile>
+      <anchor>a38aca25be6a5dcedf2d3822eb16580c6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>color</type>
+      <name>cyan</name>
+      <anchorfile>namespacecat_1_1effect_1_1base__colors.html</anchorfile>
+      <anchor>aa2db75dcabd76775e460192897b4ed9a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>color</type>
+      <name>white</name>
+      <anchorfile>namespacecat_1_1effect_1_1base__colors.html</anchorfile>
+      <anchor>a3c08129616d5bdd84c58d9433510068b</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>cat::effect::ncurses_colors</name>
+    <filename>namespacecat_1_1effect_1_1ncurses__colors.html</filename>
+    <member kind="variable">
+      <type>color</type>
+      <name>black</name>
+      <anchorfile>namespacecat_1_1effect_1_1ncurses__colors.html</anchorfile>
+      <anchor>a9db7bfb51d322a67f6a03cc50fe79ba9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>color</type>
+      <name>red</name>
+      <anchorfile>namespacecat_1_1effect_1_1ncurses__colors.html</anchorfile>
+      <anchor>aa6566e48928103b2337b25e4129e18ac</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>color</type>
+      <name>green</name>
+      <anchorfile>namespacecat_1_1effect_1_1ncurses__colors.html</anchorfile>
+      <anchor>a2bb7a1cd9294377562c44c9eede0f391</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>color</type>
+      <name>yellow</name>
+      <anchorfile>namespacecat_1_1effect_1_1ncurses__colors.html</anchorfile>
+      <anchor>a5e2b3f210cb854041c69c6757c1e3539</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>color</type>
+      <name>blue</name>
+      <anchorfile>namespacecat_1_1effect_1_1ncurses__colors.html</anchorfile>
+      <anchor>a6d7cc6edcf17a2b7d2de81b34c566a99</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>color</type>
+      <name>magenta</name>
+      <anchorfile>namespacecat_1_1effect_1_1ncurses__colors.html</anchorfile>
+      <anchor>af7cd61a91497fb974885a0728012b119</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>color</type>
+      <name>cyan</name>
+      <anchorfile>namespacecat_1_1effect_1_1ncurses__colors.html</anchorfile>
+      <anchor>a6f39476c8634fe7338261c44234c1997</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>color</type>
+      <name>white</name>
+      <anchorfile>namespacecat_1_1effect_1_1ncurses__colors.html</anchorfile>
+      <anchor>a502f79c41e0c1f1ad88134baca5caf1c</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>cat::lib</name>
+    <filename>namespacecat_1_1lib.html</filename>
+    <class kind="class">cat::lib::BasicShell</class>
+    <class kind="class">cat::lib::HorizontalContainer</class>
+    <class kind="class">cat::lib::InputField</class>
+    <class kind="class">cat::lib::LockableBuffer</class>
+    <class kind="class">cat::lib::ScrollBuffer</class>
+    <member kind="function">
+      <type>Composer::return_type</type>
+      <name>line_numbers</name>
+      <anchorfile>namespacecat_1_1lib.html</anchorfile>
+      <anchor>a978306eaf5ef8da4050d8393d57c6860</anchor>
+      <arglist>(const Composer::param_type &amp;snippet, Buffer *buffer)</arglist>
+    </member>
+    <member kind="function">
+      <type>Renderer::return_type</type>
+      <name>fit_hight</name>
+      <anchorfile>namespacecat_1_1lib.html</anchorfile>
+      <anchor>a030f498bec04e25d16df4549a9911ac3</anchor>
+      <arglist>(const Renderer::param_type &amp;param, Buffer *buffer)</arglist>
+    </member>
+    <member kind="function">
+      <type>Renderer::return_type</type>
+      <name>fit_width</name>
+      <anchorfile>namespacecat_1_1lib.html</anchorfile>
+      <anchor>af0d7dd2e7531ef8aa5d4f631cc0562fd</anchor>
+      <arglist>(const Renderer::param_type &amp;param, Buffer *buffer)</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>cat::signals</name>
+    <filename>namespacecat_1_1signals.html</filename>
+    <class kind="struct">cat::signals::MessageData</class>
+    <class kind="struct">cat::signals::SignalData</class>
+    <member kind="typedef">
+      <type>uint64_t</type>
+      <name>signal</name>
+      <anchorfile>namespacecat_1_1signals.html</anchorfile>
+      <anchor>a1997644f6f84e4b8d869df87756c4350</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>uint64_t</type>
+      <name>tag_type</name>
+      <anchorfile>namespacecat_1_1signals.html</anchorfile>
+      <anchor>a6c0ad91b99d53ee72c851509abbb7be0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::function&lt; void(const signal &amp;, const SignalData *)&gt;</type>
+      <name>listener</name>
+      <anchorfile>namespacecat_1_1signals.html</anchorfile>
+      <anchor>ae7e449b83210741c521b289d454bc7f2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>std::function&lt; void(const tag_type &amp;, const signal &amp;, const SignalData *)&gt;</type>
+      <name>tag_listener</name>
+      <anchorfile>namespacecat_1_1signals.html</anchorfile>
+      <anchor>af34770162c9e8ec5156ad1af032286c7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>signal</type>
+      <name>tag</name>
+      <anchorfile>namespacecat_1_1signals.html</anchorfile>
+      <anchor>a6173cf2aa1be4c49159eb31348037a8a</anchor>
+      <arglist>(signal sig, tag_type tag)</arglist>
+    </member>
+    <member kind="function">
+      <type>signal</type>
+      <name>create</name>
+      <anchorfile>namespacecat_1_1signals.html</anchorfile>
+      <anchor>a06877606ac62588f79b2f267d9baae88</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>signal</type>
+      <name>create</name>
+      <anchorfile>namespacecat_1_1signals.html</anchorfile>
+      <anchor>aca7d566317eb45cedd31eff88613df7e</anchor>
+      <arglist>(tag_type tag)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>listen</name>
+      <anchorfile>namespacecat_1_1signals.html</anchorfile>
+      <anchor>a6a9a40aa1437bebe36bdd15b33771aac</anchor>
+      <arglist>(const listener &amp;siglistener)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>listen_tag</name>
+      <anchorfile>namespacecat_1_1signals.html</anchorfile>
+      <anchor>a44629db39be76892e8b2326ced2cafe7</anchor>
+      <arglist>(const tag_listener &amp;taglistener)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>emit</name>
+      <anchorfile>namespacecat_1_1signals.html</anchorfile>
+      <anchor>a70fd4effadc66407b4b96f152d9d76e0</anchor>
+      <arglist>(signal sig, const SignalData *data=nullptr, bool clean=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>emit_tag</name>
+      <anchorfile>namespacecat_1_1signals.html</anchorfile>
+      <anchor>a15e53887756018997f01d9099272b938</anchor>
+      <arglist>(tag_type tag, const SignalData *data=nullptr)</arglist>
+    </member>
+    <member kind="function">
+      <type>tag_type</type>
+      <name>new_tag</name>
+      <anchorfile>namespacecat_1_1signals.html</anchorfile>
+      <anchor>aaa0d7e6edb4126d3d0f5e8ea0260e5ba</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>auto</type>
+      <name>id_of</name>
+      <anchorfile>namespacecat_1_1signals.html</anchorfile>
+      <anchor>af7d5fde16773176ee605ae28afb7d9c7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable">
+      <type>std::map&lt; tag_type, std::vector&lt; signal &gt; &gt;</type>
+      <name>tags</name>
+      <anchorfile>namespacecat_1_1signals.html</anchorfile>
+      <anchor>a5df413970a8e731efb496d33e52b897f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::map&lt; signal, std::vector&lt; tag_type &gt; &gt;</type>
+      <name>rtags_map</name>
+      <anchorfile>namespacecat_1_1signals.html</anchorfile>
+      <anchor>af3c9395ac403adfa2fbe8d4c9a1cf9a2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; listener &gt;</type>
+      <name>listeners</name>
+      <anchorfile>namespacecat_1_1signals.html</anchorfile>
+      <anchor>a394cf26d79c22fd88e4499381e9f7aee</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>std::vector&lt; tag_listener &gt;</type>
+      <name>tag_listeners</name>
+      <anchorfile>namespacecat_1_1signals.html</anchorfile>
+      <anchor>a9938d526efd3732f1671877907062c2a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>const tag_type</type>
+      <name>error_tag</name>
+      <anchorfile>namespacecat_1_1signals.html</anchorfile>
+      <anchor>acfcc5c758f82f8f1b684c8e00d212cb0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>const signal</type>
+      <name>quit_signal</name>
+      <anchorfile>namespacecat_1_1signals.html</anchorfile>
+      <anchor>aa99ffd60518b9febc9dbd5d021dd40d6</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>cat::terminal</name>
+    <filename>namespacecat_1_1terminal.html</filename>
+    <member kind="function">
+      <type>Vector2::value_type</type>
+      <name>get_x</name>
+      <anchorfile>namespacecat_1_1terminal.html</anchorfile>
+      <anchor>a516cb7b50a85fbc282e7652a59029c1e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>Vector2::value_type</type>
+      <name>get_y</name>
+      <anchorfile>namespacecat_1_1terminal.html</anchorfile>
+      <anchor>a2a37c34c5c699b20a0acf071a3bee8f3</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="page">
+    <name>md__2home_2labricecat_2lab_2dev_2src_2cat_2_r_e_a_d_m_e</name>
+    <title>cat 0.1.0</title>
+    <filename>md__2home_2labricecat_2lab_2dev_2src_2cat_2_r_e_a_d_m_e.html</filename>
+  </compound>
+  <compound kind="page">
+    <name>index</name>
+    <title>cat 0.1.0</title>
+    <filename>index.html</filename>
+    <docanchor file="index.html" title="cat 0.1.0">md_home</docanchor>
+  </compound>
+</tagfile>

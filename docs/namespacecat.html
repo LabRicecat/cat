@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8"/>
+  <title>cat namespace | cat</title>
+  <link href="favicon-dark.png" rel="icon" type="image/png"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="#22272e" name="theme-color"/>
+  <link href="poxy/poxy.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" referrerpolicy="no-referrer" rel="stylesheet"/>
+  <script src="poxy/poxy.js"></script>
+  <script>initialize_theme("dark");</script>
+  <meta content="cat" name="twitter:title"/>
+  <meta content="cat" property="og:title"/>
+  <meta content="cat" itemprop="name"/>
+  <meta content="Labricecat" name="author"/>
+  <meta content="Labricecat" property="article:author"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="Poxy v0.13.7" name="generator"/>
+  <meta content="strict-origin-when-cross-origin" name="referrer"/>
+</head>
+<body class="poxy-has-toc">
+<header><nav id="navigation">
+  <div class="m-container">
+    <div class="m-row">
+      <a class="m-col-t-8 m-col-m-none m-left-m" href="index.html" id="m-navbar-brand">cat</a>
+      <div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
+        <a class="m-doc-search-icon" href="#search" onclick="return showSearch()" title="Search"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+          <path d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z" id="m-doc-search-icon-path"></path>
+        </svg></a>
+        <a href="#navigation" id="m-navbar-show" title="Show navigation"></a>
+        <a href="#" id="m-navbar-hide" title="Hide navigation"></a>
+      </div>
+      <div class="m-col-t-12 m-show-m m-col-m-none m-right-m" id="m-navbar-collapse">
+        <div class="m-row">
+          <ol class="m-col-t-6 m-col-m-none">
+            <li><a href="namespaces.html">Namespaces</a></li>
+            <li><a href="annotated.html">Classes</a></li>
+            <li><a href="files.html">Files</a></li>
+          </ol>
+          <ol class="m-col-t-6 m-col-m-none" start="4">
+            <li><a class="poxy-icon repo github poxy-external" href="https://github.com/labricecat/cat" target="_blank" title="View on GitHub"><svg id="poxy-icon-repo" version="1.1" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"><path d="M25,1.23a24.37,24.37,0,0,0-7.7,47.5C18.51,49,19,48.2,19,47.56s0-2.12,0-4.15c-6.78,1.47-8.21-3.27-8.21-3.27C9.61,37.33,8,36.58,8,36.58c-2.21-1.51.17-1.48.17-1.48a5.12,5.12,0,0,1,3.73,2.51c2.17,3.72,5.7,2.65,7.09,2a5.25,5.25,0,0,1,1.55-3.26c-5.41-.61-11.1-2.7-11.1-12A9.41,9.41,0,0,1,12,17.79a8.75,8.75,0,0,1,.24-6.45s2-.66,6.7,2.49a23.1,23.1,0,0,1,12.2,0c4.66-3.15,6.7-2.49,6.7-2.49A8.75,8.75,0,0,1,38,17.79a9.41,9.41,0,0,1,2.51,6.54c0,9.36-5.7,11.42-11.13,12a5.83,5.83,0,0,1,1.65,4.51c0,3.26,0,5.89,0,6.69,0,.65.44,1.41,1.68,1.17A24.38,24.38,0,0,0,25,1.23Z" fill="currentColor"></path></svg></a></li>
+            <li><a class="poxy-icon theme" href="javascript:void(null);" id="poxy-theme-switch" onclick="toggle_theme(); return false;" role="button" title="Toggle dark and light themes"><svg id="poxy-theme-switch-img" version="1.1" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><circle cx="185.6708" cy="183.8122" fill="currentColor" r="65.625"></circle><path d="M185.6708,87.5622a13.1256,13.1256,0,0,0,13.125-13.125V52.5622a13.125,13.125,0,1,0-26.25,0v21.875A13.1257,13.1257,0,0,0,185.6708,87.5622Z" fill="currentColor"></path><path d="M99.051,115.7519a13.1236,13.1236,0,1,0,18.56-18.56L102.1442,81.726a13.1236,13.1236,0,0,0-18.5595,18.56Z" fill="currentColor"></path><path d="M89.4208,183.8122a13.1257,13.1257,0,0,0-13.125-13.125H54.4208a13.125,13.125,0,0,0,0,26.25h21.875A13.1256,13.1256,0,0,0,89.4208,183.8122Z" fill="currentColor"></path><path d="M99.051,251.8725,83.5847,267.3431a13.1236,13.1236,0,1,0,18.56,18.56l15.4663-15.4706a13.1236,13.1236,0,1,0-18.5595-18.56Z" fill="currentColor"></path><path d="M185.6708,280.0622a13.1258,13.1258,0,0,0-13.125,13.125v21.875a13.125,13.125,0,0,0,26.25,0v-21.875A13.1257,13.1257,0,0,0,185.6708,280.0622Z" fill="currentColor"></path><path d="M272.2907,251.8725a13.1236,13.1236,0,1,0-18.56,18.56l15.4663,15.4706a13.1236,13.1236,0,1,0,18.56-18.56Z" fill="currentColor"></path><path d="M330.0458,183.8122a13.1257,13.1257,0,0,0-13.125-13.125h-21.875a13.125,13.125,0,0,0,0,26.25h21.875A13.1256,13.1256,0,0,0,330.0458,183.8122Z" fill="currentColor"></path><path d="M263.0109,119.5971a13.0824,13.0824,0,0,0,9.28-3.8452l15.4663-15.4663a13.1236,13.1236,0,1,0-18.56-18.56L253.7312,97.1923a13.125,13.125,0,0,0,9.28,22.4048Z" fill="currentColor"></path><path d="M456.9379,401.6714a63.97,63.97,0,0,1-14.9963,7.2055c-19.6448,6.5283-41.8787,2.9566-58.1439-9.8523a68.9311,68.9311,0,0,1-10.835-10.8339c-12.8088-16.2663-16.3806-38.5-9.8523-58.1471a63.8444,63.8444,0,0,1,7.2077-14.9931,8.8036,8.8036,0,0,0-10.1172-13.3034,87.5188,87.5188,0,1,0,110.0372,110.04A8.8,8.8,0,0,0,456.9379,401.6714Z" fill="currentColor"></path></svg></a></li>
+            <li class="m-show-m"><a class="m-doc-search-icon" href="#search" onclick="return showSearch()" title="Search"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+              <use href="#m-doc-search-icon-path"></use>
+            </svg></a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav></header>
+<main><article>
+  <div class="m-container m-container-inflatable">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <h1>
+          cat <span class="m-thin">namespace</span>
+        </h1>
+        <p></p>
+        <nav class="m-block m-default poxy-toc" id="poxy-toc">
+          <h3>Contents</h3>
+          <ul>
+            <li>
+              Reference
+              <ul>
+                <li><a href="#namespaces">Namespaces</a></li>
+                <li><a href="#nested-classes">Classes</a></li>
+                <li><a href="#enum-members">Enums</a></li>
+                <li><a href="#typedef-members">Typedefs</a></li>
+                <li><a href="#func-members">Functions</a></li>
+                <li><a href="#var-members">Variables</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <section id="namespaces">
+          <h2><a href="#namespaces">Namespaces</a></h2>
+          <dl class="m-doc">
+            <dt>namespace <a class="m-doc" href="namespacecat_1_1config.html">config</a></dt>
+            <dd></dd>
+            <dt>namespace <a class="m-doc" href="namespacecat_1_1effect.html">effect</a></dt>
+            <dd></dd>
+            <dt>namespace <a class="m-doc" href="namespacecat_1_1lib.html">lib</a></dt>
+            <dd></dd>
+            <dt>namespace <a class="m-doc" href="namespacecat_1_1signals.html">signals</a></dt>
+            <dd></dd>
+            <dt>namespace <a class="m-doc" href="namespacecat_1_1terminal.html">terminal</a></dt>
+            <dd></dd>
+          </dl>
+        </section>
+        <section id="nested-classes">
+          <h2><a href="#nested-classes">Classes</a></h2>
+          <dl class="m-doc">
+            <dt>
+              class <a class="m-doc" href="classcat_1_1_buffer.html">Buffer</a>
+            </dt>
+            <dd></dd>
+            <dt>
+              class <a class="m-doc" href="classcat_1_1_cat_string.html">CatString</a>
+            </dt>
+            <dd></dd>
+            <dt>
+              struct <a class="m-doc" href="structcat_1_1_cat_string_iterator.html">CatStringIterator</a>
+            </dt>
+            <dd></dd>
+            <dt>
+              struct <a class="m-doc" href="structcat_1_1_const_cat_string_iterator.html">ConstCatStringIterator</a>
+            </dt>
+            <dd></dd>
+            <dt>
+              class <a class="m-doc poxy-injected poxy-external poxy-cppreference poxy-named-requirement" href="https://en.cppreference.com/w/cpp/named_req/Container" target="_blank">Container</a>
+            </dt>
+            <dd></dd>
+            <dt>
+              class <a class="m-doc" href="classcat_1_1_positional.html">Positional</a>
+            </dt>
+            <dd></dd>
+            <dt>
+              <div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename Treturn_type</span>, <span class="m-doc-template-param">typename Tparam_type</span></span>&gt;</div>
+              struct <a class="m-doc" href="structcat_1_1_processor.html">Processor</a>
+            </dt>
+            <dd></dd>
+            <dt>
+              struct <a class="m-doc" href="structcat_1_1_settings.html">Settings</a>
+            </dt>
+            <dd></dd>
+            <dt>
+              struct <a class="m-doc" href="structcat_1_1_vector2.html">Vector2</a>
+            </dt>
+            <dd></dd>
+            <dt>
+              class <a class="m-doc" href="classcat_1_1_window.html">Window</a>
+            </dt>
+            <dd></dd>
+            <dt>
+              struct <a class="m-doc" href="structcat_1_1curs__position.html">curs_position</a>
+            </dt>
+            <dd></dd>
+          </dl>
+        </section>
+        <section id="enum-members">
+          <h2><a href="#enum-members">Enums</a></h2>
+          <dl class="m-doc">
+            <dt id="846c56119c791f790ebe6289df186bf14f8fd6e511378adbc9e0c82ac23eb9ce">
+              <span class="m-doc-wrap-bumper">enum class <a class="m-doc" href="#afb9038176a5490c4455248c147148dcc">Priority</a> { </span><span class="m-doc-wrap"><a class="m-doc-self" href="#846c56119c791f790ebe6289df186bf14f8fd6e511378adbc9e0c82ac23eb9ce">HIGH</a>,
+              <a class="m-doc-self" href="#846c56119c791f790ebe6289df186bf14f8fd6e511378adbc9e0c82ac23eb9ce">NORMAL</a>,
+              <a class="m-doc-self" href="#846c56119c791f790ebe6289df186bf14f8fd6e511378adbc9e0c82ac23eb9ce">LOW</a> }</span>
+            </dt>
+            <dd></dd>
+          </dl>
+        </section>
+        <section id="typedef-members">
+          <h2><a href="#typedef-members">Typedefs</a></h2>
+          <dl class="m-doc">
+            <dt>
+              using <a class="m-doc" href="#a42a11d320a68cf9b9622b72c7566bb31">Composer</a> = <a class="m-doc" href="structcat_1_1_processor.html">Processor</a>&lt;<a class="m-doc" href="#a6dfb86ebbb1fb574ca0bbe6dd0bf407e">image_<wbr/>type</a>, <a class="m-doc" href="#a9956eac013712610ae19d4def66ff571">snippet_<wbr/>type</a>&gt;
+            </dt>
+            <dd></dd>
+            <dt>
+              using <a class="m-doc" href="#abd77a5f8f9a559e1be8ad238cd4a842d">Renderer</a> = <a class="m-doc" href="structcat_1_1_processor.html">Processor</a>&lt;<a class="m-doc" href="#a6dfb86ebbb1fb574ca0bbe6dd0bf407e">image_<wbr/>type</a>, <a class="m-doc" href="#a6dfb86ebbb1fb574ca0bbe6dd0bf407e">image_<wbr/>type</a>&gt;
+            </dt>
+            <dd></dd>
+            <dt>
+              using <a class="m-doc" href="#acd9c794fdeae9e7256d31d94241168df">draw_behaviour</a> = <a class="m-doc-external poxy-cppreference poxy-external" href="http://en.cppreference.com/w/cpp/utility/functional/function.html" target="_blank">std::<wbr/>function</a>&lt;void(WINDOW*, <a class="m-doc poxy-injected poxy-external poxy-cppreference" href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank">size_t</a>, const char*)&gt;
+            </dt>
+            <dd></dd>
+            <dt>
+              using <a class="m-doc" href="#a3d03a98ba16ebc8920ce3b3cd672d54b">id_type</a> = <a class="m-doc poxy-injected poxy-external poxy-cppreference" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint64_t</a>
+            </dt>
+            <dd></dd>
+            <dt>
+              using <a class="m-doc" href="#a6dfb86ebbb1fb574ca0bbe6dd0bf407e">image_type</a> = <a class="m-doc" href="classcat_1_1_cat_string.html">CatString</a>
+            </dt>
+            <dd></dd>
+            <dt>
+              using <a class="m-doc" href="#a9bedec76f31ed6d6b6aa354f79c214ba">key</a> = int
+            </dt>
+            <dd></dd>
+            <dt>
+              using <a class="m-doc" href="#a46504b334e77c132e83bd405fdcafd1b">key_event</a> = <a class="m-doc-external poxy-cppreference poxy-external" href="http://en.cppreference.com/w/cpp/utility/functional/function.html" target="_blank">std::<wbr/>function</a>&lt;void()&gt;
+            </dt>
+            <dd></dd>
+            <dt>
+              using <a class="m-doc" href="#a8c836b79359fef361386614e80394c2b">keymap</a> = <a class="m-doc-external poxy-cppreference poxy-external" href="http://en.cppreference.com/w/cpp/container/map.html" target="_blank">std::<wbr/>map</a>&lt;<a class="m-doc" href="#a9bedec76f31ed6d6b6aa354f79c214ba">key</a>, <a class="m-doc" href="#a46504b334e77c132e83bd405fdcafd1b">key_<wbr/>event</a>&gt;
+            </dt>
+            <dd></dd>
+            <dt>
+              using <a class="m-doc" href="#a42a7147ec6c329917adb445ed3398966">process_queue</a> = <a class="m-doc-external poxy-cppreference poxy-external" href="http://en.cppreference.com/w/cpp/container/vector.html" target="_blank">std::<wbr/>vector</a>&lt;<a class="m-doc" href="#a8170e9498d159e06b9977227057acd82">process_<wbr/>t</a>&gt;
+            </dt>
+            <dd></dd>
+            <dt>
+              using <a class="m-doc" href="#a8170e9498d159e06b9977227057acd82">process_t</a> = <a class="m-doc-external poxy-cppreference poxy-external" href="http://en.cppreference.com/w/cpp/utility/functional/function.html" target="_blank">std::<wbr/>function</a>&lt;void()&gt;
+            </dt>
+            <dd></dd>
+            <dt>
+              using <a class="m-doc" href="#a9956eac013712610ae19d4def66ff571">snippet_type</a> = <a class="m-doc" href="classcat_1_1_cat_string.html">CatString</a>
+            </dt>
+            <dd></dd>
+          </dl>
+        </section>
+        <section id="func-members">
+          <h2><a href="#func-members">Functions</a></h2>
+          <dl class="m-doc">
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a4e02bd25a37bc7dce906a71ed7cc9949">apply</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="structcat_1_1_settings.html">Settings</a>&amp; applied) -&gt; <a class="m-doc" href="structcat_1_1_settings.html">Settings</a></span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a class="m-doc" href="#a47f80520f0f014557b101b77d3a42bc6">async</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="#afb9038176a5490c4455248c147148dcc">Priority</a>&amp; priority,
+              const <a class="m-doc" href="#a8170e9498d159e06b9977227057acd82">process_<wbr/>t</a>&amp; process)</span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a class="m-doc" href="#a894c062f0bde9d306c13cbf27c4a5845">clear_container_pool</a>(</span><span class="m-doc-wrap">)</span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a class="m-doc" href="#ae648ed2c293c21f70820f209def0530f">clear_pool</a>(</span><span class="m-doc-wrap">)</span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename Tcomp</span></span>&gt;</div>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#ab0249b77fed38bbac01c547269b21901">compose</a>(</span><span class="m-doc-wrap">const Tcomp&amp; r0) -&gt; Tcomp</span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename Tcomp</span>, <span class="m-doc-template-param">typename... TcompP</span></span>&gt;</div>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#ac1a2f5089154fa8399f1cb03e6fd24ed">compose</a>(</span><span class="m-doc-wrap">const Tcomp&amp; r0,
+              const Tcomp&amp; r1,
+              const TcompP&amp;... tail) -&gt; Tcomp</span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a class="m-doc" href="#aee56737ffaccbbd0745d5b03253a2de6">cycle</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="structcat_1_1_settings.html">Settings</a>&amp; settings = {})</span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename... Targs</span></span>&gt;</div>
+              <span class="m-doc-wrap-bumper">void <a class="m-doc" href="#a46e33a50496d687cf8a7c60ef0635f86">draw</a>(</span><span class="m-doc-wrap">WINDOW* win,
+              const <a class="m-doc" href="classcat_1_1_cat_string.html">CatString</a>&amp; fmstr,
+              Targs... args)</span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename... Targs</span></span>&gt;</div>
+              <span class="m-doc-wrap-bumper">void <a class="m-doc" href="#a8143e93299fbe4a8aa9738e80a120fe5">draw</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="structcat_1_1_vector2.html">Vector2</a>&amp; position,
+              WINDOW* win,
+              const <a class="m-doc" href="classcat_1_1_cat_string.html">CatString</a>&amp; fmstr,
+              Targs... args)</span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a class="m-doc" href="#a98cda3da96d2dc8689372d7ebc29f056">draw_base</a>(</span><span class="m-doc-wrap">WINDOW* win,
+              const <a class="m-doc" href="classcat_1_1_cat_string.html">CatString</a>&amp; fmstr,
+              const <a class="m-doc" href="#acd9c794fdeae9e7256d31d94241168df">draw_<wbr/>behaviour</a>&amp; draw,
+              bool do_cformat,
+              <a class="m-doc poxy-injected poxy-external poxy-cppreference" href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank">size_t</a> argsize,
+              ...)</span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a class="m-doc" href="#a589e67902b09cfc3a0765e9c1ffaa5af">error</a>(</span><span class="m-doc-wrap">const <a class="m-doc-external poxy-cppreference poxy-external" href="http://en.cppreference.com/w/cpp/string/basic_string.html" target="_blank">std::<wbr/>string</a>&amp; msg)</span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a class="m-doc" href="#ac596e9e57efb3df1e5613128bdf89bbe">exit</a>(</span><span class="m-doc-wrap">)</span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a33a759c1860ea34ddd67a308f6e82ffc">get_cursor</a>(</span><span class="m-doc-wrap">) -&gt; <a class="m-doc" href="structcat_1_1curs__position.html">curs_<wbr/>position</a></span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename TWindow = Window</span></span>&gt;</div>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#acbd0aba5edd594a6e23ecf9313680f22">get_focused</a>(</span><span class="m-doc-wrap">) -&gt; TWindow*</span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename TWindow = Window</span></span>&gt;</div>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a8192f41ca82955a66f5a6fc31f6f5fd9">get_window</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="#a3d03a98ba16ebc8920ce3b3cd672d54b">id_<wbr/>type</a>&amp; id) -&gt; TWindow*</span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a9d180006d67ca69fed521616a950dffd">in_global_keymap</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="#a9bedec76f31ed6d6b6aa354f79c214ba">key</a>&amp; skey) -&gt; bool</span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a class="m-doc" href="#a0cc47facb555decf5fe1e9899b1a0681">init</a>(</span><span class="m-doc-wrap">)</span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a class="m-doc" href="#a6422012d61ab7deb7b9885b163087cb3">move_cursor</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classcat_1_1_window.html">Window</a>* win,
+              const <a class="m-doc" href="structcat_1_1_vector2.html">Vector2</a>&amp; position)</span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a class="m-doc" href="#aebbc2188ab53808dae9f3bd3a5ed3ba9">move_cursor</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="structcat_1_1curs__position.html">curs_<wbr/>position</a>&amp; position)</span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a class="m-doc" href="#a262ec84a2c3fcef45a39aa1e536be396">move_cursor_global</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="structcat_1_1_vector2.html">Vector2</a>&amp; position)</span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a class="m-doc" href="#a107dad89474dae184530f17e71ce6415">move_cursor_relative</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="structcat_1_1_vector2.html">Vector2</a>&amp; movement)</span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename TContainer = <a class="m-doc poxy-injected poxy-external poxy-cppreference poxy-named-requirement" href="https://en.cppreference.com/w/cpp/named_req/Container" target="_blank">Container</a></span></span>&gt;</div>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a49721ad0d44e2c1cb21c8085c8fae551">new_container</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="structcat_1_1_vector2.html">Vector2</a>&amp; position,
+              const <a class="m-doc" href="structcat_1_1_vector2.html">Vector2</a>&amp; resolution) -&gt; TContainer*</span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a56d118e21f0bce7896b5b73fbeae8d04">new_id</a>(</span><span class="m-doc-wrap">) -&gt; <a class="m-doc" href="#a3d03a98ba16ebc8920ce3b3cd672d54b">id_<wbr/>type</a></span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename TWindow = Window</span></span>&gt;</div>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#abe6a03f24b9472a3b177ecc16c16c470">new_window</a>(</span><span class="m-doc-wrap">TWindow* win) -&gt; TWindow*</span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename TWindow = Window</span></span>&gt;</div>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#ac9cf32a5580bf0e9c6fe57fc64c15657">new_window</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="structcat_1_1_vector2.html">Vector2</a>&amp; position = {0, 0},
+              const <a class="m-doc" href="structcat_1_1_vector2.html">Vector2</a>&amp; resolution = {1, 1}) -&gt; TWindow*</span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <div class="m-doc-template">template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename TWindow = Window</span></span>&gt;</div>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a762faabb736ea5d18629acb11121d9fe">next_handler</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="#a9bedec76f31ed6d6b6aa354f79c214ba">key</a>&amp; skey) -&gt; TWindow*</span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a4a43a0a6e60810f882d3c9bfcdfab4e8">operator+</a>(</span><span class="m-doc-wrap">const <a class="m-doc-external poxy-cppreference poxy-external" href="http://en.cppreference.com/w/cpp/string/basic_string.html" target="_blank">std::<wbr/>string</a>&amp; s,
+              const <a class="m-doc" href="classcat_1_1_cat_string.html">CatString</a>&amp; cs) -&gt; <a class="m-doc" href="classcat_1_1_cat_string.html">CatString</a></span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#aca94ee9dec65c571721b0a4092646f8f">operator+</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classcat_1_1_cat_string.html#ab0aca22097b524d767eda283feb12e55">CatString::<wbr/>fn_type</a>&amp; fn,
+              const <a class="m-doc" href="classcat_1_1_cat_string.html">CatString</a>&amp; cs) -&gt; <a class="m-doc" href="classcat_1_1_cat_string.html">CatString</a></span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a class="m-doc" href="#a749df1e02ba97cae9bbdacdadfc6d13c">pass_input</a>(</span><span class="m-doc-wrap">int input)</span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a class="m-doc" href="#ab2b69fb4c9c8d2c905c20b516afd6db3">process</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="#afb9038176a5490c4455248c147148dcc">Priority</a>&amp; priority,
+              const <a class="m-doc" href="#a8170e9498d159e06b9977227057acd82">process_<wbr/>t</a>&amp; process)</span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a class="m-doc" href="#ab60ef35d03f090e295a41ebff3bedb44">redraw</a>(</span><span class="m-doc-wrap">)</span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a class="m-doc" href="#a14b51f45925f88dc3785dc985e6ff4f1">remove_container</a>(</span><span class="m-doc-wrap">const <a class="m-doc poxy-injected poxy-external poxy-cppreference poxy-named-requirement" href="https://en.cppreference.com/w/cpp/named_req/Container" target="_blank">Container</a>* container)</span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a class="m-doc" href="#a96e7e1e08f23f08d73b77d7a19e3759e">remove_window</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classcat_1_1_window.html">Window</a>* win)</span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a class="m-doc" href="#a0c11d62142a2a260af4babc7e8c86ea0">remove_window</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="#a3d03a98ba16ebc8920ce3b3cd672d54b">id_<wbr/>type</a>&amp; id)</span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a class="m-doc" href="#a8b0cde4208de02c577bf7241bad15a7d">set_keymap</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="#a9bedec76f31ed6d6b6aa354f79c214ba">key</a>&amp; skey,
+              const <a class="m-doc" href="#a46504b334e77c132e83bd405fdcafd1b">key_<wbr/>event</a>&amp; event)</span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a class="m-doc" href="#ae7d4d5994dfee2d46e0a83d4892a3a89">set_keymap</a>(</span><span class="m-doc-wrap"><a class="m-doc-external poxy-cppreference poxy-external" href="http://en.cppreference.com/w/cpp/container/map.html" target="_blank">std::<wbr/>map</a>&lt;const <a class="m-doc" href="#a9bedec76f31ed6d6b6aa354f79c214ba">key</a>, const <a class="m-doc" href="#a46504b334e77c132e83bd405fdcafd1b">key_<wbr/>event</a>&gt; events)</span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc" href="#a181414ff49bc30540b6cf27eb7ff9d8b">shift</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="#a9bedec76f31ed6d6b6aa354f79c214ba">key</a>&amp; k) -&gt; <a class="m-doc" href="#a9bedec76f31ed6d6b6aa354f79c214ba">key</a></span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a class="m-doc" href="#a15b2cd8cc97fcab5128a366912beb0b9">unfocus</a>(</span><span class="m-doc-wrap">)</span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a class="m-doc" href="#a396b94f93119ea9617c657752ef5cf34">update</a>(</span><span class="m-doc-wrap">)</span>
+            </dt>
+            <dd></dd>
+          </dl>
+        </section>
+        <section id="var-members">
+          <h2><a href="#var-members">Variables</a></h2>
+          <dl class="m-doc">
+            <dt>
+              <a class="m-doc-external poxy-cppreference poxy-external" href="http://en.cppreference.com/w/cpp/container/map.html" target="_blank">std::<wbr/>map</a>&lt;<a class="m-doc" href="#afb9038176a5490c4455248c147148dcc">Priority</a>, <a class="m-doc" href="#a42a7147ec6c329917adb445ed3398966">process_<wbr/>queue</a>&gt; <a class="m-doc" href="#afe8eaebd514fefb940f20bd418df195b">async_processes</a>
+            </dt>
+            <dd></dd>
+            <dt>
+              <a class="m-doc-external poxy-cppreference poxy-external" href="http://en.cppreference.com/w/cpp/container/vector.html" target="_blank">std::<wbr/>vector</a>&lt;<a class="m-doc poxy-injected poxy-external poxy-cppreference poxy-named-requirement" href="https://en.cppreference.com/w/cpp/named_req/Container" target="_blank">Container</a>*&gt; <a class="m-doc" href="#a7dfd11bd031c710318e06b486bd4b195">container_pool</a>
+            </dt>
+            <dd></dd>
+            <dt>
+              <a class="m-doc" href="structcat_1_1_settings.html">Settings</a> <a class="m-doc" href="#a64d2eeccc58e47e9cf18a4b29a75dced">current_settings</a>
+            </dt>
+            <dd></dd>
+            <dt>
+              <a class="m-doc" href="structcat_1_1curs__position.html">curs_<wbr/>position</a> <a class="m-doc" href="#a2c289f7fd31fae2f71ff240da03b0828">cursor</a>
+            </dt>
+            <dd></dd>
+            <dt>
+              <a class="m-doc" href="#a8c836b79359fef361386614e80394c2b">keymap</a> <a class="m-doc" href="#a03a6a6dc9039b26613fac592a01388b7">global_keymap</a>
+            </dt>
+            <dd></dd>
+            <dt>
+              <a class="m-doc" href="#a3d03a98ba16ebc8920ce3b3cd672d54b">id_<wbr/>type</a> <a class="m-doc" href="#af08030cee7c400405a3e140b8214cbe0">id_increment</a>
+            </dt>
+            <dd></dd>
+            <dt>
+              <a class="m-doc-external poxy-cppreference poxy-external" href="http://en.cppreference.com/w/cpp/container/map.html" target="_blank">std::<wbr/>map</a>&lt;<a class="m-doc" href="#afb9038176a5490c4455248c147148dcc">Priority</a>, <a class="m-doc" href="#a42a7147ec6c329917adb445ed3398966">process_<wbr/>queue</a>&gt; <a class="m-doc" href="#a249114148809307d61f67e7a844681e4">processes</a>
+            </dt>
+            <dd></dd>
+            <dt>
+              <a class="m-doc-external poxy-cppreference poxy-external" href="http://en.cppreference.com/w/cpp/container/vector.html" target="_blank">std::<wbr/>vector</a>&lt;<a class="m-doc" href="classcat_1_1_window.html">Window</a>*&gt; <a class="m-doc" href="#a708e422e0a8cac7dd0cf6a1390f74932">window_pool</a>
+            </dt>
+            <dd></dd>
+          </dl>
+        </section>
+        <section>
+          <h2>Enum documentation</h2>
+          <section class="m-doc-details" id="afb9038176a5490c4455248c147148dcc"><div>
+            <h3>
+              enum class <span class="m-doc-details-prefix">cat::<wbr/></span><a class="m-doc-self" href="#afb9038176a5490c4455248c147148dcc">Priority</a>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="lifespan_8hpp.html">&lt;lifespan.hpp&gt;</a></div>
+            </h3>
+            <p></p>
+          </div></section>
+        </section>
+        <section>
+          <h2>Typedef documentation</h2>
+          <section class="m-doc-details" id="a42a11d320a68cf9b9622b72c7566bb31"><div>
+            <h3>
+              using <span class="m-doc-details-prefix">cat::<wbr/></span><a class="m-doc-self" href="#a42a11d320a68cf9b9622b72c7566bb31">Composer</a> = <a class="m-doc" href="structcat_1_1_processor.html">Processor</a>&lt;<a class="m-doc" href="#a6dfb86ebbb1fb574ca0bbe6dd0bf407e">image_<wbr/>type</a>, <a class="m-doc" href="#a9956eac013712610ae19d4def66ff571">snippet_<wbr/>type</a>&gt;
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="buffer_8hpp.html">&lt;buffer.hpp&gt;</a></div>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="abd77a5f8f9a559e1be8ad238cd4a842d"><div>
+            <h3>
+              using <span class="m-doc-details-prefix">cat::<wbr/></span><a class="m-doc-self" href="#abd77a5f8f9a559e1be8ad238cd4a842d">Renderer</a> = <a class="m-doc" href="structcat_1_1_processor.html">Processor</a>&lt;<a class="m-doc" href="#a6dfb86ebbb1fb574ca0bbe6dd0bf407e">image_<wbr/>type</a>, <a class="m-doc" href="#a6dfb86ebbb1fb574ca0bbe6dd0bf407e">image_<wbr/>type</a>&gt;
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="buffer_8hpp.html">&lt;buffer.hpp&gt;</a></div>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="acd9c794fdeae9e7256d31d94241168df"><div>
+            <h3>
+              using <span class="m-doc-details-prefix">cat::<wbr/></span><a class="m-doc-self" href="#acd9c794fdeae9e7256d31d94241168df">draw_behaviour</a> = <a class="m-doc-external poxy-cppreference poxy-external" href="http://en.cppreference.com/w/cpp/utility/functional/function.html" target="_blank">std::<wbr/>function</a>&lt;void(WINDOW*, <a class="m-doc poxy-injected poxy-external poxy-cppreference" href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank">size_t</a>, const char*)&gt;
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="drawcalls_8hpp.html">&lt;drawcalls.hpp&gt;</a></div>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="a3d03a98ba16ebc8920ce3b3cd672d54b"><div>
+            <h3>
+              using <span class="m-doc-details-prefix">cat::<wbr/></span><a class="m-doc-self" href="#a3d03a98ba16ebc8920ce3b3cd672d54b">id_type</a> = <a class="m-doc poxy-injected poxy-external poxy-cppreference" href="https://en.cppreference.com/w/cpp/types/integer" target="_blank">uint64_t</a>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="id_8hpp.html">&lt;id.hpp&gt;</a></div>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="a6dfb86ebbb1fb574ca0bbe6dd0bf407e"><div>
+            <h3>
+              using <span class="m-doc-details-prefix">cat::<wbr/></span><a class="m-doc-self" href="#a6dfb86ebbb1fb574ca0bbe6dd0bf407e">image_type</a> = <a class="m-doc" href="classcat_1_1_cat_string.html">CatString</a>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="buffer_8hpp.html">&lt;buffer.hpp&gt;</a></div>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="a9bedec76f31ed6d6b6aa354f79c214ba"><div>
+            <h3>
+              using <span class="m-doc-details-prefix">cat::<wbr/></span><a class="m-doc-self" href="#a9bedec76f31ed6d6b6aa354f79c214ba">key</a> = int
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="input_8hpp.html">&lt;input.hpp&gt;</a></div>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="a46504b334e77c132e83bd405fdcafd1b"><div>
+            <h3>
+              using <span class="m-doc-details-prefix">cat::<wbr/></span><a class="m-doc-self" href="#a46504b334e77c132e83bd405fdcafd1b">key_event</a> = <a class="m-doc-external poxy-cppreference poxy-external" href="http://en.cppreference.com/w/cpp/utility/functional/function.html" target="_blank">std::<wbr/>function</a>&lt;void()&gt;
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="input_8hpp.html">&lt;input.hpp&gt;</a></div>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="a8c836b79359fef361386614e80394c2b"><div>
+            <h3>
+              using <span class="m-doc-details-prefix">cat::<wbr/></span><a class="m-doc-self" href="#a8c836b79359fef361386614e80394c2b">keymap</a> = <a class="m-doc-external poxy-cppreference poxy-external" href="http://en.cppreference.com/w/cpp/container/map.html" target="_blank">std::<wbr/>map</a>&lt;<a class="m-doc" href="#a9bedec76f31ed6d6b6aa354f79c214ba">key</a>, <a class="m-doc" href="#a46504b334e77c132e83bd405fdcafd1b">key_<wbr/>event</a>&gt;
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="input_8hpp.html">&lt;input.hpp&gt;</a></div>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="a42a7147ec6c329917adb445ed3398966"><div>
+            <h3>
+              using <span class="m-doc-details-prefix">cat::<wbr/></span><a class="m-doc-self" href="#a42a7147ec6c329917adb445ed3398966">process_queue</a> = <a class="m-doc-external poxy-cppreference poxy-external" href="http://en.cppreference.com/w/cpp/container/vector.html" target="_blank">std::<wbr/>vector</a>&lt;<a class="m-doc" href="#a8170e9498d159e06b9977227057acd82">process_<wbr/>t</a>&gt;
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="lifespan_8hpp.html">&lt;lifespan.hpp&gt;</a></div>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="a8170e9498d159e06b9977227057acd82"><div>
+            <h3>
+              using <span class="m-doc-details-prefix">cat::<wbr/></span><a class="m-doc-self" href="#a8170e9498d159e06b9977227057acd82">process_t</a> = <a class="m-doc-external poxy-cppreference poxy-external" href="http://en.cppreference.com/w/cpp/utility/functional/function.html" target="_blank">std::<wbr/>function</a>&lt;void()&gt;
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="lifespan_8hpp.html">&lt;lifespan.hpp&gt;</a></div>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="a9956eac013712610ae19d4def66ff571"><div>
+            <h3>
+              using <span class="m-doc-details-prefix">cat::<wbr/></span><a class="m-doc-self" href="#a9956eac013712610ae19d4def66ff571">snippet_type</a> = <a class="m-doc" href="classcat_1_1_cat_string.html">CatString</a>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="buffer_8hpp.html">&lt;buffer.hpp&gt;</a></div>
+            </h3>
+            <p></p>
+          </div></section>
+        </section>
+        <section>
+          <h2>Function documentation</h2>
+          <section class="m-doc-details" id="a4e02bd25a37bc7dce906a71ed7cc9949"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a class="m-doc" href="structcat_1_1_settings.html">Settings</a> <span class="m-doc-details-prefix">cat::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a4e02bd25a37bc7dce906a71ed7cc9949">apply</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="structcat_1_1_settings.html">Settings</a>&amp; applied)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="settings_8hpp.html">&lt;settings.hpp&gt;</a></div>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="a47f80520f0f014557b101b77d3a42bc6"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <span class="m-doc-details-prefix">cat::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a47f80520f0f014557b101b77d3a42bc6">async</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="#afb9038176a5490c4455248c147148dcc">Priority</a>&amp; priority,
+              const <a class="m-doc" href="#a8170e9498d159e06b9977227057acd82">process_<wbr/>t</a>&amp; process)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="lifespan_8hpp.html">&lt;lifespan.hpp&gt;</a></div>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="a894c062f0bde9d306c13cbf27c4a5845"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <span class="m-doc-details-prefix">cat::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a894c062f0bde9d306c13cbf27c4a5845">clear_container_pool</a>(</span><span class="m-doc-wrap">)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="container_8hpp.html">&lt;container.hpp&gt;</a></div>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="ae648ed2c293c21f70820f209def0530f"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <span class="m-doc-details-prefix">cat::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#ae648ed2c293c21f70820f209def0530f">clear_pool</a>(</span><span class="m-doc-wrap">)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="drawing_8hpp.html">&lt;drawing.hpp&gt;</a></div>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="ab0249b77fed38bbac01c547269b21901"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="buffer_8hpp.html">&lt;buffer.hpp&gt;</a></div>
+              <div class="m-doc-template">
+                template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename Tcomp</span></span>&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">Tcomp <span class="m-doc-details-prefix">cat::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#ab0249b77fed38bbac01c547269b21901">compose</a>(</span><span class="m-doc-wrap">const Tcomp&amp; r0)</span></span>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="ac1a2f5089154fa8399f1cb03e6fd24ed"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="buffer_8hpp.html">&lt;buffer.hpp&gt;</a></div>
+              <div class="m-doc-template">
+                template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename Tcomp</span>, <span class="m-doc-template-param">typename... TcompP</span></span>&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">Tcomp <span class="m-doc-details-prefix">cat::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#ac1a2f5089154fa8399f1cb03e6fd24ed">compose</a>(</span><span class="m-doc-wrap">const Tcomp&amp; r0,
+              const Tcomp&amp; r1,
+              const TcompP&amp;... tail)</span></span>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="aee56737ffaccbbd0745d5b03253a2de6"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <span class="m-doc-details-prefix">cat::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#aee56737ffaccbbd0745d5b03253a2de6">cycle</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="structcat_1_1_settings.html">Settings</a>&amp; settings = {})</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="lifespan_8hpp.html">&lt;lifespan.hpp&gt;</a></div>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="a46e33a50496d687cf8a7c60ef0635f86"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="drawcalls_8hpp.html">&lt;drawcalls.hpp&gt;</a></div>
+              <div class="m-doc-template">
+                template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename... Targs</span></span>&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">void <span class="m-doc-details-prefix">cat::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a46e33a50496d687cf8a7c60ef0635f86">draw</a>(</span><span class="m-doc-wrap">WINDOW* win,
+              const <a class="m-doc" href="classcat_1_1_cat_string.html">CatString</a>&amp; fmstr,
+              Targs... args)</span></span>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="a8143e93299fbe4a8aa9738e80a120fe5"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="drawcalls_8hpp.html">&lt;drawcalls.hpp&gt;</a></div>
+              <div class="m-doc-template">
+                template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename... Targs</span></span>&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">void <span class="m-doc-details-prefix">cat::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a8143e93299fbe4a8aa9738e80a120fe5">draw</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="structcat_1_1_vector2.html">Vector2</a>&amp; position,
+              WINDOW* win,
+              const <a class="m-doc" href="classcat_1_1_cat_string.html">CatString</a>&amp; fmstr,
+              Targs... args)</span></span>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="a98cda3da96d2dc8689372d7ebc29f056"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <span class="m-doc-details-prefix">cat::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a98cda3da96d2dc8689372d7ebc29f056">draw_base</a>(</span><span class="m-doc-wrap">WINDOW* win,
+              const <a class="m-doc" href="classcat_1_1_cat_string.html">CatString</a>&amp; fmstr,
+              const <a class="m-doc" href="#acd9c794fdeae9e7256d31d94241168df">draw_<wbr/>behaviour</a>&amp; draw,
+              bool do_cformat,
+              <a class="m-doc poxy-injected poxy-external poxy-cppreference" href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank">size_t</a> argsize,
+              ...)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="drawcalls_8hpp.html">&lt;drawcalls.hpp&gt;</a></div>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="a589e67902b09cfc3a0765e9c1ffaa5af"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <span class="m-doc-details-prefix">cat::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a589e67902b09cfc3a0765e9c1ffaa5af">error</a>(</span><span class="m-doc-wrap">const <a class="m-doc-external poxy-cppreference poxy-external" href="http://en.cppreference.com/w/cpp/string/basic_string.html" target="_blank">std::<wbr/>string</a>&amp; msg)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="signals_8hpp.html">&lt;signals.hpp&gt;</a></div>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="ac596e9e57efb3df1e5613128bdf89bbe"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <span class="m-doc-details-prefix">cat::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#ac596e9e57efb3df1e5613128bdf89bbe">exit</a>(</span><span class="m-doc-wrap">)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="drawing_8hpp.html">&lt;drawing.hpp&gt;</a></div>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="a33a759c1860ea34ddd67a308f6e82ffc"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a class="m-doc" href="structcat_1_1curs__position.html">curs_<wbr/>position</a> <span class="m-doc-details-prefix">cat::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a33a759c1860ea34ddd67a308f6e82ffc">get_cursor</a>(</span><span class="m-doc-wrap">)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="cursor_8hpp.html">&lt;cursor.hpp&gt;</a></div>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="acbd0aba5edd594a6e23ecf9313680f22"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="drawing_8hpp.html">&lt;drawing.hpp&gt;</a></div>
+              <div class="m-doc-template">
+                template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename TWindow = Window</span></span>&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">TWindow* <span class="m-doc-details-prefix">cat::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#acbd0aba5edd594a6e23ecf9313680f22">get_focused</a>(</span><span class="m-doc-wrap">)</span></span>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="a8192f41ca82955a66f5a6fc31f6f5fd9"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="drawing_8hpp.html">&lt;drawing.hpp&gt;</a></div>
+              <div class="m-doc-template">
+                template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename TWindow = Window</span></span>&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">TWindow* <span class="m-doc-details-prefix">cat::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a8192f41ca82955a66f5a6fc31f6f5fd9">get_window</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="#a3d03a98ba16ebc8920ce3b3cd672d54b">id_<wbr/>type</a>&amp; id)</span></span>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="a9d180006d67ca69fed521616a950dffd"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">bool <span class="m-doc-details-prefix">cat::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a9d180006d67ca69fed521616a950dffd">in_global_keymap</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="#a9bedec76f31ed6d6b6aa354f79c214ba">key</a>&amp; skey)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="input_8hpp.html">&lt;input.hpp&gt;</a></div>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="a0cc47facb555decf5fe1e9899b1a0681"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <span class="m-doc-details-prefix">cat::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a0cc47facb555decf5fe1e9899b1a0681">init</a>(</span><span class="m-doc-wrap">)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="drawing_8hpp.html">&lt;drawing.hpp&gt;</a></div>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="a6422012d61ab7deb7b9885b163087cb3"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <span class="m-doc-details-prefix">cat::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a6422012d61ab7deb7b9885b163087cb3">move_cursor</a>(</span><span class="m-doc-wrap"><a class="m-doc" href="classcat_1_1_window.html">Window</a>* win,
+              const <a class="m-doc" href="structcat_1_1_vector2.html">Vector2</a>&amp; position)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="cursor_8hpp.html">&lt;cursor.hpp&gt;</a></div>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="aebbc2188ab53808dae9f3bd3a5ed3ba9"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <span class="m-doc-details-prefix">cat::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#aebbc2188ab53808dae9f3bd3a5ed3ba9">move_cursor</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="structcat_1_1curs__position.html">curs_<wbr/>position</a>&amp; position)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="cursor_8hpp.html">&lt;cursor.hpp&gt;</a></div>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="a262ec84a2c3fcef45a39aa1e536be396"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <span class="m-doc-details-prefix">cat::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a262ec84a2c3fcef45a39aa1e536be396">move_cursor_global</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="structcat_1_1_vector2.html">Vector2</a>&amp; position)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="cursor_8hpp.html">&lt;cursor.hpp&gt;</a></div>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="a107dad89474dae184530f17e71ce6415"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <span class="m-doc-details-prefix">cat::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a107dad89474dae184530f17e71ce6415">move_cursor_relative</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="structcat_1_1_vector2.html">Vector2</a>&amp; movement)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="cursor_8hpp.html">&lt;cursor.hpp&gt;</a></div>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="a49721ad0d44e2c1cb21c8085c8fae551"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="container_8hpp.html">&lt;container.hpp&gt;</a></div>
+              <div class="m-doc-template">
+                template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename TContainer = <a class="m-doc poxy-injected poxy-external poxy-cppreference poxy-named-requirement" href="https://en.cppreference.com/w/cpp/named_req/Container" target="_blank">Container</a></span></span>&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">TContainer* <span class="m-doc-details-prefix">cat::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a49721ad0d44e2c1cb21c8085c8fae551">new_container</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="structcat_1_1_vector2.html">Vector2</a>&amp; position,
+              const <a class="m-doc" href="structcat_1_1_vector2.html">Vector2</a>&amp; resolution)</span></span>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="a56d118e21f0bce7896b5b73fbeae8d04"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a class="m-doc" href="#a3d03a98ba16ebc8920ce3b3cd672d54b">id_<wbr/>type</a> <span class="m-doc-details-prefix">cat::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a56d118e21f0bce7896b5b73fbeae8d04">new_id</a>(</span><span class="m-doc-wrap">)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="id_8hpp.html">&lt;id.hpp&gt;</a></div>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="abe6a03f24b9472a3b177ecc16c16c470"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="drawing_8hpp.html">&lt;drawing.hpp&gt;</a></div>
+              <div class="m-doc-template">
+                template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename TWindow = Window</span></span>&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">TWindow* <span class="m-doc-details-prefix">cat::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#abe6a03f24b9472a3b177ecc16c16c470">new_window</a>(</span><span class="m-doc-wrap">TWindow* win)</span></span>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="ac9cf32a5580bf0e9c6fe57fc64c15657"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="drawing_8hpp.html">&lt;drawing.hpp&gt;</a></div>
+              <div class="m-doc-template">
+                template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename TWindow = Window</span></span>&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">TWindow* <span class="m-doc-details-prefix">cat::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#ac9cf32a5580bf0e9c6fe57fc64c15657">new_window</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="structcat_1_1_vector2.html">Vector2</a>&amp; position = {0, 0},
+              const <a class="m-doc" href="structcat_1_1_vector2.html">Vector2</a>&amp; resolution = {1, 1})</span></span>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="a762faabb736ea5d18629acb11121d9fe"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="drawing_8hpp.html">&lt;drawing.hpp&gt;</a></div>
+              <div class="m-doc-template">
+                template &lt;<span class="m-doc-template-params"><span class="m-doc-template-param">typename TWindow = Window</span></span>&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">TWindow* <span class="m-doc-details-prefix">cat::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a762faabb736ea5d18629acb11121d9fe">next_handler</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="#a9bedec76f31ed6d6b6aa354f79c214ba">key</a>&amp; skey)</span></span>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="a4a43a0a6e60810f882d3c9bfcdfab4e8"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a class="m-doc" href="classcat_1_1_cat_string.html">CatString</a> <span class="m-doc-details-prefix">cat::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a4a43a0a6e60810f882d3c9bfcdfab4e8">operator+</a>(</span><span class="m-doc-wrap">const <a class="m-doc-external poxy-cppreference poxy-external" href="http://en.cppreference.com/w/cpp/string/basic_string.html" target="_blank">std::<wbr/>string</a>&amp; s,
+              const <a class="m-doc" href="classcat_1_1_cat_string.html">CatString</a>&amp; cs)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="string_8hpp.html">&lt;string.hpp&gt;</a></div>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="aca94ee9dec65c571721b0a4092646f8f"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a class="m-doc" href="classcat_1_1_cat_string.html">CatString</a> <span class="m-doc-details-prefix">cat::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#aca94ee9dec65c571721b0a4092646f8f">operator+</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classcat_1_1_cat_string.html#ab0aca22097b524d767eda283feb12e55">CatString::<wbr/>fn_type</a>&amp; fn,
+              const <a class="m-doc" href="classcat_1_1_cat_string.html">CatString</a>&amp; cs)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="string_8hpp.html">&lt;string.hpp&gt;</a></div>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="a749df1e02ba97cae9bbdacdadfc6d13c"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <span class="m-doc-details-prefix">cat::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a749df1e02ba97cae9bbdacdadfc6d13c">pass_input</a>(</span><span class="m-doc-wrap">int input)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="lifespan_8hpp.html">&lt;lifespan.hpp&gt;</a></div>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="ab2b69fb4c9c8d2c905c20b516afd6db3"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <span class="m-doc-details-prefix">cat::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#ab2b69fb4c9c8d2c905c20b516afd6db3">process</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="#afb9038176a5490c4455248c147148dcc">Priority</a>&amp; priority,
+              const <a class="m-doc" href="#a8170e9498d159e06b9977227057acd82">process_<wbr/>t</a>&amp; process)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="lifespan_8hpp.html">&lt;lifespan.hpp&gt;</a></div>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="ab60ef35d03f090e295a41ebff3bedb44"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <span class="m-doc-details-prefix">cat::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#ab60ef35d03f090e295a41ebff3bedb44">redraw</a>(</span><span class="m-doc-wrap">)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="drawing_8hpp.html">&lt;drawing.hpp&gt;</a></div>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="a14b51f45925f88dc3785dc985e6ff4f1"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <span class="m-doc-details-prefix">cat::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a14b51f45925f88dc3785dc985e6ff4f1">remove_container</a>(</span><span class="m-doc-wrap">const <a class="m-doc poxy-injected poxy-external poxy-cppreference poxy-named-requirement" href="https://en.cppreference.com/w/cpp/named_req/Container" target="_blank">Container</a>* container)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="container_8hpp.html">&lt;container.hpp&gt;</a></div>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="a96e7e1e08f23f08d73b77d7a19e3759e"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <span class="m-doc-details-prefix">cat::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a96e7e1e08f23f08d73b77d7a19e3759e">remove_window</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classcat_1_1_window.html">Window</a>* win)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="drawing_8hpp.html">&lt;drawing.hpp&gt;</a></div>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="a0c11d62142a2a260af4babc7e8c86ea0"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <span class="m-doc-details-prefix">cat::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a0c11d62142a2a260af4babc7e8c86ea0">remove_window</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="#a3d03a98ba16ebc8920ce3b3cd672d54b">id_<wbr/>type</a>&amp; id)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="drawing_8hpp.html">&lt;drawing.hpp&gt;</a></div>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="a8b0cde4208de02c577bf7241bad15a7d"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <span class="m-doc-details-prefix">cat::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a8b0cde4208de02c577bf7241bad15a7d">set_keymap</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="#a9bedec76f31ed6d6b6aa354f79c214ba">key</a>&amp; skey,
+              const <a class="m-doc" href="#a46504b334e77c132e83bd405fdcafd1b">key_<wbr/>event</a>&amp; event)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="input_8hpp.html">&lt;input.hpp&gt;</a></div>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="ae7d4d5994dfee2d46e0a83d4892a3a89"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <span class="m-doc-details-prefix">cat::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#ae7d4d5994dfee2d46e0a83d4892a3a89">set_keymap</a>(</span><span class="m-doc-wrap"><a class="m-doc-external poxy-cppreference poxy-external" href="http://en.cppreference.com/w/cpp/container/map.html" target="_blank">std::<wbr/>map</a>&lt;const <a class="m-doc" href="#a9bedec76f31ed6d6b6aa354f79c214ba">key</a>, const <a class="m-doc" href="#a46504b334e77c132e83bd405fdcafd1b">key_<wbr/>event</a>&gt; events)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="input_8hpp.html">&lt;input.hpp&gt;</a></div>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="a181414ff49bc30540b6cf27eb7ff9d8b"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a class="m-doc" href="#a9bedec76f31ed6d6b6aa354f79c214ba">key</a> <span class="m-doc-details-prefix">cat::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a181414ff49bc30540b6cf27eb7ff9d8b">shift</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="#a9bedec76f31ed6d6b6aa354f79c214ba">key</a>&amp; k)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="input_8hpp.html">&lt;input.hpp&gt;</a></div>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="a15b2cd8cc97fcab5128a366912beb0b9"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <span class="m-doc-details-prefix">cat::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a15b2cd8cc97fcab5128a366912beb0b9">unfocus</a>(</span><span class="m-doc-wrap">)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="drawing_8hpp.html">&lt;drawing.hpp&gt;</a></div>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="a396b94f93119ea9617c657752ef5cf34"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <span class="m-doc-details-prefix">cat::<wbr/></span></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a396b94f93119ea9617c657752ef5cf34">update</a>(</span><span class="m-doc-wrap">)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="lifespan_8hpp.html">&lt;lifespan.hpp&gt;</a></div>
+            </h3>
+            <p></p>
+          </div></section>
+        </section>
+        <section>
+          <h2>Variable documentation</h2>
+          <section class="m-doc-details" id="afe8eaebd514fefb940f20bd418df195b"><div>
+            <h3>
+              <a class="m-doc-external poxy-cppreference poxy-external" href="http://en.cppreference.com/w/cpp/container/map.html" target="_blank">std::<wbr/>map</a>&lt;<a class="m-doc" href="#afb9038176a5490c4455248c147148dcc">Priority</a>, <a class="m-doc" href="#a42a7147ec6c329917adb445ed3398966">process_<wbr/>queue</a>&gt; <span class="m-doc-details-prefix">cat::<wbr/></span><a class="m-doc-self" href="#afe8eaebd514fefb940f20bd418df195b">async_processes</a>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="lifespan_8hpp.html">&lt;lifespan.hpp&gt;</a></div>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="a7dfd11bd031c710318e06b486bd4b195"><div>
+            <h3>
+              <a class="m-doc-external poxy-cppreference poxy-external" href="http://en.cppreference.com/w/cpp/container/vector.html" target="_blank">std::<wbr/>vector</a>&lt;<a class="m-doc poxy-injected poxy-external poxy-cppreference poxy-named-requirement" href="https://en.cppreference.com/w/cpp/named_req/Container" target="_blank">Container</a>*&gt; <span class="m-doc-details-prefix">cat::<wbr/></span><a class="m-doc-self" href="#a7dfd11bd031c710318e06b486bd4b195">container_pool</a>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="container_8hpp.html">&lt;container.hpp&gt;</a></div>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="a64d2eeccc58e47e9cf18a4b29a75dced"><div>
+            <h3>
+              <a class="m-doc" href="structcat_1_1_settings.html">Settings</a> <span class="m-doc-details-prefix">cat::<wbr/></span><a class="m-doc-self" href="#a64d2eeccc58e47e9cf18a4b29a75dced">current_settings</a>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="settings_8hpp.html">&lt;settings.hpp&gt;</a></div>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="a2c289f7fd31fae2f71ff240da03b0828"><div>
+            <h3>
+              <a class="m-doc" href="structcat_1_1curs__position.html">curs_<wbr/>position</a> <span class="m-doc-details-prefix">cat::<wbr/></span><a class="m-doc-self" href="#a2c289f7fd31fae2f71ff240da03b0828">cursor</a>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="cursor_8hpp.html">&lt;cursor.hpp&gt;</a></div>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="a03a6a6dc9039b26613fac592a01388b7"><div>
+            <h3>
+              <a class="m-doc" href="#a8c836b79359fef361386614e80394c2b">keymap</a> <span class="m-doc-details-prefix">cat::<wbr/></span><a class="m-doc-self" href="#a03a6a6dc9039b26613fac592a01388b7">global_keymap</a>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="input_8hpp.html">&lt;input.hpp&gt;</a></div>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="af08030cee7c400405a3e140b8214cbe0"><div>
+            <h3>
+              <a class="m-doc" href="#a3d03a98ba16ebc8920ce3b3cd672d54b">id_<wbr/>type</a> <span class="m-doc-details-prefix">cat::<wbr/></span><a class="m-doc-self" href="#af08030cee7c400405a3e140b8214cbe0">id_increment</a>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="id_8hpp.html">&lt;id.hpp&gt;</a></div>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="a249114148809307d61f67e7a844681e4"><div>
+            <h3>
+              <a class="m-doc-external poxy-cppreference poxy-external" href="http://en.cppreference.com/w/cpp/container/map.html" target="_blank">std::<wbr/>map</a>&lt;<a class="m-doc" href="#afb9038176a5490c4455248c147148dcc">Priority</a>, <a class="m-doc" href="#a42a7147ec6c329917adb445ed3398966">process_<wbr/>queue</a>&gt; <span class="m-doc-details-prefix">cat::<wbr/></span><a class="m-doc-self" href="#a249114148809307d61f67e7a844681e4">processes</a>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="lifespan_8hpp.html">&lt;lifespan.hpp&gt;</a></div>
+            </h3>
+            <p></p>
+          </div></section>
+          <section class="m-doc-details" id="a708e422e0a8cac7dd0cf6a1390f74932"><div>
+            <h3>
+              <a class="m-doc-external poxy-cppreference poxy-external" href="http://en.cppreference.com/w/cpp/container/vector.html" target="_blank">std::<wbr/>vector</a>&lt;<a class="m-doc" href="classcat_1_1_window.html">Window</a>*&gt; <span class="m-doc-details-prefix">cat::<wbr/></span><a class="m-doc-self" href="#a708e422e0a8cac7dd0cf6a1390f74932">window_pool</a>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="drawing_8hpp.html">&lt;drawing.hpp&gt;</a></div>
+            </h3>
+            <p></p>
+          </div></section>
+        </section>
+      </div>
+    </div>
+  </div>
+</article></main>
+<div class="m-doc-search" id="search">
+  <a href="#!" onclick="return hideSearch()"></a>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-m-8 m-push-m-2">
+        <div class="m-doc-search-header m-text m-small">
+          <div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
+          <div id="search-symbolcount">…</div>
+        </div>
+        <div class="m-doc-search-content">
+          <form>
+            <input autocomplete="off" autofocus="autofocus" disabled="disabled" id="search-input" name="q" placeholder="Loading …" spellcheck="false" type="search"/>
+          </form>
+          <noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
+          <div class="m-text m-dim m-text-center" id="search-help">
+            <p class="m-noindent">Search for symbols, directories, files, pages or
+            modules. You can omit any prefix from the symbol or file path; adding a
+            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
+            directory.</p>
+            <p class="m-noindent">Use <span class="m-label m-dim">↓</span>
+            / <span class="m-label m-dim">↑</span> to navigate through the list,
+            <span class="m-label m-dim">Enter</span> to go.
+            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
+            copy a link to the result using <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">M</span> produces a Markdown link.</p>
+          </div>
+          <div class="m-text m-warning m-text-center" id="search-notfound">Sorry, nothing was found.</div>
+          <ul id="search-results"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="search-v2.js"></script><script>install_mcss_search_shim();</script>
+<script async="async" src="searchdata-v2.js"></script>
+<footer><nav>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        
+<a class="poxy-external" href="https://github.com/labricecat/cat" target="_blank">GitHub</a>
+• <a class="poxy-external" href="https://github.com/labricecat/cat/issues" target="_blank">Report an issue</a>
+• <a class="poxy-external" href="https://github.com/labricecat/cat/blob/main/LICENSE" target="_blank">License</a>
+• <a download="" href="cat.tagfile.xml" target="_blank" type="text/xml">Doxygen tagfile</a>
+<br/><br/>
+Site generated using <a class="poxy-external" href="https://github.com/marzer/poxy/" target="_blank">Poxy</a>
+
+      </div>
+    </div>
+  </div>
+</nav></footer>
+
+
+</body></html>

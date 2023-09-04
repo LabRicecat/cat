@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8"/>
+  <title>cat::CatString class | cat</title>
+  <link href="favicon-dark.png" rel="icon" type="image/png"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="#22272e" name="theme-color"/>
+  <link href="poxy/poxy.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" referrerpolicy="no-referrer" rel="stylesheet"/>
+  <script src="poxy/poxy.js"></script>
+  <script>initialize_theme("dark");</script>
+  <meta content="cat" name="twitter:title"/>
+  <meta content="cat" property="og:title"/>
+  <meta content="cat" itemprop="name"/>
+  <meta content="Labricecat" name="author"/>
+  <meta content="Labricecat" property="article:author"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="Poxy v0.13.7" name="generator"/>
+  <meta content="strict-origin-when-cross-origin" name="referrer"/>
+</head>
+<body class="poxy-has-toc">
+<header><nav id="navigation">
+  <div class="m-container">
+    <div class="m-row">
+      <a class="m-col-t-8 m-col-m-none m-left-m" href="index.html" id="m-navbar-brand">cat</a>
+      <div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
+        <a class="m-doc-search-icon" href="#search" onclick="return showSearch()" title="Search"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+          <path d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z" id="m-doc-search-icon-path"></path>
+        </svg></a>
+        <a href="#navigation" id="m-navbar-show" title="Show navigation"></a>
+        <a href="#" id="m-navbar-hide" title="Hide navigation"></a>
+      </div>
+      <div class="m-col-t-12 m-show-m m-col-m-none m-right-m" id="m-navbar-collapse">
+        <div class="m-row">
+          <ol class="m-col-t-6 m-col-m-none">
+            <li><a href="namespaces.html">Namespaces</a></li>
+            <li><a href="annotated.html">Classes</a></li>
+            <li><a href="files.html">Files</a></li>
+          </ol>
+          <ol class="m-col-t-6 m-col-m-none" start="4">
+            <li><a class="poxy-icon repo github poxy-external" href="https://github.com/labricecat/cat" target="_blank" title="View on GitHub"><svg id="poxy-icon-repo" version="1.1" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"><path d="M25,1.23a24.37,24.37,0,0,0-7.7,47.5C18.51,49,19,48.2,19,47.56s0-2.12,0-4.15c-6.78,1.47-8.21-3.27-8.21-3.27C9.61,37.33,8,36.58,8,36.58c-2.21-1.51.17-1.48.17-1.48a5.12,5.12,0,0,1,3.73,2.51c2.17,3.72,5.7,2.65,7.09,2a5.25,5.25,0,0,1,1.55-3.26c-5.41-.61-11.1-2.7-11.1-12A9.41,9.41,0,0,1,12,17.79a8.75,8.75,0,0,1,.24-6.45s2-.66,6.7,2.49a23.1,23.1,0,0,1,12.2,0c4.66-3.15,6.7-2.49,6.7-2.49A8.75,8.75,0,0,1,38,17.79a9.41,9.41,0,0,1,2.51,6.54c0,9.36-5.7,11.42-11.13,12a5.83,5.83,0,0,1,1.65,4.51c0,3.26,0,5.89,0,6.69,0,.65.44,1.41,1.68,1.17A24.38,24.38,0,0,0,25,1.23Z" fill="currentColor"></path></svg></a></li>
+            <li><a class="poxy-icon theme" href="javascript:void(null);" id="poxy-theme-switch" onclick="toggle_theme(); return false;" role="button" title="Toggle dark and light themes"><svg id="poxy-theme-switch-img" version="1.1" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><circle cx="185.6708" cy="183.8122" fill="currentColor" r="65.625"></circle><path d="M185.6708,87.5622a13.1256,13.1256,0,0,0,13.125-13.125V52.5622a13.125,13.125,0,1,0-26.25,0v21.875A13.1257,13.1257,0,0,0,185.6708,87.5622Z" fill="currentColor"></path><path d="M99.051,115.7519a13.1236,13.1236,0,1,0,18.56-18.56L102.1442,81.726a13.1236,13.1236,0,0,0-18.5595,18.56Z" fill="currentColor"></path><path d="M89.4208,183.8122a13.1257,13.1257,0,0,0-13.125-13.125H54.4208a13.125,13.125,0,0,0,0,26.25h21.875A13.1256,13.1256,0,0,0,89.4208,183.8122Z" fill="currentColor"></path><path d="M99.051,251.8725,83.5847,267.3431a13.1236,13.1236,0,1,0,18.56,18.56l15.4663-15.4706a13.1236,13.1236,0,1,0-18.5595-18.56Z" fill="currentColor"></path><path d="M185.6708,280.0622a13.1258,13.1258,0,0,0-13.125,13.125v21.875a13.125,13.125,0,0,0,26.25,0v-21.875A13.1257,13.1257,0,0,0,185.6708,280.0622Z" fill="currentColor"></path><path d="M272.2907,251.8725a13.1236,13.1236,0,1,0-18.56,18.56l15.4663,15.4706a13.1236,13.1236,0,1,0,18.56-18.56Z" fill="currentColor"></path><path d="M330.0458,183.8122a13.1257,13.1257,0,0,0-13.125-13.125h-21.875a13.125,13.125,0,0,0,0,26.25h21.875A13.1256,13.1256,0,0,0,330.0458,183.8122Z" fill="currentColor"></path><path d="M263.0109,119.5971a13.0824,13.0824,0,0,0,9.28-3.8452l15.4663-15.4663a13.1236,13.1236,0,1,0-18.56-18.56L253.7312,97.1923a13.125,13.125,0,0,0,9.28,22.4048Z" fill="currentColor"></path><path d="M456.9379,401.6714a63.97,63.97,0,0,1-14.9963,7.2055c-19.6448,6.5283-41.8787,2.9566-58.1439-9.8523a68.9311,68.9311,0,0,1-10.835-10.8339c-12.8088-16.2663-16.3806-38.5-9.8523-58.1471a63.8444,63.8444,0,0,1,7.2077-14.9931,8.8036,8.8036,0,0,0-10.1172-13.3034,87.5188,87.5188,0,1,0,110.0372,110.04A8.8,8.8,0,0,0,456.9379,401.6714Z" fill="currentColor"></path></svg></a></li>
+            <li class="m-show-m"><a class="m-doc-search-icon" href="#search" onclick="return showSearch()" title="Search"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+              <use href="#m-doc-search-icon-path"></use>
+            </svg></a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav></header>
+<main><article>
+  <div class="m-container m-container-inflatable">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <h1>
+          <span class="m-breadcrumb"><a href="namespacecat.html">cat</a>::<wbr/></span>CatString <span class="m-thin">class</span>
+          <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="string_8hpp.html">&lt;string.hpp&gt;</a></div>
+        </h1>
+        <p></p>
+        <nav class="m-block m-default poxy-toc" id="poxy-toc">
+          <h3>Contents</h3>
+          <ul>
+            <li>
+              Reference
+              <ul>
+                <li><a href="#pub-types">Public types</a></li>
+                <li><a href="#typeless-methods">Constructors, destructors, conversion operators</a></li>
+                <li><a href="#pub-methods">Public functions</a></li>
+                <li><a href="#friends">Friends</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <section id="pub-types">
+          <h2><a href="#pub-types">Public types</a></h2>
+          <dl class="m-doc">
+            <dt id="ab0aca22097b524d767eda283feb12e55">
+              using <a class="m-doc-self" href="#ab0aca22097b524d767eda283feb12e55">fn_type</a> = <a class="m-doc-external poxy-cppreference poxy-external" href="http://en.cppreference.com/w/cpp/utility/functional/function.html" target="_blank">event::<wbr/>fn_type</a>
+            </dt>
+            <dd></dd>
+          </dl>
+        </section>
+        <section id="typeless-methods">
+          <h2><a href="#typeless-methods">Constructors, destructors, conversion operators</a></h2>
+          <dl class="m-doc">
+            <dt id="a0e1de30c2a7a775d7e4f500c5b547099">
+              <span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a0e1de30c2a7a775d7e4f500c5b547099">CatString</a>(</span><span class="m-doc-wrap">)</span>
+            </dt>
+            <dd></dd>
+            <dt id="af85150671af327bd901dd7e2bc459361">
+              <span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#af85150671af327bd901dd7e2bc459361">CatString</a>(</span><span class="m-doc-wrap">const <a class="m-doc-external poxy-cppreference poxy-external" href="http://en.cppreference.com/w/cpp/string/basic_string.html" target="_blank">std::<wbr/>string</a>&amp; s)</span>
+            </dt>
+            <dd></dd>
+            <dt id="a1cf743b91d3b4e3082f34ffb6aa51a04">
+              <span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a1cf743b91d3b4e3082f34ffb6aa51a04">CatString</a>(</span><span class="m-doc-wrap">const char* s)</span>
+            </dt>
+            <dd></dd>
+            <dt id="a7e2929475eb01cb860d4fefbd8fc8a7d">
+              <span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a7e2929475eb01cb860d4fefbd8fc8a7d">CatString</a>(</span><span class="m-doc-wrap">const <a class="m-doc-external poxy-cppreference poxy-external" href="http://en.cppreference.com/w/cpp/utility/functional/function.html" target="_blank">event::<wbr/>fn_type</a>&amp; fn)</span>
+            </dt>
+            <dd></dd>
+            <dt id="a67ff51c45c1aaeb8335c8e42ab24c996">
+              <span class="m-doc-wrap-bumper"><a class="m-doc-self" href="#a67ff51c45c1aaeb8335c8e42ab24c996">CatString</a>(</span><span class="m-doc-wrap">const <a class="m-doc-external poxy-cppreference poxy-external" href="http://en.cppreference.com/w/cpp/container/list.html" target="_blank">std::<wbr/>list</a>&lt;event&gt; src)</span>
+            </dt>
+            <dd></dd>
+          </dl>
+        </section>
+        <section id="pub-methods">
+          <h2><a href="#pub-methods">Public functions</a></h2>
+          <dl class="m-doc">
+            <dt id="a7171d95a343bc58a6c1832be1d955e70">
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc-self" href="#a7171d95a343bc58a6c1832be1d955e70">begin</a>(</span><span class="m-doc-wrap">) -&gt; <a class="m-doc" href="structcat_1_1_cat_string_iterator.html">CatStringIterator</a></span>
+            </dt>
+            <dd></dd>
+            <dt id="a242a843f046e12b27e733dd8ddc13a07">
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc-self" href="#a242a843f046e12b27e733dd8ddc13a07">begin</a>(</span><span class="m-doc-wrap">) const -&gt; <a class="m-doc" href="structcat_1_1_const_cat_string_iterator.html">ConstCatStringIterator</a></span>
+            </dt>
+            <dd></dd>
+            <dt id="a3455ca200446e66ebc6ea2f935bbe3e8">
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc-self" href="#a3455ca200446e66ebc6ea2f935bbe3e8">empty</a>(</span><span class="m-doc-wrap">) const -&gt; bool</span>
+            </dt>
+            <dd></dd>
+            <dt id="ae7b2a9aeed4de1ca3206562ea47af75b">
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc-self" href="#ae7b2a9aeed4de1ca3206562ea47af75b">end</a>(</span><span class="m-doc-wrap">) const -&gt; <a class="m-doc" href="structcat_1_1_const_cat_string_iterator.html">ConstCatStringIterator</a></span>
+            </dt>
+            <dd></dd>
+            <dt id="abc9cf1bd38366c16cfeb1146f9be36ec">
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc-self" href="#abc9cf1bd38366c16cfeb1146f9be36ec">end</a>(</span><span class="m-doc-wrap">) -&gt; <a class="m-doc" href="structcat_1_1_cat_string_iterator.html">CatStringIterator</a></span>
+            </dt>
+            <dd></dd>
+            <dt id="aa719930fadb1cdd7687eeeecab3e8568">
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc-self" href="#aa719930fadb1cdd7687eeeecab3e8568">entries</a>(</span><span class="m-doc-wrap">) -&gt; <a class="m-doc-external poxy-cppreference poxy-external" href="http://en.cppreference.com/w/cpp/container/list.html" target="_blank">std::<wbr/>list</a>&lt;event&gt;&amp;</span>
+            </dt>
+            <dd></dd>
+            <dt id="a3d1e929087174f24aaae2d5510d0b900">
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc-self" href="#a3d1e929087174f24aaae2d5510d0b900">entries</a>(</span><span class="m-doc-wrap">) const -&gt; const <a class="m-doc-external poxy-cppreference poxy-external" href="http://en.cppreference.com/w/cpp/container/list.html" target="_blank">std::<wbr/>list</a>&lt;event&gt;&amp;</span>
+            </dt>
+            <dd></dd>
+            <dt id="a9109afc5b1b55f3d90e6162ac568c0e6">
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc-self" href="#a9109afc5b1b55f3d90e6162ac568c0e6">erase</a>(</span><span class="m-doc-wrap"><a class="m-doc poxy-injected poxy-external poxy-cppreference" href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank">size_t</a> pos,
+              <a class="m-doc poxy-injected poxy-external poxy-cppreference" href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank">size_t</a> n = 1) -&gt; <a class="m-doc" href="classcat_1_1_cat_string.html">CatString</a>&amp;</span>
+            </dt>
+            <dd></dd>
+            <dt id="a14f44b81014480903f60875598a50112">
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc-self" href="#a14f44b81014480903f60875598a50112">operator+</a>(</span><span class="m-doc-wrap">const <a class="m-doc-external poxy-cppreference poxy-external" href="http://en.cppreference.com/w/cpp/string/basic_string.html" target="_blank">std::<wbr/>string</a>&amp; s) const -&gt; <a class="m-doc" href="classcat_1_1_cat_string.html">CatString</a></span>
+            </dt>
+            <dd></dd>
+            <dt id="ab225ff76436ecb234f720a9cf2b51a51">
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc-self" href="#ab225ff76436ecb234f720a9cf2b51a51">operator+</a>(</span><span class="m-doc-wrap">const <a class="m-doc-external poxy-cppreference poxy-external" href="http://en.cppreference.com/w/cpp/utility/functional/function.html" target="_blank">event::<wbr/>fn_type</a>&amp; fn) const -&gt; <a class="m-doc" href="classcat_1_1_cat_string.html">CatString</a></span>
+            </dt>
+            <dd></dd>
+            <dt id="a55d81eaee7b573273844c575dc356cda">
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc-self" href="#a55d81eaee7b573273844c575dc356cda">operator+</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classcat_1_1_cat_string.html">CatString</a>&amp; s) const -&gt; <a class="m-doc" href="classcat_1_1_cat_string.html">CatString</a></span>
+            </dt>
+            <dd></dd>
+            <dt id="a427598ebd95a0d3f78a54f3c37002d60">
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc-self" href="#a427598ebd95a0d3f78a54f3c37002d60">operator+</a>(</span><span class="m-doc-wrap">const char* s) const -&gt; <a class="m-doc" href="classcat_1_1_cat_string.html">CatString</a></span>
+            </dt>
+            <dd></dd>
+            <dt id="a2d505f643a3e7a72aa644a6442bc34d0">
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc-self" href="#a2d505f643a3e7a72aa644a6442bc34d0">operator+</a>(</span><span class="m-doc-wrap">const char&amp; c) const -&gt; <a class="m-doc" href="classcat_1_1_cat_string.html">CatString</a></span>
+            </dt>
+            <dd></dd>
+            <dt id="afbee8f78a4d19ae71a1caf3592666a02">
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc-self" href="#afbee8f78a4d19ae71a1caf3592666a02">operator+=</a>(</span><span class="m-doc-wrap">const <a class="m-doc-external poxy-cppreference poxy-external" href="http://en.cppreference.com/w/cpp/string/basic_string.html" target="_blank">std::<wbr/>string</a>&amp; s) -&gt; <a class="m-doc" href="classcat_1_1_cat_string.html">CatString</a>&amp;</span>
+            </dt>
+            <dd></dd>
+            <dt id="ae6034b6fdcd6503ae933a75bf5e4adf6">
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc-self" href="#ae6034b6fdcd6503ae933a75bf5e4adf6">operator+=</a>(</span><span class="m-doc-wrap">const <a class="m-doc-external poxy-cppreference poxy-external" href="http://en.cppreference.com/w/cpp/utility/functional/function.html" target="_blank">event::<wbr/>fn_type</a>&amp; fn) -&gt; <a class="m-doc" href="classcat_1_1_cat_string.html">CatString</a>&amp;</span>
+            </dt>
+            <dd></dd>
+            <dt id="ae99849e551d9240e4a7e1701a6c03889">
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc-self" href="#ae99849e551d9240e4a7e1701a6c03889">operator+=</a>(</span><span class="m-doc-wrap">const char&amp; c) -&gt; <a class="m-doc" href="classcat_1_1_cat_string.html">CatString</a>&amp;</span>
+            </dt>
+            <dd></dd>
+            <dt id="a8289bf5e64f5c82868ac4cb6d6bada48">
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc-self" href="#a8289bf5e64f5c82868ac4cb6d6bada48">operator+=</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="classcat_1_1_cat_string.html">CatString</a>&amp; s) -&gt; <a class="m-doc" href="classcat_1_1_cat_string.html">CatString</a>&amp;</span>
+            </dt>
+            <dd></dd>
+            <dt id="a2e6deab2c94b098ebe44ea511389a9d1">
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc-self" href="#a2e6deab2c94b098ebe44ea511389a9d1">operator+=</a>(</span><span class="m-doc-wrap">const char* s) -&gt; <a class="m-doc" href="classcat_1_1_cat_string.html">CatString</a>&amp;</span>
+            </dt>
+            <dd></dd>
+            <dt id="a5990f80e13e757701b5a81405d0bee24">
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc-self" href="#a5990f80e13e757701b5a81405d0bee24">operator[]</a>(</span><span class="m-doc-wrap"><a class="m-doc poxy-injected poxy-external poxy-cppreference" href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank">size_t</a> pos) -&gt; char&amp;</span>
+            </dt>
+            <dd></dd>
+            <dt id="a0997be2759323f908abf2091d486f357">
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc-self" href="#a0997be2759323f908abf2091d486f357">pop</a>(</span><span class="m-doc-wrap">) -&gt; event</span>
+            </dt>
+            <dd></dd>
+            <dt id="a8b68dcad1d565408881aaecc9f8c7e2f">
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc-self" href="#a8b68dcad1d565408881aaecc9f8c7e2f">push_back</a>(</span><span class="m-doc-wrap">const <a class="m-doc-external poxy-cppreference poxy-external" href="http://en.cppreference.com/w/cpp/string/basic_string.html" target="_blank">std::<wbr/>string</a>&amp; s) -&gt; <a class="m-doc" href="classcat_1_1_cat_string.html">CatString</a>&amp;</span>
+            </dt>
+            <dd></dd>
+            <dt id="ad430e93b2a7f6b901f8dba5c9061c966">
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc-self" href="#ad430e93b2a7f6b901f8dba5c9061c966">push_back</a>(</span><span class="m-doc-wrap">const <a class="m-doc-external poxy-cppreference poxy-external" href="http://en.cppreference.com/w/cpp/utility/functional/function.html" target="_blank">event::<wbr/>fn_type</a>&amp; fn) -&gt; <a class="m-doc" href="classcat_1_1_cat_string.html">CatString</a>&amp;</span>
+            </dt>
+            <dd></dd>
+            <dt id="ad4f7d51d4142ac56576425c59d5fd7d4">
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc-self" href="#ad4f7d51d4142ac56576425c59d5fd7d4">push_front</a>(</span><span class="m-doc-wrap">const <a class="m-doc-external poxy-cppreference poxy-external" href="http://en.cppreference.com/w/cpp/string/basic_string.html" target="_blank">std::<wbr/>string</a>&amp; s) -&gt; <a class="m-doc" href="classcat_1_1_cat_string.html">CatString</a>&amp;</span>
+            </dt>
+            <dd></dd>
+            <dt id="ad99c27ff93cfe1c9e93054456d65dc88">
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc-self" href="#ad99c27ff93cfe1c9e93054456d65dc88">push_front</a>(</span><span class="m-doc-wrap">const <a class="m-doc-external poxy-cppreference poxy-external" href="http://en.cppreference.com/w/cpp/utility/functional/function.html" target="_blank">event::<wbr/>fn_type</a>&amp; fn) -&gt; <a class="m-doc" href="classcat_1_1_cat_string.html">CatString</a>&amp;</span>
+            </dt>
+            <dd></dd>
+            <dt id="adf89bba77ae0afd0053358bfd65cf2ea">
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc-self" href="#adf89bba77ae0afd0053358bfd65cf2ea">size</a>(</span><span class="m-doc-wrap">) const -&gt; <a class="m-doc poxy-injected poxy-external poxy-cppreference" href="https://en.cppreference.com/w/cpp/types/size_t" target="_blank">size_t</a></span>
+            </dt>
+            <dd></dd>
+            <dt id="acdee1c690aeb6854716ac105692381e8">
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc-self" href="#acdee1c690aeb6854716ac105692381e8">to_string</a>(</span><span class="m-doc-wrap">) const -&gt; <a class="m-doc-external poxy-cppreference poxy-external" href="http://en.cppreference.com/w/cpp/string/basic_string.html" target="_blank">std::<wbr/>string</a></span>
+            </dt>
+            <dd></dd>
+          </dl>
+        </section>
+        <section id="friends">
+          <h2><a href="#friends">Friends</a></h2>
+          <dl class="m-doc">
+            <dt id="ae4ce723af68502b48839408daf93eb70">
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc-self" href="#ae4ce723af68502b48839408daf93eb70">operator+</a>(</span><span class="m-doc-wrap">const <a class="m-doc-external poxy-cppreference poxy-external" href="http://en.cppreference.com/w/cpp/string/basic_string.html" target="_blank">std::<wbr/>string</a>&amp;,
+              const <a class="m-doc" href="classcat_1_1_cat_string.html">CatString</a>&amp;) -&gt; <a class="m-doc" href="classcat_1_1_cat_string.html">CatString</a></span>
+            </dt>
+            <dd></dd>
+            <dt id="a4a136101a08d5523e0fd7a0053d96d6b">
+              <span class="m-doc-wrap-bumper">auto <a class="m-doc-self" href="#a4a136101a08d5523e0fd7a0053d96d6b">operator+</a>(</span><span class="m-doc-wrap">const <a class="m-doc" href="#ab0aca22097b524d767eda283feb12e55">fn_<wbr/>type</a>&amp;,
+              const <a class="m-doc" href="classcat_1_1_cat_string.html">CatString</a>&amp;) -&gt; <a class="m-doc" href="classcat_1_1_cat_string.html">CatString</a></span>
+            </dt>
+            <dd></dd>
+          </dl>
+        </section>
+      </div>
+    </div>
+  </div>
+</article></main>
+<div class="m-doc-search" id="search">
+  <a href="#!" onclick="return hideSearch()"></a>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-m-8 m-push-m-2">
+        <div class="m-doc-search-header m-text m-small">
+          <div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
+          <div id="search-symbolcount">…</div>
+        </div>
+        <div class="m-doc-search-content">
+          <form>
+            <input autocomplete="off" autofocus="autofocus" disabled="disabled" id="search-input" name="q" placeholder="Loading …" spellcheck="false" type="search"/>
+          </form>
+          <noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
+          <div class="m-text m-dim m-text-center" id="search-help">
+            <p class="m-noindent">Search for symbols, directories, files, pages or
+            modules. You can omit any prefix from the symbol or file path; adding a
+            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
+            directory.</p>
+            <p class="m-noindent">Use <span class="m-label m-dim">↓</span>
+            / <span class="m-label m-dim">↑</span> to navigate through the list,
+            <span class="m-label m-dim">Enter</span> to go.
+            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
+            copy a link to the result using <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">M</span> produces a Markdown link.</p>
+          </div>
+          <div class="m-text m-warning m-text-center" id="search-notfound">Sorry, nothing was found.</div>
+          <ul id="search-results"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="search-v2.js"></script><script>install_mcss_search_shim();</script>
+<script async="async" src="searchdata-v2.js"></script>
+<footer><nav>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        
+<a class="poxy-external" href="https://github.com/labricecat/cat" target="_blank">GitHub</a>
+• <a class="poxy-external" href="https://github.com/labricecat/cat/issues" target="_blank">Report an issue</a>
+• <a class="poxy-external" href="https://github.com/labricecat/cat/blob/main/LICENSE" target="_blank">License</a>
+• <a download="" href="cat.tagfile.xml" target="_blank" type="text/xml">Doxygen tagfile</a>
+<br/><br/>
+Site generated using <a class="poxy-external" href="https://github.com/marzer/poxy/" target="_blank">Poxy</a>
+
+      </div>
+    </div>
+  </div>
+</nav></footer>
+
+
+</body></html>

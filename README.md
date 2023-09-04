@@ -19,6 +19,8 @@ $ sudo make install
 ```
 
 ## Usage
+For details read the **[documentation](https://labricecat.github.io/docs/cat/index.html)**.
+### Example
 This is an example from `examples/example.cpp`
 
 ```cpp

@@ -19,7 +19,7 @@ $ sudo make install
 ```
 
 ## Usage
-For details read the **[documentation](https://labricecat.github.io/docs/cat/index.html)**.
+For details read the **[documentation](https://labricecat.github.io/docs/cat/)**.
 ### Example
 This is an example from `examples/example.cpp`
 

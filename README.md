@@ -2,17 +2,15 @@
 Cat Approved TUI - a TUI framework, meow~
 
 ## Requirements
-- C++ 20 (Language)
-- [catcaretaker](https://github.com/LabRicecat/catcaretaker) (Up-To-Date Dependencies)
-- cmake (Building)
-- make (Building)
-- ncurses (Display library)
+- C++ 20
+- cmake 
+- make 
+- ncurses 
 
 ## Installation
 ```sh
 $ git clone https://github.com/LabRicecat/cat
 $ cd cat
-$ catcare sync
 $ mkdir build && cd build
 $ cmake ..
 $ sudo make install

@@ -1,4 +1,4 @@
-# cat 0.1.0
+# cat 0.2.0
 Cat Approved TUI - a TUI framework, meow~
 
 ## Requirements

@@ -2,3 +2,4 @@ catpkgs/
 *.out
 inc/catpkgs
 build/
+.cache

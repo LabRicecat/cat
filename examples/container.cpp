@@ -1,14 +1,14 @@
 #include <cat/cat.hpp>
 
-/* displays usage of the `cat::lib::HorizontalContainer` */
+/* displays usage of the `cat::HorizontalContainer` */
 
 int main() {
         // creating our container
-    cat::lib::HorizontalContainer* container;
-    
-        // initializing with max hight/width
+    cat::HorizontalContainer* container;
+        
+    // initializing with max hight/width
     cat::async(cat::Priority::NORMAL, [&]() {
-        container = cat::new_container<cat::lib::HorizontalContainer>({0,0},{cat::terminal::get_x(), cat::terminal::get_y()});
+        container = cat::new_container<cat::HorizontalContainer>({0,0},{cat::terminal::get_x(), cat::terminal::get_y()});
     });
         
         // define behaviour when applying 

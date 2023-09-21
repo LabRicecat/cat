@@ -10,6 +10,7 @@
 namespace cat {
 
 namespace signals {
+
     using signal = uint64_t;
     using tag_type = uint64_t;
     struct SignalData;
@@ -54,9 +55,11 @@ namespace signals {
         std::string msg;
         MessageData(const std::string& msg): msg(msg) { }
     };
+
 } // namespace signals
 
 void error(const std::string& msg); 
+void emit(signals::signal sig, const signals::SignalData* data = nullptr, bool clean = true);
 
 } // namespace cat
 

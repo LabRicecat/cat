@@ -31,6 +31,16 @@ CatStringIterator& CatStringIterator::set_end() {
 bool CatStringIterator::operator==(const CatStringIterator& i) { return i.current == current; }
 bool CatStringIterator::operator!=(const CatStringIterator& i) { return i.current != current; } 
 
+CatStringIterator& CatStringIterator::operator+=(size_t n) {
+    while(n-- > 0)
+        next();
+    return *this;
+}
+CatStringIterator CatStringIterator::operator+(size_t n) {
+    CatStringIterator cp = *this;
+    return cp += n;
+}
+
 std::string::const_iterator ConstCatStringIterator::next() {
     if(adv >= lst.size()) return lst.back()->cend();
         
@@ -59,5 +69,15 @@ ConstCatStringIterator& ConstCatStringIterator::set_end() {
     
 bool ConstCatStringIterator::operator==(const ConstCatStringIterator& i) { return i.current == current; }
 bool ConstCatStringIterator::operator!=(const ConstCatStringIterator& i) { return i.current != current; }
+
+ConstCatStringIterator& ConstCatStringIterator::operator+=(size_t n) {
+    while(n-- > 0)
+        next();
+    return *this;
+}
+ConstCatStringIterator ConstCatStringIterator::operator+(size_t n) {
+    ConstCatStringIterator cp = *this;
+    return cp += n;
+}
 
 } // namespace cat

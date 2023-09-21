@@ -127,10 +127,10 @@ key_event& Window::get_key_event(const key& skey) {
     return win_keymap[skey];
 }
 
-Window& Window::draw_buffer(const Vector2& offset) {
+Window& Window::draw_buffer() {
     if(!buffer) return *this;
-
-    draw_base(ncurses_window, buffer->display(), [&](WINDOW* w,size_t s,const char* c) { mvwprintw(w, offset.y, offset.x, "%s", c); }, false, 0); 
+    this->move({0,0});
+    draw_base(ncurses_window, buffer->display(), [&](WINDOW* w,size_t s,const char* c) { wprintw(w, "%s", c); }, false, 0); 
     return *this;
 }
 

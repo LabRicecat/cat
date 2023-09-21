@@ -3,7 +3,7 @@
 
 /* the whole TUI framework */ 
 
-#define CAT_VERSION 000200
+#define CAT_VERSION 000201
 
 // requires C++20
 #if __cplusplus >= 202002
@@ -22,6 +22,7 @@
 #include "renderer/fit.hpp"
 
 #include "window/inputfield.hpp"
+#include "window/textfield.hpp"
 
 #endif 
 

@@ -79,7 +79,7 @@ class Window;
 
 class Buffer {
 protected:
-    std::string raw;
+    CatString raw;
     Window* assoc_window = nullptr;
 
     Composer i_composer = [](const Composer::param_type& data, Buffer*) { return (Composer::return_type)data; };
@@ -95,7 +95,7 @@ public:
 
     virtual Buffer& set(const std::string& raw);
     virtual Buffer& append(const std::string& raw);
-    virtual std::string& get_raw();
+    virtual CatString& get_raw();
 
     virtual Buffer& clear();
 

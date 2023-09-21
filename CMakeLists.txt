@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.9)
 
-set(VERS 0.2.0)
+set(VERS 0.2.1)
 
 project(catui
     VERSION ${VERS} 
@@ -9,7 +9,6 @@ project(catui
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 add_library(catui STATIC
     src/base/buffer.cpp
@@ -38,6 +37,9 @@ add_library(catui STATIC
     src/container/horizontal.cpp
 
     src/renderer/fit.cpp
+
+    src/window/inputfield.cpp 
+    src/window/textfield.cpp
 )
 
 target_compile_features(catui PRIVATE cxx_std_20)
@@ -45,6 +47,11 @@ set_target_properties(catui PROPERTIES VERSION ${VERS})
 set_target_properties(catui PROPERTIES SOVERSION 0)
 
 set_target_properties(catui PROPERTIES VERSION ${VERS})
+
+if(DEBUG)
+    target_compile_options(catui PUBLIC -g)
+    set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+endif(DEBUG)
 
 target_include_directories(catui PRIVATE .)
 

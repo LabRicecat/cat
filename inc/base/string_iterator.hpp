@@ -24,7 +24,10 @@ struct CatStringIterator {
     CatStringIterator& set_end();
 
     bool operator==(const CatStringIterator& i);
-    bool operator!=(const CatStringIterator& i); 
+    bool operator!=(const CatStringIterator& i);
+
+    CatStringIterator& operator+=(size_t n);
+    CatStringIterator operator+(size_t n);
 };
 
 struct ConstCatStringIterator {
@@ -47,6 +50,8 @@ struct ConstCatStringIterator {
     bool operator==(const ConstCatStringIterator& i);
     bool operator!=(const ConstCatStringIterator& i); 
 
+    ConstCatStringIterator& operator+=(size_t n);
+    ConstCatStringIterator operator+(size_t n);
 };
 
 }

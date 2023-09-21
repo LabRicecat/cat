@@ -20,7 +20,7 @@ Buffer& Buffer::append(const std::string& raw) {
     return *this;
 }
 
-std::string& Buffer::get_raw() {
+CatString& Buffer::get_raw() {
     return raw;
 }
 

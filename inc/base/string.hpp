@@ -47,12 +47,10 @@ public:
         string_src = src;
     }
 
+    
+    CatString& push_back(const CatString& s);
 
-    CatString& push_back(const std::string& s);
-    CatString& push_back(const event::fn_type& fn);
-
-    CatString& push_front(const std::string& s);
-    CatString& push_front(const event::fn_type& fn);
+    CatString& push_front(const CatString& s);
 
     event pop();
 
@@ -62,8 +60,16 @@ public:
     const std::list<event>& entries() const;
 
     size_t size() const;
+    size_t length() const;
 
     CatString& erase(size_t pos, size_t n = 1);
+    CatString& insert(size_t pos, const CatString& s);
+    CatString& insert(size_t pos, char c);
+
+    CatString& append(const CatString& c);
+
+    CatString substr(size_t pos);
+    CatString substr(size_t pos, size_t n);
 
     CatString& operator+=(const std::string& s);
     CatString& operator+=(const event::fn_type& fn);

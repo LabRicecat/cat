@@ -6,7 +6,6 @@ namespace signals {
 
 size_t SignalData::id() const { return typeid(*this).hash_code(); }
 
-
 signal tag(signal sig, tag_type tag) {
     tags[tag].push_back(sig);
     rtags_map[sig].push_back(tag);
@@ -56,6 +55,10 @@ tag_type new_tag() {
 
 void error(const std::string& msg) {
     signals::emit_tag(signals::error_tag, new signals::MessageData(msg));    
+}
+
+void emit(signals::signal sig, const signals::SignalData* data, bool clean) {
+    signals::emit(sig, data, clean);
 }
 
 } // namespace cat

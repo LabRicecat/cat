@@ -121,7 +121,7 @@ public:
         return *this;
     }
 
-    virtual Window& draw_buffer(const Vector2& offset = {0,0});
+    virtual Window& draw_buffer();
 
     virtual Window& on_redraw(const redraw_event& event);
     virtual Window& on_focus(const focus_event& event);

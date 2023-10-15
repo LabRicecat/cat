@@ -1,3 +1,6 @@
+# !! MOVED TO CODEBERG.ORG !!
+**This is an old version, please visit the current version at [codeberg.org](https://codeberg.org/LabRicecat/cat)!**
+
 # cat 0.2.0
 Cat Approved TUI - a TUI framework, meow~
 

@@ -1,4 +1,5 @@
-#include "../../inc/base/window.hpp"
+#include "../inc/window.hpp"
+#include <cassert>
 
 namespace cat {
 
@@ -47,9 +48,9 @@ Window& Window::cursor(const Vector2& position, bool absolute) {
 }
 
 Window Window::duplicate() {
-    Window new_window = *this;
-    new_window.ncurses_window = dupwin(ncurses_window);
-    return new_window;
+    Window w = *this;
+    w.ncurses_window = dupwin(ncurses_window);
+    return w;
 }
 
 Window& Window::adopt(Window* win) {
@@ -127,10 +128,10 @@ key_event& Window::get_key_event(const key& skey) {
     return win_keymap[skey];
 }
 
-Window& Window::draw_buffer() {
+Window& Window::draw_buffer(const Vector2& offset) {
     if(!buffer) return *this;
-    this->move({0,0});
-    draw_base(ncurses_window, buffer->display(), [&](WINDOW* w,size_t s,const char* c) { wprintw(w, "%s", c); }, false, 0); 
+
+    draw_base(ncurses_window, buffer->display(), [&](WINDOW* w,size_t s,const char* c) { mvwprintw(w, offset.y, offset.x, "%s", c); }, false, 0); 
     return *this;
 }
 
